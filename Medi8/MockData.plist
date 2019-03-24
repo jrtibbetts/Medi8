@@ -1,0 +1,2637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>The Beatles</key>
+	<dict>
+		<key>Please Please Me</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>It Won&apos;t Be Long</string>
+					<key>Duration</key>
+					<string>2:14</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>All I&apos;ve Got To Do</string>
+					<key>Duration</key>
+					<string>2:05</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>All My Loving</string>
+					<key>Duration</key>
+					<string>2:10</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Don&apos;t Bother Me</string>
+					<key>Duration</key>
+					<string>2:29</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Little Child</string>
+					<key>Duration</key>
+					<string>1:48</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Till There Was You</string>
+					<key>Duration</key>
+					<string>2:17</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Willson</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Please Mister Postman</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Dobbin/Garrett/Garman/Brianbert</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Roll Over Beethoven</string>
+					<key>Duration</key>
+					<string>2:48</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Berry</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Hold Me Tight</string>
+					<key>Duration</key>
+					<string>2:33</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You Really Got a Hold on Me</string>
+					<key>Duration</key>
+					<string>3:03</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Robinson</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Wanna Be Your Man</string>
+					<key>Duration</key>
+					<string>1:59</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Devil in Her Heart</string>
+					<key>Duration</key>
+					<string>2:28</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Drapkin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Not a Second Time</string>
+					<key>Duration</key>
+					<string>2:08</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Money (That&apos;s What I Want)</string>
+					<key>Duration</key>
+					<string>2:48</string>
+					<key>Comment</key>
+					<string>1963/11/22 UK &quot;With The Beatles&quot; LP (Parlophone PMC 1206)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Bradford/Gordy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Beatles for Sale</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>No Reply</string>
+					<key>Duration</key>
+					<string>2:18</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240), UK mono version</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;m a Loser</string>
+					<key>Duration</key>
+					<string>2:34</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Baby&apos;s in Black</string>
+					<key>Duration</key>
+					<string>2:08</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Rock and Roll Music</string>
+					<key>Duration</key>
+					<string>2:34</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Berry</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;ll Follow the Sun</string>
+					<key>Duration</key>
+					<string>1:51</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Mr. Moonlight</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240), UK mono version</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Johnson</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Kansas City / Hey-Hey-Hey-Hey!</string>
+					<key>Duration</key>
+					<string>2:33</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lieber/Stoller/Penniman</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Eight Days a Week</string>
+					<key>Duration</key>
+					<string>2:45</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Words of Love</string>
+					<key>Duration</key>
+					<string>2:15</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Holly</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Honey Don&apos;t</string>
+					<key>Duration</key>
+					<string>3:00</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Perkins</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Every Little Thing</string>
+					<key>Duration</key>
+					<string>2:05</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Don&apos;t Want to Spoil the Party</string>
+					<key>Duration</key>
+					<string>2:36</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>What You&apos;re Doing</string>
+					<key>Duration</key>
+					<string>2:35</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Everybody&apos;s Trying to Be My Baby</string>
+					<key>Duration</key>
+					<string>2:24</string>
+					<key>Comment</key>
+					<string>1964/12/04 UK &quot;Beatles for Sale&quot; LP (Parlophone PMC 1240)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Perkins</string>
+				</dict>
+			</array>
+		</dict>
+		<key>A Hard Day&apos;s Night</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Beatles</string>
+					<key>Duration</key>
+					<string>2:33</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; 7&quot; single (Parlophone R 5160), UK mono version</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Should Have Known Better</string>
+					<key>Duration</key>
+					<string>2:44</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>If I Fell</string>
+					<key>Duration</key>
+					<string>2:22</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;m Happy Just to Dance with You</string>
+					<key>Duration</key>
+					<string>1:59</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>And I Love Her</string>
+					<key>Duration</key>
+					<string>2:31</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Tell Me Why</string>
+					<key>Duration</key>
+					<string>2:10</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Can&apos;t Buy Me Love</string>
+					<key>Duration</key>
+					<string>2:15</string>
+					<key>Comment</key>
+					<string>1964/03/20 UK &quot;Can&apos;t Buy Me Love&quot; 7&quot; single (Parlophone R 5114)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Any Time at All</string>
+					<key>Duration</key>
+					<string>2:13</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;ll Cry Instead</string>
+					<key>Duration</key>
+					<string>1:48</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Things We Said Today</string>
+					<key>Duration</key>
+					<string>2:39</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; 7&quot; single (Parlophone R 5160)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>When I Get Home</string>
+					<key>Duration</key>
+					<string>2:18</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You Can&apos;t Do That</string>
+					<key>Duration</key>
+					<string>2:38</string>
+					<key>Comment</key>
+					<string>1964/03/20 UK &quot;Can&apos;t Buy Me Love&quot; 7&quot; single (Parlophone R 5114)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;ll Be Back</string>
+					<key>Duration</key>
+					<string>2:21</string>
+					<key>Comment</key>
+					<string>1964/07/10 UK &quot;A Hard Day&apos;s Night&quot; LP (Parlophone PMC 1230)</string>
+					<key>Year</key>
+					<integer>1964</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Help!</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Help!</string>
+					<key>Duration</key>
+					<string>2:21</string>
+					<key>Comment</key>
+					<string>1965/07/23 UK &quot;Help!&quot; 7&quot; single (Parlophone R 5305)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Night Before</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You&apos;ve Got to Hide Your Love Away</string>
+					<key>Duration</key>
+					<string>2:11</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Need You</string>
+					<key>Duration</key>
+					<string>2:31</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Another Girl</string>
+					<key>Duration</key>
+					<string>2:08</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You&apos;re Gonna Lose That Girl</string>
+					<key>Duration</key>
+					<string>2:20</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Ticket to Ride</string>
+					<key>Duration</key>
+					<string>3:12</string>
+					<key>Comment</key>
+					<string>1965/04/09 UK &quot;Ticket to Ride&quot; 7&quot; single (Parlophone R 5265)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Act Naturally</string>
+					<key>Duration</key>
+					<string>2:33</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Morrisson/Russell</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>It&apos;s Only Love</string>
+					<key>Duration</key>
+					<string>1:59</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You Like Me Too Much</string>
+					<key>Duration</key>
+					<string>2:39</string>
+					<key>Comment</key>
+					<string>1965/06/14 US &quot;Beatles VI&quot; LP (Capitol T 2358)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Tell Me What You See</string>
+					<key>Duration</key>
+					<string>2:40</string>
+					<key>Comment</key>
+					<string>1965/06/14 US &quot;Beatles VI&quot; LP (Capitol T 2358)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;ve Just Seen a Face</string>
+					<key>Duration</key>
+					<string>2:07</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Yesterday</string>
+					<key>Duration</key>
+					<string>2:07</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Dizzy Miss Lizzy</string>
+					<key>Duration</key>
+					<string>2:54</string>
+					<key>Comment</key>
+					<string>1965/08/06 UK &quot;Help!&quot; LP (Parlophone PCS 3071)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Williams</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Past Masters, Volume 1</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Love Me Do</string>
+					<key>Duration</key>
+					<string>2:24</string>
+					<key>Comment</key>
+					<string>1962/10/05 UK &quot;Love Me Do&quot; 7&quot; single (Parlophone 45-R 4949)</string>
+					<key>Year</key>
+					<integer>1962</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>From Me to You</string>
+					<key>Duration</key>
+					<string>1:58</string>
+					<key>Comment</key>
+					<string>1963/04/11 UK &quot;From Me to You&quot; 7&quot; single (Parlophone R 5015)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Thank You Girl</string>
+					<key>Duration</key>
+					<string>2:04</string>
+					<key>Comment</key>
+					<string>1963/04/11 UK &quot;From Me to You&quot; 7&quot; single (Parlophone R 5015)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>She Loves You</string>
+					<key>Duration</key>
+					<string>2:21</string>
+					<key>Comment</key>
+					<string>1963/08/23 UK &quot;She Loves You&quot; 7&quot; single (Parlophone R 5055)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;ll Get You</string>
+					<key>Duration</key>
+					<string>2:06</string>
+					<key>Comment</key>
+					<string>1963/08/23 UK &quot;She Loves You&quot; 7&quot; single (Parlophone R 5055)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Want to Hold Your Hand</string>
+					<key>Duration</key>
+					<string>2:27</string>
+					<key>Comment</key>
+					<string>1963/11/29 UK &quot;I Want to Hold Your Hand&quot; 7&quot; single (Parlophone R 5084)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>This Boy</string>
+					<key>Duration</key>
+					<string>2:16</string>
+					<key>Comment</key>
+					<string>1963/11/29 UK &quot;I Want to Hold Your Hand&quot; 7&quot; single (Parlophone R 5084)</string>
+					<key>Year</key>
+					<integer>1963</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Komm, Gib Mir Deine Hand</string>
+					<key>Duration</key>
+					<string>2:27</string>
+					<key>Comment</key>
+					<string>1964/99/99 DE &quot;Komm, Gib Mir Deine Hand&quot; 7&quot; single (Odeon O 22 671)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sie Leibt Dich</string>
+					<key>Duration</key>
+					<string>2:20</string>
+					<key>Comment</key>
+					<string>1964/99/99 DE &quot;Komm, Gib Mir Deine Hand&quot; 7&quot; single (Odeon O 22 671)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Long Tall Sally</string>
+					<key>Duration</key>
+					<string>2:03</string>
+					<key>Comment</key>
+					<string>1964/06/19 UK &quot;Long Tall Sally&quot; 7&quot; EP (Parlophone GEP 8913)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Call Your Name</string>
+					<key>Duration</key>
+					<string>2:09</string>
+					<key>Comment</key>
+					<string>1964/06/19 UK &quot;Long Tall Sally&quot; 7&quot; EP (Parlophone GEP 8913)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Slow Down</string>
+					<key>Duration</key>
+					<string>2:56</string>
+					<key>Comment</key>
+					<string>1964/06/19 UK &quot;Long Tall Sally&quot; 7&quot; EP (Parlophone GEP 8913)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Matchbox</string>
+					<key>Duration</key>
+					<string>1:59</string>
+					<key>Comment</key>
+					<string>1964/06/19 UK &quot;Long Tall Sally&quot; 7&quot; EP (Parlophone GEP 8913)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Feel Fine</string>
+					<key>Duration</key>
+					<string>2:20</string>
+					<key>Comment</key>
+					<string>1964/11/27 UK &quot;I Feel Fine&quot; 7&quot; single (Parlophone R 5200)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>She&apos;s a Woman</string>
+					<key>Duration</key>
+					<string>3:03</string>
+					<key>Comment</key>
+					<string>1964/11/27 UK &quot;I Feel Fine&quot; 7&quot; single (Parlophone R 5200)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Bad Boy</string>
+					<key>Duration</key>
+					<string>2:21</string>
+					<key>Comment</key>
+					<string>1965/06/14 US &quot;Beatles VI&quot; LP (Capitol T 2358)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Yes It Is</string>
+					<key>Duration</key>
+					<string>2:43</string>
+					<key>Comment</key>
+					<string>1965/04/09 UK &quot;Ticket to Ride&quot; 7&quot; single (Parlophone R 5265)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;m Down</string>
+					<key>Duration</key>
+					<string>2:32</string>
+					<key>Comment</key>
+					<string>1965/07/23 UK &quot;Help!&quot; 7&quot; single (Parlophone R 5305)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Rubber Soul</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Beatles</string>
+					<key>Duration</key>
+					<string>2:30</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Norwegian Wood (This Bird Has Flown)</string>
+					<key>Duration</key>
+					<string>2:05</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You Won&apos;t See Me</string>
+					<key>Duration</key>
+					<string>3:23</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Nowhere Man</string>
+					<key>Duration</key>
+					<string>2:44</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Think for Yourself</string>
+					<key>Duration</key>
+					<string>2:19</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Word</string>
+					<key>Duration</key>
+					<string>2:44</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Michelle</string>
+					<key>Duration</key>
+					<string>2:42</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>What Goes On</string>
+					<key>Duration</key>
+					<string>2:51</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney/Starkey</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Girl</string>
+					<key>Duration</key>
+					<string>2:34</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;m Looking through You</string>
+					<key>Duration</key>
+					<string>2:28</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>In My Life</string>
+					<key>Duration</key>
+					<string>2:28</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Wait</string>
+					<key>Duration</key>
+					<string>2:17</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>If I Needed Someone</string>
+					<key>Duration</key>
+					<string>2:24</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Run for Your Life</string>
+					<key>Duration</key>
+					<string>2:19</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;Rubber Soul&quot; LP (PCS 3075)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Revolver</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Taxman</string>
+					<key>Duration</key>
+					<string>2:39</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Eleanor Rigby</string>
+					<key>Duration</key>
+					<string>2:08</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Yellow Submarine&quot; / &quot;Eleanor Rigby&quot; double A-side 7&quot; single (Parlophone R 5493)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;m Only Sleeping</string>
+					<key>Duration</key>
+					<string>3:02</string>
+					<key>Comment</key>
+					<string>1966/06/20 US &quot;Yesterday...And Today&quot; LP (Capitol ST 2553)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Love You To</string>
+					<key>Duration</key>
+					<string>3:01</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Here, There and Everywhere</string>
+					<key>Duration</key>
+					<string>2:26</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Yellow Submarine</string>
+					<key>Duration</key>
+					<string>2:40</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Yellow Submarine&quot; / &quot;Eleanor Rigby&quot; double A-side 7&quot; single (Parlophone R 5493)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>She Said She Said</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Good Day Sunshine</string>
+					<key>Duration</key>
+					<string>2:10</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>And Your Bird Can Sing</string>
+					<key>Duration</key>
+					<string>2:02</string>
+					<key>Comment</key>
+					<string>1966/06/20 US &quot;Yesterday...And Today&quot; LP (Capitol ST 2553)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>For No One</string>
+					<key>Duration</key>
+					<string>2:02</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Doctor Robert</string>
+					<key>Duration</key>
+					<string>2:15</string>
+					<key>Comment</key>
+					<string>1966/06/20 US &quot;Yesterday...And Today&quot; LP (Capitol ST 2553)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Want to Tell You</string>
+					<key>Duration</key>
+					<string>2:30</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Got to Get You into My Life</string>
+					<key>Duration</key>
+					<string>2:31</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Tomorrow Never Knows</string>
+					<key>Duration</key>
+					<string>2:57</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Revolver&quot; LP (Parlophone PCS 7009)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Magical Mystery Tour</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Magical Mystery Tour</string>
+					<key>Duration</key>
+					<string>2:52</string>
+					<key>Comment</key>
+					<string>1967/11/27 US &quot;Magical Mystery Tour&quot; LP (Capitol)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Fool on the Hill</string>
+					<key>Duration</key>
+					<string>3:00</string>
+					<key>Comment</key>
+					<string>1967/11/27 US &quot;Magical Mystery Tour&quot; LP (Capitol)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Flying</string>
+					<key>Duration</key>
+					<string>2:17</string>
+					<key>Comment</key>
+					<string>1967/11/27 US &quot;Magical Mystery Tour&quot; LP (Capitol)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney/Harrison/Starkey</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Blue Jay Way</string>
+					<key>Duration</key>
+					<string>3:57</string>
+					<key>Comment</key>
+					<string>1967/11/27 US &quot;Magical Mystery Tour&quot; LP (Capitol)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Your Mother Should Know</string>
+					<key>Duration</key>
+					<string>2:30</string>
+					<key>Comment</key>
+					<string>1967/11/27 US &quot;Magical Mystery Tour&quot; LP (Capitol)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Am the Walrus</string>
+					<key>Duration</key>
+					<string>4:37</string>
+					<key>Comment</key>
+					<string>1967/11/24 UK &quot;Hello, Goodbye&quot; 7&quot; single (Parlophone R 5655)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Hello, Goodbye</string>
+					<key>Duration</key>
+					<string>3:31</string>
+					<key>Comment</key>
+					<string>1967/11/24 UK &quot;Hello, Goodbye&quot; 7&quot; single (Parlophone R 5655)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Strawberry Fields Forever</string>
+					<key>Duration</key>
+					<string>4:10</string>
+					<key>Comment</key>
+					<string>1967/02/17 UK &quot;Strawberry Fields Forever&quot; / &quot;Penny Lane&quot; 7&quot; single (Parlophone R 5570)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Penny Lane</string>
+					<key>Duration</key>
+					<string>3:03</string>
+					<key>Comment</key>
+					<string>1967/02/17 UK &quot;Strawberry Fields Forever&quot; / &quot;Penny Lane&quot; 7&quot; single (Parlophone R 5570)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Baby You’re a Rich Man</string>
+					<key>Duration</key>
+					<string>3:04</string>
+					<key>Comment</key>
+					<string>1967/07/07 UK &quot;All You Need Is Love&quot; 7&quot; single (Parlophone R 5620)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>All You Need Is Love</string>
+					<key>Duration</key>
+					<string>3:48</string>
+					<key>Comment</key>
+					<string>1967/07/07 UK &quot;All You Need Is Love&quot; 7&quot; single (Parlophone R 5620)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Sgt. Pepper&apos;s Lonely Hearts Club Band</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Beatles</string>
+					<key>Duration</key>
+					<string>2:02</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>With a Little Help from My Friends</string>
+					<key>Duration</key>
+					<string>2:44</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Lucy in the Sky with Diamonds</string>
+					<key>Duration</key>
+					<string>3:28</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Getting Better</string>
+					<key>Duration</key>
+					<string>2:48</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Fixing a Hole</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>She&apos;s Leaving Home</string>
+					<key>Duration</key>
+					<string>3:35</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Being for the Benefit of Mr. Kite!</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Within You, without You</string>
+					<key>Duration</key>
+					<string>5:05</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>When I&apos;m Sixty-Four</string>
+					<key>Duration</key>
+					<string>2:38</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Lovely Rita</string>
+					<key>Duration</key>
+					<string>2:42</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Good Morning Good Morning</string>
+					<key>Duration</key>
+					<string>2:41</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sgt. Pepper&apos;s Lonely Hearts Club Band (reprise)</string>
+					<key>Duration</key>
+					<string>1:19</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>A Day in the Life</string>
+					<key>Duration</key>
+					<string>5:34</string>
+					<key>Comment</key>
+					<string>1967/06/01 UK &quot;Sgt. Pepper&apos;s Lonely Hearts Club Band&quot; LP (Parlophone PCS 7027)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>The Beatles</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Back in the U.S.S.R.</string>
+					<key>Duration</key>
+					<string>2:43</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Dear Prudence</string>
+					<key>Duration</key>
+					<string>3:57</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Glass Onion</string>
+					<key>Duration</key>
+					<string>2:18</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Ob-La-Di, Ob-La-Da</string>
+					<key>Duration</key>
+					<string>3:09</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Wild Honey Pie</string>
+					<key>Duration</key>
+					<string>1:01</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Continuing Story of Bungalow Bill</string>
+					<key>Duration</key>
+					<string>3:06</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>While My Guitar Gently Weeps</string>
+					<key>Duration</key>
+					<string>4:45</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Happiness is a Warm Gun</string>
+					<key>Duration</key>
+					<string>2:44</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Martha My Dear</string>
+					<key>Duration</key>
+					<string>2:29</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;m So Tired</string>
+					<key>Duration</key>
+					<string>2:03</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Blackbird</string>
+					<key>Duration</key>
+					<string>2:18</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068), 1968/06/11 take 32</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Piggies</string>
+					<key>Duration</key>
+					<string>2:04</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Rocky Raccoon</string>
+					<key>Duration</key>
+					<string>3:41</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Don&apos;t Pass Me By</string>
+					<key>Duration</key>
+					<string>3:42</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney/Starkey</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Why Don&apos;t We Do It in the Road?</string>
+					<key>Duration</key>
+					<string>1:41</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Will</string>
+					<key>Duration</key>
+					<string>1:46</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Julia</string>
+					<key>Duration</key>
+					<string>2:54</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Birthday</string>
+					<key>Duration</key>
+					<string>2:43</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Yer Blues</string>
+					<key>Duration</key>
+					<string>4:01</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Mother Nature&apos;s Son</string>
+					<key>Duration</key>
+					<string>2:48</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Everybody&apos;s Got Something to Hide Except Me and My Monkey</string>
+					<key>Duration</key>
+					<string>2:25</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sexy Sadie</string>
+					<key>Duration</key>
+					<string>3:15</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Helter Skelter</string>
+					<key>Duration</key>
+					<string>4:30</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Long, Long, Long</string>
+					<key>Duration</key>
+					<string>3:04</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Revolution 1</string>
+					<key>Duration</key>
+					<string>4:16</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068), 1968/05/31 take 19 onto 1968/05/30 take 18</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Honey Pie</string>
+					<key>Duration</key>
+					<string>2:41</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Savoy Truffle</string>
+					<key>Duration</key>
+					<string>2:55</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Cry Baby Cry</string>
+					<key>Duration</key>
+					<string>3:11</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Revolution 9</string>
+					<key>Duration</key>
+					<string>8:13</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068), 1968/05/30 take 18?</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Good Night</string>
+					<key>Duration</key>
+					<string>3:12</string>
+					<key>Comment</key>
+					<string>1968/11/22 UK &quot;The Beatles&quot; 2xLP (Apple PCS 7067-7068)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Abbey Road</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Come Together</string>
+					<key>Duration</key>
+					<string>4:21</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Something</string>
+					<key>Duration</key>
+					<string>3:03</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Maxwell&apos;s Silver Hammer</string>
+					<key>Duration</key>
+					<string>3:27</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Oh! Darling</string>
+					<key>Duration</key>
+					<string>3:27</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Octopus&apos;s Garden</string>
+					<key>Duration</key>
+					<string>2:51</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Starkey</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Want You (She&apos;s So Heavy)</string>
+					<key>Duration</key>
+					<string>7:47</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Here Comes the Sun</string>
+					<key>Duration</key>
+					<string>3:06</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Because</string>
+					<key>Duration</key>
+					<string>2:46</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You Never Give Me Your Money</string>
+					<key>Duration</key>
+					<string>4:02</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sun King</string>
+					<key>Duration</key>
+					<string>2:26</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Mean Mr Mustard</string>
+					<key>Duration</key>
+					<string>1:06</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Polythene Pam</string>
+					<key>Duration</key>
+					<string>1:13</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>She Came in through the Bathroom Window</string>
+					<key>Duration</key>
+					<string>1:58</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Golden Slumbers</string>
+					<key>Duration</key>
+					<string>1:32</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Carry That Weight</string>
+					<key>Duration</key>
+					<string>1:37</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The End</string>
+					<key>Duration</key>
+					<string>2:20</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Her Majesty</string>
+					<key>Duration</key>
+					<string>0:23</string>
+					<key>Comment</key>
+					<string>1969/09/26 UK &quot;Abbey Road&quot; LP (Apple PCS 7068)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Yellow Submarine</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Yellow Submarine</string>
+					<key>Duration</key>
+					<string>2:43</string>
+					<key>Comment</key>
+					<string>1966/08/05 UK &quot;Yellow Submarine&quot; / &quot;Eleanor Rigby&quot; double A-side 7&quot; single (Parlophone R 5493)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Only a Northern Song</string>
+					<key>Duration</key>
+					<string>3:28</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>All Together Now</string>
+					<key>Duration</key>
+					<string>2:14</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Hey Bulldog</string>
+					<key>Duration</key>
+					<string>3:14</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple), 1968/02/11 take 10</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>It&apos;s All Too Much</string>
+					<key>Duration</key>
+					<string>6:28</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>All You Need Is Love</string>
+					<key>Duration</key>
+					<string>3:53</string>
+					<key>Comment</key>
+					<string>1967/07/77 UK &quot;All You Need Is Love&quot; 7&quot; single (Parlophone R 5620)</string>
+					<key>Year</key>
+					<integer>1967</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Pepperland</string>
+					<key>Duration</key>
+					<string>2:24</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Martin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sea of Time</string>
+					<key>Duration</key>
+					<string>3:00</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Martin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sea of Holes</string>
+					<key>Duration</key>
+					<string>2:21</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Martin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Sea of Monsters</string>
+					<key>Duration</key>
+					<string>3:40</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Martin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>March of the Meanies</string>
+					<key>Duration</key>
+					<string>2:22</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Martin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Pepperland Laid Waste</string>
+					<key>Duration</key>
+					<string>2:15</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Martin</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Yellow Submarine in Pepperland</string>
+					<key>Duration</key>
+					<string>2:11</string>
+					<key>Comment</key>
+					<string>1969/01/13 US &quot;Yellow Submarine&quot; soundtrack LP (Apple)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Let It Be</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Two of Us</string>
+					<key>Duration</key>
+					<string>3:37</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Dig a Pony</string>
+					<key>Duration</key>
+					<string>3:55</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Across the Universe</string>
+					<key>Duration</key>
+					<string>3:49</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1), 1970/03/99 from 1968/02/04 take 8, stereo</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I Me Mine</string>
+					<key>Duration</key>
+					<string>2:26</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Dig It</string>
+					<key>Duration</key>
+					<string>0:50</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Harrison/Lennon/McCartney/Starkey</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Let It Be</string>
+					<key>Duration</key>
+					<string>4:03</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Maggie Mae</string>
+					<key>Duration</key>
+					<string>0:41</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Harrison/McCartney/Starkey/Trad arr. Lennon</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>I&apos;ve Got a Feeling</string>
+					<key>Duration</key>
+					<string>3:38</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>One after 909</string>
+					<key>Duration</key>
+					<string>2:56</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Long and Winding Road</string>
+					<key>Duration</key>
+					<string>3:38</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>For You Blue</string>
+					<key>Duration</key>
+					<string>2:33</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Harrison</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Get Back</string>
+					<key>Duration</key>
+					<string>3:07</string>
+					<key>Comment</key>
+					<string>1970/05/08 UK &quot;Let It Be&quot; LP (Apple PXS 1)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+		<key>Past Masters, Volume 2</key>
+		<dict>
+			<key>Tracks</key>
+			<array>
+				<dict>
+					<key>Title</key>
+					<string>Day Tripper</string>
+					<key>Duration</key>
+					<string>2:50</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;We Can Work It Out&quot; / &quot;Day Tripper&quot; double A-side 7&quot; single (Parlophone R 5389)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>We Can Work It Out</string>
+					<key>Duration</key>
+					<string>2:16</string>
+					<key>Comment</key>
+					<string>1965/12/03 UK &quot;We Can Work It Out&quot; / &quot;Day Tripper&quot; double A-side 7&quot; single (Parlophone R 5389)</string>
+					<key>Year</key>
+					<integer>1965</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Paperback Writer</string>
+					<key>Duration</key>
+					<string>2:19</string>
+					<key>Comment</key>
+					<string>1966/06/10 UK &quot;Paperback Writer&quot; 7&quot; single (Parlophone R 5452)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Rain</string>
+					<key>Duration</key>
+					<string>3:02</string>
+					<key>Comment</key>
+					<string>1966/06/10 UK &quot;Paperback Writer&quot; 7&quot; single (Parlophone R 5452)</string>
+					<key>Year</key>
+					<integer>1966</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Lady Madonna</string>
+					<key>Duration</key>
+					<string>2:18</string>
+					<key>Comment</key>
+					<string>1968/03/15 UK &quot;Lady Madonna&quot; 7&quot; single (Parlophone R 5675), 1969/02/14 mono remixes 3-10 from 1968/02/06 take 5</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Inner Light</string>
+					<key>Duration</key>
+					<string>2:37</string>
+					<key>Comment</key>
+					<string>1968/03/15 UK &quot;Lady Madonna&quot; 7&quot; single (Parlophone R 5675), 1968/02/08 mono remixes 2-4 from 1968/02/06 take 6</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Hey Jude</string>
+					<key>Duration</key>
+					<string>7:08</string>
+					<key>Comment</key>
+					<string>1968/08/30 UK &quot;Hey Jude&quot; 7&quot; single (Apple R 5722)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Revolution</string>
+					<key>Duration</key>
+					<string>3:25</string>
+					<key>Comment</key>
+					<string>1968/08/30 UK &quot;Hey Jude&quot; 7&quot; single (Apple R 5722)</string>
+					<key>Year</key>
+					<integer>1968</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Get Back</string>
+					<key>Duration</key>
+					<string>3:14</string>
+					<key>Comment</key>
+					<string>1969/04/11 UK &quot;Get Back&quot; 7&quot; single (Apple R 5777), single version</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Don&apos;t Let Me Down</string>
+					<key>Duration</key>
+					<string>3:35</string>
+					<key>Comment</key>
+					<string>1969/04/11 UK &quot;Get Back&quot; 7&quot; single (Apple R 5777)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>The Ballad of John and Yoko</string>
+					<key>Duration</key>
+					<string>3:00</string>
+					<key>Comment</key>
+					<string>1969/05/30 UK &quot;The Ballad of John and Yoko&quot; 7&quot; single (Apple R 5786)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Old Brown Shoe</string>
+					<key>Duration</key>
+					<string>3:18</string>
+					<key>Comment</key>
+					<string>1969/05/30 UK &quot;The Ballad of John and Yoko&quot; 7&quot; single (Apple R 5786)</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Across the Universe</string>
+					<key>Duration</key>
+					<string>3:49</string>
+					<key>Comment</key>
+					<string>1969/12/99 UK &quot;Nothing&apos;s Gonna Change Our World&quot; charity compilation LP, 1969/10/99 sound effects onto 1968/02/08 overdubs onto 1969/02/04 take 8, mono, http://www.maccafan.net/Bootlegs/ArtifactsVol4/revolution.htm</string>
+					<key>Year</key>
+					<integer>1969</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>Let It Be</string>
+					<key>Duration</key>
+					<string>3:51</string>
+					<key>Comment</key>
+					<string>1970/03/06 UK &quot;Let It Be&quot; 7&quot; single (Apple R 5833)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+				<dict>
+					<key>Title</key>
+					<string>You Know My Name (Look up the Number)</string>
+					<key>Duration</key>
+					<string>4:19</string>
+					<key>Comment</key>
+					<string>1970/03/06 UK &quot;Let It Be&quot; 7&quot; single (Apple R 5833)</string>
+					<key>Year</key>
+					<integer>1970</integer>
+					<key>Composer</key>
+					<string>Lennon/McCartney</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

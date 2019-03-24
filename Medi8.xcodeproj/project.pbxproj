@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96A2F7EA2247197300FBC798 /* Immediate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB302246DC1B00C9F2AD /* Immediate.xcdatamodeld */; };
+		96A2F7F82247365D00FBC798 /* MockMediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */; };
+		96A2F7F92247365D00FBC798 /* FetchedResultsTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7ED2247365C00FBC798 /* FetchedResultsTableModel.swift */; };
+		96A2F7FA2247365D00FBC798 /* HasArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7EE2247365C00FBC798 /* HasArtists.swift */; };
+		96A2F7FB2247365D00FBC798 /* NSManagedObjectContext+ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7EF2247365C00FBC798 /* NSManagedObjectContext+ObjectCreator.swift */; };
+		96A2F7FC2247365D00FBC798 /* FetchedResultsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F02247365C00FBC798 /* FetchedResultsCollectionModel.swift */; };
+		96A2F7FD2247365D00FBC798 /* ManagedObjectContextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F12247365C00FBC798 /* ManagedObjectContextContainer.swift */; };
+		96A2F7FE2247365D00FBC798 /* Immediate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */; };
+		96A2F7FF2247365D00FBC798 /* FetchedResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F52247365C00FBC798 /* FetchedResultsModel.swift */; };
+		96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F62247365C00FBC798 /* MediaImporter.swift */; };
+		96A2F8012247365D00FBC798 /* FetchedResultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */; };
+		96A2F8032247373400FBC798 /* MockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F8022247373400FBC798 /* MockData.plist */; };
+		96A2F8062247377F00FBC798 /* FetchedResultsModelTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */; };
+		96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8072247379200FBC798 /* FetchingTestBase.swift */; };
+		96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 		96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */; };
 		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96ACFB362246DC1B00C9F2AD /* MockMediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB292246DC1B00C9F2AD /* MockMediaImporter.swift */; };
-		96ACFB372246DC1C00C9F2AD /* FetchedResultsTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2A2246DC1B00C9F2AD /* FetchedResultsTableModel.swift */; };
-		96ACFB382246DC1C00C9F2AD /* HasArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2B2246DC1B00C9F2AD /* HasArtists.swift */; };
-		96ACFB392246DC1C00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2C2246DC1B00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift */; };
-		96ACFB3A2246DC1C00C9F2AD /* FetchedResultsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2D2246DC1B00C9F2AD /* FetchedResultsCollectionModel.swift */; };
-		96ACFB3C2246DC1C00C9F2AD /* ManagedObjectContextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2F2246DC1B00C9F2AD /* ManagedObjectContextContainer.swift */; };
-		96ACFB3E2246DC1C00C9F2AD /* FetchedResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB332246DC1B00C9F2AD /* FetchedResultsModel.swift */; };
-		96ACFB3F2246DC1C00C9F2AD /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB342246DC1B00C9F2AD /* MediaImporter.swift */; };
-		96ACFB402246DC1C00C9F2AD /* FetchedResultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB352246DC1B00C9F2AD /* FetchedResultsProvider.swift */; };
-		96ACFB442246DC3C00C9F2AD /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB412246DC3C00C9F2AD /* FetchingTestBase.swift */; };
-		96ACFB452246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB432246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift */; };
 		96ACFB482246DC7200C9F2AD /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB472246DC7200C9F2AD /* Stylobate.framework */; };
-		96ACFB4A2246DEB600C9F2AD /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB492246DEB600C9F2AD /* MockMediaImporterTests.swift */; };
-		96ACFB4C2246DF2200C9F2AD /* MockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96ACFB4B2246DF2200C9F2AD /* MockData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,28 +38,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporter.swift; sourceTree = "<group>"; };
+		96A2F7ED2247365C00FBC798 /* FetchedResultsTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsTableModel.swift; sourceTree = "<group>"; };
+		96A2F7EE2247365C00FBC798 /* HasArtists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasArtists.swift; sourceTree = "<group>"; };
+		96A2F7EF2247365C00FBC798 /* NSManagedObjectContext+ObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+ObjectCreator.swift"; sourceTree = "<group>"; };
+		96A2F7F02247365C00FBC798 /* FetchedResultsCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsCollectionModel.swift; sourceTree = "<group>"; };
+		96A2F7F12247365C00FBC798 /* ManagedObjectContextContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextContainer.swift; sourceTree = "<group>"; };
+		96A2F7F32247365C00FBC798 /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
+		96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
+		96A2F7F52247365C00FBC798 /* FetchedResultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModel.swift; sourceTree = "<group>"; };
+		96A2F7F62247365C00FBC798 /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
+		96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsProvider.swift; sourceTree = "<group>"; };
+		96A2F8022247373400FBC798 /* MockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockData.plist; sourceTree = "<group>"; };
+		96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
+		96A2F8072247379200FBC798 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
+		96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB112246DBE700C9F2AD /* Medi8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
 		96ACFB122246DBE700C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8Tests.swift; sourceTree = "<group>"; };
 		96ACFB1E2246DBE800C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96ACFB292246DC1B00C9F2AD /* MockMediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporter.swift; sourceTree = "<group>"; };
-		96ACFB2A2246DC1B00C9F2AD /* FetchedResultsTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsTableModel.swift; sourceTree = "<group>"; };
-		96ACFB2B2246DC1B00C9F2AD /* HasArtists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasArtists.swift; sourceTree = "<group>"; };
-		96ACFB2C2246DC1B00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+ObjectCreator.swift"; sourceTree = "<group>"; };
-		96ACFB2D2246DC1B00C9F2AD /* FetchedResultsCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsCollectionModel.swift; sourceTree = "<group>"; };
-		96ACFB2F2246DC1B00C9F2AD /* ManagedObjectContextContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextContainer.swift; sourceTree = "<group>"; };
-		96ACFB312246DC1B00C9F2AD /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
-		96ACFB322246DC1B00C9F2AD /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
-		96ACFB332246DC1B00C9F2AD /* FetchedResultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModel.swift; sourceTree = "<group>"; };
-		96ACFB342246DC1B00C9F2AD /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
-		96ACFB352246DC1B00C9F2AD /* FetchedResultsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsProvider.swift; sourceTree = "<group>"; };
-		96ACFB412246DC3C00C9F2AD /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchingTestBase.swift; path = ../../../nrith/Immediate/ImmediateTests/FetchingTestBase.swift; sourceTree = "<group>"; };
-		96ACFB432246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
 		96ACFB472246DC7200C9F2AD /* Stylobate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stylobate.framework; path = Carthage/Build/iOS/Stylobate.framework; sourceTree = "<group>"; };
-		96ACFB492246DEB600C9F2AD /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
-		96ACFB4B2246DF2200C9F2AD /* MockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MockData.plist; path = ../../../nrith/Immediate/Immediate/MockData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +82,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96A2F7EB2247365C00FBC798 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				96A2F7F02247365C00FBC798 /* FetchedResultsCollectionModel.swift */,
+				96A2F7F52247365C00FBC798 /* FetchedResultsModel.swift */,
+				96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */,
+				96A2F7ED2247365C00FBC798 /* FetchedResultsTableModel.swift */,
+				96A2F7EE2247365C00FBC798 /* HasArtists.swift */,
+				96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */,
+				96A2F7F12247365C00FBC798 /* ManagedObjectContextContainer.swift */,
+				96A2F7F62247365C00FBC798 /* MediaImporter.swift */,
+				96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */,
+				96A2F7EF2247365C00FBC798 /* NSManagedObjectContext+ObjectCreator.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		96A2F8042247377F00FBC798 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		96ACFB042246DBE700C9F2AD = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +129,10 @@
 		96ACFB102246DBE700C9F2AD /* Medi8 */ = {
 			isa = PBXGroup;
 			children = (
-				96ACFB282246DC1B00C9F2AD /* Core Data */,
+				96A2F7EB2247365C00FBC798 /* Core Data */,
 				96ACFB122246DBE700C9F2AD /* Info.plist */,
 				96ACFB112246DBE700C9F2AD /* Medi8.h */,
-				96ACFB4B2246DF2200C9F2AD /* MockData.plist */,
+				96A2F8022247373400FBC798 /* MockData.plist */,
 			);
 			path = Medi8;
 			sourceTree = "<group>";
@@ -115,40 +140,13 @@
 		96ACFB1B2246DBE800C9F2AD /* Medi8Tests */ = {
 			isa = PBXGroup;
 			children = (
-				96ACFB422246DC3C00C9F2AD /* Core Data */,
-				96ACFB412246DC3C00C9F2AD /* FetchingTestBase.swift */,
+				96A2F8042247377F00FBC798 /* Core Data */,
+				96A2F8072247379200FBC798 /* FetchingTestBase.swift */,
 				96ACFB1E2246DBE800C9F2AD /* Info.plist */,
 				96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */,
-				96ACFB492246DEB600C9F2AD /* MockMediaImporterTests.swift */,
+				96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */,
 			);
 			path = Medi8Tests;
-			sourceTree = "<group>";
-		};
-		96ACFB282246DC1B00C9F2AD /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				96ACFB2D2246DC1B00C9F2AD /* FetchedResultsCollectionModel.swift */,
-				96ACFB332246DC1B00C9F2AD /* FetchedResultsModel.swift */,
-				96ACFB352246DC1B00C9F2AD /* FetchedResultsProvider.swift */,
-				96ACFB2A2246DC1B00C9F2AD /* FetchedResultsTableModel.swift */,
-				96ACFB2B2246DC1B00C9F2AD /* HasArtists.swift */,
-				96ACFB302246DC1B00C9F2AD /* Immediate.xcdatamodeld */,
-				96ACFB2F2246DC1B00C9F2AD /* ManagedObjectContextContainer.swift */,
-				96ACFB342246DC1B00C9F2AD /* MediaImporter.swift */,
-				96ACFB292246DC1B00C9F2AD /* MockMediaImporter.swift */,
-				96ACFB2C2246DC1B00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift */,
-			);
-			name = "Core Data";
-			path = "../../../nrith/Immediate/Immediate/Core Data";
-			sourceTree = "<group>";
-		};
-		96ACFB422246DC3C00C9F2AD /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				96ACFB432246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift */,
-			);
-			name = "Core Data";
-			path = "../../../nrith/Immediate/ImmediateTests/Core Data";
 			sourceTree = "<group>";
 		};
 		96ACFB462246DC7200C9F2AD /* Frameworks */ = {
@@ -250,7 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACFB4C2246DF2200C9F2AD /* MockData.plist in Resources */,
+				96A2F8032247373400FBC798 /* MockData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACFB382246DC1C00C9F2AD /* HasArtists.swift in Sources */,
-				96ACFB392246DC1C00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift in Sources */,
-				96ACFB3C2246DC1C00C9F2AD /* ManagedObjectContextContainer.swift in Sources */,
-				96ACFB362246DC1B00C9F2AD /* MockMediaImporter.swift in Sources */,
-				96ACFB3E2246DC1C00C9F2AD /* FetchedResultsModel.swift in Sources */,
-				96ACFB402246DC1C00C9F2AD /* FetchedResultsProvider.swift in Sources */,
-				96ACFB3F2246DC1C00C9F2AD /* MediaImporter.swift in Sources */,
-				96ACFB372246DC1C00C9F2AD /* FetchedResultsTableModel.swift in Sources */,
-				96ACFB3A2246DC1C00C9F2AD /* FetchedResultsCollectionModel.swift in Sources */,
-				96A2F7EA2247197300FBC798 /* Immediate.xcdatamodeld in Sources */,
+				96A2F7FB2247365D00FBC798 /* NSManagedObjectContext+ObjectCreator.swift in Sources */,
+				96A2F7FF2247365D00FBC798 /* FetchedResultsModel.swift in Sources */,
+				96A2F7FC2247365D00FBC798 /* FetchedResultsCollectionModel.swift in Sources */,
+				96A2F7F82247365D00FBC798 /* MockMediaImporter.swift in Sources */,
+				96A2F7FA2247365D00FBC798 /* HasArtists.swift in Sources */,
+				96A2F8012247365D00FBC798 /* FetchedResultsProvider.swift in Sources */,
+				96A2F7FD2247365D00FBC798 /* ManagedObjectContextContainer.swift in Sources */,
+				96A2F7FE2247365D00FBC798 /* Immediate.xcdatamodeld in Sources */,
+				96A2F7F92247365D00FBC798 /* FetchedResultsTableModel.swift in Sources */,
+				96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACFB442246DC3C00C9F2AD /* FetchingTestBase.swift in Sources */,
 				96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */,
-				96ACFB4A2246DEB600C9F2AD /* MockMediaImporterTests.swift in Sources */,
-				96ACFB452246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift in Sources */,
+				96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */,
+				96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */,
+				96A2F8062247377F00FBC798 /* FetchedResultsModelTestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,13 +552,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		96ACFB302246DC1B00C9F2AD /* Immediate.xcdatamodeld */ = {
+		96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				96ACFB312246DC1B00C9F2AD /* Immediate.xcdatamodel */,
-				96ACFB322246DC1B00C9F2AD /* Immediate 2.xcdatamodel */,
+				96A2F7F32247365C00FBC798 /* Immediate.xcdatamodel */,
+				96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */,
 			);
-			currentVersion = 96ACFB322246DC1B00C9F2AD /* Immediate 2.xcdatamodel */;
+			currentVersion = 96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */;
 			path = Immediate.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

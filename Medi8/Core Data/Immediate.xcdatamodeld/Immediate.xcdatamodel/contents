@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13154.30" systemVersion="16G12b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Artist" representedClassName=".Artist" isAbstract="YES" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="sortName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="composedSongs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="composers" inverseEntity="Song" syncable="YES"/>
+        <relationship name="datesActive" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateRange" inverseName="artists" inverseEntity="DateRange" syncable="YES"/>
+        <relationship name="releases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MasterRelease" inverseName="artists" inverseEntity="MasterRelease" syncable="YES"/>
+        <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="artists" inverseEntity="Song" syncable="YES"/>
+    </entity>
+    <entity name="Band" representedClassName=".Band" parentEntity="Artist" syncable="YES" codeGenerationType="class">
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MemberOfBand" inverseName="band" inverseEntity="MemberOfBand" syncable="YES"/>
+    </entity>
+    <entity name="CatalogInfo" representedClassName=".CatalogInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="asin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" attributeType="String" defaultValueString="no label" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <relationship name="label" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordLabel" inverseName="catalogInfo" inverseEntity="RecordLabel" syncable="YES"/>
+        <relationship name="releaseVersion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="catalogInfos" inverseEntity="ReleaseVersion" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName=".Country" syncable="YES" codeGenerationType="class">
+        <attribute name="code" attributeType="String" minValueString="2" maxValueString="2" defaultValueString="us" syncable="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString="United States" syncable="YES"/>
+        <attribute name="sortName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="releaseDates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseDate" inverseName="country" inverseEntity="ReleaseDate" syncable="YES"/>
+    </entity>
+    <entity name="DateRange" representedClassName=".DateRange" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="datesActive" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="membersOfBands" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MemberOfBand" inverseName="datesActive" inverseEntity="MemberOfBand" syncable="YES"/>
+    </entity>
+    <entity name="IndividualArtist" representedClassName=".IndividualArtist" parentEntity="Artist" syncable="YES" codeGenerationType="class">
+        <relationship name="memberOfBands" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MemberOfBand" inverseName="artist" inverseEntity="MemberOfBand" syncable="YES"/>
+    </entity>
+    <entity name="Instrument" representedClassName=".Instrument" syncable="YES" codeGenerationType="class">
+        <relationship name="musicianCredit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MusicianCredit" inverseName="instruments" inverseEntity="MusicianCredit" syncable="YES"/>
+        <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="InstrumentType" inverseName="instruments" inverseEntity="InstrumentType" syncable="YES"/>
+    </entity>
+    <entity name="InstrumentType" representedClassName=".InstrumentType" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="instruments" toMany="YES" deletionRule="Nullify" destinationEntity="Instrument" inverseName="type" inverseEntity="Instrument" syncable="YES"/>
+    </entity>
+    <entity name="Lyrics" representedClassName=".Lyrics" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="lyrics" inverseEntity="Song" syncable="YES"/>
+        <relationship name="songVersions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SongVersion" inverseName="lyrics" inverseEntity="SongVersion" syncable="YES"/>
+    </entity>
+    <entity name="MasterRelease" representedClassName=".MasterRelease" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="amazonId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appleMusicId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="discogsMasterReleaseId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastFmId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="musicbrainzReleaseGroupId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortTitle" optional="YES" attributeType="String" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="spotifyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="type" attributeType="String" defaultValueString="unknown" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <relationship name="artists" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Artist" inverseName="releases" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="musicianCredits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MusicianCredit" inverseName="musician" inverseEntity="MusicianCredit" syncable="YES"/>
+        <relationship name="versions" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="parentRelease" inverseEntity="ReleaseVersion" syncable="YES"/>
+    </entity>
+    <entity name="MediaType" representedClassName=".MediaType" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="releaseFormats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseFormat" inverseName="mediaTypes" inverseEntity="ReleaseFormat" syncable="YES"/>
+    </entity>
+    <entity name="MemberOfBand" representedClassName=".MemberOfBand" syncable="YES" codeGenerationType="class">
+        <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IndividualArtist" inverseName="memberOfBands" inverseEntity="IndividualArtist" syncable="YES"/>
+        <relationship name="band" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Band" inverseName="members" inverseEntity="Band" syncable="YES"/>
+        <relationship name="datesActive" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateRange" inverseName="membersOfBands" inverseEntity="DateRange" syncable="YES"/>
+    </entity>
+    <entity name="Musician" representedClassName=".Musician" parentEntity="IndividualArtist" syncable="YES" codeGenerationType="class">
+        <relationship name="credits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MusicianCredit" inverseName="releases" inverseEntity="MusicianCredit" syncable="YES"/>
+    </entity>
+    <entity name="MusicianCredit" representedClassName=".MusicianCredit" syncable="YES" codeGenerationType="class">
+        <relationship name="instruments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Instrument" inverseName="musicianCredit" inverseEntity="Instrument" syncable="YES"/>
+        <relationship name="musician" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MasterRelease" inverseName="musicianCredits" inverseEntity="MasterRelease" syncable="YES"/>
+        <relationship name="releases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Musician" inverseName="credits" inverseEntity="Musician" syncable="YES"/>
+    </entity>
+    <entity name="Notable" representedClassName=".Notable" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Playlist" representedClassName=".Playlist" syncable="YES" codeGenerationType="class">
+        <attribute name="title" attributeType="String" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <relationship name="tracks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="playlists" inverseEntity="TrackListing" syncable="YES"/>
+        <fetchedProperty name="fetchedProperty" optional="YES" syncable="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="Playlist"/>
+        </fetchedProperty>
+    </entity>
+    <entity name="Recording" representedClassName=".Recording" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <relationship name="songs" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="recordings" inverseEntity="Song" syncable="YES"/>
+        <relationship name="songVersions" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="SongVersion" inverseName="recording" inverseEntity="SongVersion" syncable="YES"/>
+    </entity>
+    <entity name="RecordLabel" representedClassName=".RecordLabel" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="catalogInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CatalogInfo" inverseName="label" inverseEntity="CatalogInfo" syncable="YES"/>
+    </entity>
+    <entity name="ReleaseDate" representedClassName=".ReleaseDate" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="releaseDates" inverseEntity="Country" syncable="YES"/>
+        <relationship name="releaseVersions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="releaseDate" inverseEntity="ReleaseVersion" syncable="YES"/>
+    </entity>
+    <entity name="ReleaseFormat" representedClassName=".ReleaseFormat" syncable="YES" codeGenerationType="class">
+        <relationship name="mediaTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MediaType" inverseName="releaseFormats" inverseEntity="MediaType" syncable="YES"/>
+        <relationship name="releaseVersions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="formats" inverseEntity="ReleaseVersion" syncable="YES"/>
+    </entity>
+    <entity name="ReleaseVersion" representedClassName=".ReleaseVersion" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="iTunesId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="catalogInfos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CatalogInfo" inverseName="releaseVersion" inverseEntity="CatalogInfo" syncable="YES"/>
+        <relationship name="formats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseFormat" inverseName="releaseVersions" inverseEntity="ReleaseFormat" syncable="YES"/>
+        <relationship name="parentRelease" maxCount="1" deletionRule="Nullify" destinationEntity="MasterRelease" inverseName="versions" inverseEntity="MasterRelease" syncable="YES"/>
+        <relationship name="releaseDate" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseDate" inverseName="releaseVersions" inverseEntity="ReleaseDate" syncable="YES"/>
+        <relationship name="trackListing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="releaseVersion" inverseEntity="TrackListing" syncable="YES"/>
+    </entity>
+    <entity name="Song" representedClassName=".Song" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Artist" inverseName="songs" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="composers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="composedSongs" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="lyrics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lyrics" inverseName="song" inverseEntity="Lyrics" syncable="YES"/>
+        <relationship name="recordings" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Recording" inverseName="songs" inverseEntity="Recording" syncable="YES"/>
+        <relationship name="versions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SongVersion" inverseName="song" inverseEntity="SongVersion" syncable="YES"/>
+    </entity>
+    <entity name="SongVersion" representedClassName=".SongVersion" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="aka" optional="YES" attributeType="String" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="alternativeTitle" optional="YES" attributeType="String" indexed="YES" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="amazonId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appleMusicId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="iTunesId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localUrlString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteUrlString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spotifyId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lyrics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lyrics" inverseName="songVersions" inverseEntity="Lyrics" syncable="YES"/>
+        <relationship name="recording" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recording" inverseName="songVersions" inverseEntity="Recording" syncable="YES"/>
+        <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="versions" inverseEntity="Song" syncable="YES"/>
+        <relationship name="trackListings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="songVersions" inverseEntity="TrackListing" syncable="YES"/>
+    </entity>
+    <entity name="TrackListing" representedClassName=".TrackListing" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <relationship name="playlists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Playlist" inverseName="tracks" inverseEntity="Playlist" syncable="YES"/>
+        <relationship name="releaseVersion" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="trackListing" inverseEntity="ReleaseVersion" syncable="YES"/>
+        <relationship name="songVersions" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SongVersion" inverseName="trackListings" inverseEntity="SongVersion" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Artist" positionX="295" positionY="135" width="128" height="133"/>
+        <element name="Band" positionX="459" positionY="252" width="128" height="58"/>
+        <element name="CatalogInfo" positionX="-108" positionY="621" width="128" height="103"/>
+        <element name="Country" positionX="-315" positionY="677" width="128" height="103"/>
+        <element name="DateRange" positionX="466" positionY="81" width="128" height="103"/>
+        <element name="IndividualArtist" positionX="295" positionY="315" width="128" height="58"/>
+        <element name="Instrument" positionX="468" positionY="495" width="128" height="73"/>
+        <element name="InstrumentType" positionX="466" positionY="612" width="128" height="73"/>
+        <element name="Lyrics" positionX="-567" positionY="468" width="128" height="88"/>
+        <element name="MasterRelease" positionX="126" positionY="270" width="128" height="223"/>
+        <element name="MediaType" positionX="297" positionY="746" width="128" height="73"/>
+        <element name="MemberOfBand" positionX="466" positionY="378" width="128" height="88"/>
+        <element name="Musician" positionX="297" positionY="416" width="128" height="58"/>
+        <element name="MusicianCredit" positionX="297" positionY="495" width="128" height="88"/>
+        <element name="Notable" positionX="-29" positionY="62" width="128" height="73"/>
+        <element name="Playlist" positionX="-360" positionY="216" width="128" height="101"/>
+        <element name="Recording" positionX="-335" positionY="269" width="128" height="73"/>
+        <element name="RecordLabel" positionX="126" positionY="743" width="128" height="103"/>
+        <element name="ReleaseDate" positionX="-108" positionY="749" width="128" height="88"/>
+        <element name="ReleaseFormat" positionX="295" positionY="608" width="128" height="73"/>
+        <element name="ReleaseVersion" positionX="124" positionY="566" width="128" height="133"/>
+        <element name="Song" positionX="-360" positionY="126" width="128" height="133"/>
+        <element name="SongVersion" positionX="-317" positionY="414" width="128" height="238"/>
+        <element name="TrackListing" positionX="-110" positionY="432" width="128" height="88"/>
+    </elements>
+</model>
