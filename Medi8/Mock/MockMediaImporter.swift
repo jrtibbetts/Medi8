@@ -56,7 +56,7 @@ class MockMediaImporter: MediaImporter {
              artist: Artist,
              to tracks: TrackListing,
              in context: NSManagedObjectContext) {
-        let _ = fetchOrCreateSong(named: songTitle, by: artist)
+        _ = fetchOrCreateSong(named: songTitle, by: artist)
     }
 
 }

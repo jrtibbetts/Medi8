@@ -4,9 +4,9 @@ import CoreData
 import UIKit
 
 open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
     weak var collectionView: UICollectionView!
-
+    
     public init(_ collectionView: UICollectionView,
                 context: NSManagedObjectContext,
                 fetchedResultsController: FRC) {
@@ -15,31 +15,31 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
-
+    
     // MARK: - UICollectionViewDataSource & UICollectionViewDelegate
-
+    
     open func collectionView(_ collectionView: UICollectionView,
                              numberOfItemsInSection section: Int) -> Int {
         return numberOfItems(in: section)
     }
-
+    
     open func collectionView(_ collectionView: UICollectionView,
-                               cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                             cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
     }
-
+    
     // MARK: - Fetched results controller
-
+    
     open func controllerWillChangeContent(_ controller: FRC) {
         // Collections don't have a beginUpdates() method like tables do.
     }
-
+    
     open func controller(_ controller: FRC,
-                           didChange sectionInfo: NSFetchedResultsSectionInfo,
-                           atSectionIndex sectionIndex: Int,
-                           for type: NSFetchedResultsChangeType) {
+                         didChange sectionInfo: NSFetchedResultsSectionInfo,
+                         atSectionIndex sectionIndex: Int,
+                         for type: NSFetchedResultsChangeType) {
         let sectionIndices = IndexSet(integer: sectionIndex)
-
+        
         switch type {
         case .insert:
             collectionView.insertSections(sectionIndices)
@@ -49,7 +49,7 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
             return
         }
     }
-
+    
     open func controller(_ controller: FRC,
                          didChange anObject: Any,
                          at indexPath: IndexPath?,
@@ -70,5 +70,5 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
     open func controllerDidChangeContent(_ controller: FRC) {
         // Collections don't have an endUpdates() method like tables do.
     }
-
+    
 }

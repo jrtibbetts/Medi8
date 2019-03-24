@@ -30,35 +30,34 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
 
     /// Get the number of sections from the fetched results controller.
     ///
-    /// - parameter tableView: The table view. If it's not the exact same
-    /// instance with which this model was created, an assertion failure is
-    /// barfed up.
+    /// - parameter tableView: The table view.
     ///
     /// - returns: The number of sections.
     open func numberOfSections(in tableView: UITableView) -> Int {
-        assert(tableView: tableView)
         return numberOfSections()
     }
 
     /// Get the number of sections from the fetched results controller.
     ///
-    /// - parameter tableView: The table view. If it's not the exact same
-    /// instance with which this model was created, an assertion failure is
-    /// barfed up.
+    /// - parameter tableView: The table view.
     ///
     /// - returns: The number of rows in the specified section.
-    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        assert(tableView: tableView)
+    open func tableView(_ tableView: UITableView,
+                        numberOfRowsInSection section: Int) -> Int {
         return numberOfItems(in: section)
     }
 
     // This default implementation barfs up an assertion failure. You must
     // override it and *not* call `super.tableView(_, cellForRowAt:)`.
-    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        preconditionFailure("Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResultsTableModel.")
+    open func tableView(_ tableView: UITableView,
+                        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        preconditionFailure("""
+Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResultsTableModel.
+""")
     }
 
-    open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    open func tableView(_ tableView: UITableView,
+                        canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return false
     }
@@ -78,7 +77,8 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
                     // appropriately.
                     // fatalError() causes the application to generate a crash
                     // log and terminate. You should not use this function in a
-                    // shipping application, although it may be useful during development.
+                    // shipping application, although it may be useful during
+                    // development.
                     let nserror = error as NSError
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
@@ -90,7 +90,9 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
         return fetchedResultsController?.sectionIndexTitles
     }
 
-    public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+    public func tableView(_ tableView: UITableView,
+                          sectionForSectionIndexTitle title: String,
+                          at index: Int) -> Int {
         return fetchedResultsController?.section(forSectionIndexTitle: title, at: index) ?? 0
     }
 
@@ -98,7 +100,6 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
 
     /// Tell the table view that updates are about to begin.
     public func controllerWillChangeContent(_ controller: FRC) {
-        assert(fetchedResultsController: controller)
         self.tableView.beginUpdates()
     }
 
@@ -106,7 +107,6 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
                            didChange sectionInfo: NSFetchedResultsSectionInfo,
                            atSectionIndex sectionIndex: Int,
                            for type: NSFetchedResultsChangeType) {
-        assert(fetchedResultsController: controller)
         let sectionIndices = IndexSet(integer: sectionIndex)
 
         switch type {
@@ -124,7 +124,6 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
                            at indexPath: IndexPath?,
                            for type: NSFetchedResultsChangeType,
                            newIndexPath: IndexPath?) {
-        assert(fetchedResultsController: controller)
         switch type {
         case .insert:
             tableView.insertRows(at: [newIndexPath!], with: .fade)
@@ -138,7 +137,6 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
     }
 
     public func controllerDidChangeContent(_ controller: FRC) {
-        assert(fetchedResultsController: controller)
         self.tableView.endUpdates()
     }
 
@@ -148,21 +146,9 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
     // instead just implement controllerDidChangeContent: which notifies the
     // delegate that all section and object changes have been processed.
 
-    func controllerDidChangeContent(controller: FRC) {
+    public func controllerDidChangeContent(controller: FRC) {
         // In the simplest, most efficient, case, reload the table view.
         self.tableView.reloadData()
-    }
-
-    // MARK: - Everything else
-
-    private func assert(tableView: UITableView) {
-        Swift.assert(tableView === self.tableView,
-                     "Attempting to use the model with a different table view instance.")
-    }
-
-    private func assert(fetchedResultsController controller: FRC) {
-        Swift.assert(self.fetchedResultsController === controller,
-               "Attempting to use the model with a different fetched results controller instance.")
     }
 
 }

@@ -100,15 +100,10 @@ public extension MediaImporter {
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
 
         return context.fetchOrCreateManagedObject(with: request) { (context) -> Song in
-            let song = Song(context: context) <~ {
-                $0.title = name
-            }
-
+            let song = Song(context: context)
+            song.title = name
             artist.addToSongs(song)
-
-            let _ = Recording(context: context) <~ {
-                $0.addToSongs(song)
-            }
+            Recording(context: context).addToSongs(song)
 
             return song
         }
