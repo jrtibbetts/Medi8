@@ -21,6 +21,7 @@
 		96A2F8062247377F00FBC798 /* FetchedResultsModelTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */; };
 		96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8072247379200FBC798 /* FetchingTestBase.swift */; };
 		96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */; };
+		96A2F80C2247483900FBC798 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F80B2247483900FBC798 /* MockData.json */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 		96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */; };
 		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 		96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
 		96A2F8072247379200FBC798 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
 		96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
+		96A2F80B2247483900FBC798 /* MockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB112246DBE700C9F2AD /* Medi8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
 		96ACFB122246DBE700C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				96A2F7EB2247365C00FBC798 /* Core Data */,
 				96ACFB122246DBE700C9F2AD /* Info.plist */,
 				96ACFB112246DBE700C9F2AD /* Medi8.h */,
+				96A2F80B2247483900FBC798 /* MockData.json */,
 				96A2F8022247373400FBC798 /* MockData.plist */,
 			);
 			path = Medi8;
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A2F8032247373400FBC798 /* MockData.plist in Resources */,
+				96A2F80C2247483900FBC798 /* MockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
