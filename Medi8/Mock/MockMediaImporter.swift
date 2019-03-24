@@ -2,6 +2,7 @@
 
 import CoreData
 import MediaPlayer
+import Stylobate
 
 class MockMediaImporter: MediaImporter {
 
@@ -19,15 +20,12 @@ class MockMediaImporter: MediaImporter {
         delegate?.didStartImporting()
 
         // Load the music that's in this bundle.
-        if let mockDataFile = Bundle(for: type(of: self)).path(forResource: "MockData", ofType: "plist") {
-            if let mockData = NSDictionary(contentsOfFile: mockDataFile) {
-                mockData.enumerateKeysAndObjects { (artistName, releases, stop) in
-                    if let artist = fetchOrCreateArtist(named: artistName as! String) {
-                        (releases as! NSDictionary).enumerateKeysAndObjects { (releaseName, tracks, stop) in
-                            add(releaseNamed: releaseName as! String, with: tracks as! NSDictionary, to: artist, in: context)
-                        }
-                    }
-                }
+        let mockData: MockData = try JSONUtils.jsonObject(forFileNamed: "MockData",
+                                                          ofType: "json",
+                                                          inBundle: Bundle(for: type(of: self)))
+        try! mockData.releases.forEach { (release) in
+            if let artist = fetchOrCreateArtist(named: mockData.artist) {
+                add(releaseNamed: release.title, with: release.tracks, to: artist, in: context)
             }
 
             try context.save()
@@ -38,18 +36,14 @@ class MockMediaImporter: MediaImporter {
     }
 
     func add(releaseNamed releaseTitle: String,
-             with rawTracks: NSDictionary,
+             with tracks: [MockData.Track],
              to artist: Artist,
              in context: NSManagedObjectContext) {
         let release = fetchOrCreateMasterRelease(named: releaseTitle, by: [artist])!
-        let tracksArray = rawTracks["Tracks"] as! NSArray
-
-        tracksArray.enumerateObjects { (element, index, stop) in
-            let dataDict = element as! NSDictionary
-
+        tracks.forEach { (track) in
             release.versions?.forEach { (version) in
-                if let trackListing = (version as! ReleaseVersion).trackListing {
-                    add(songNamed: dataDict["Title"] as! String,
+                if let trackListing = (version as? ReleaseVersion)?.trackListing {
+                    add(songNamed: track.title,
                         artist: artist,
                         to: trackListing,
                         in: context)

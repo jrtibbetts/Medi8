@@ -17,11 +17,11 @@
 		96A2F7FF2247365D00FBC798 /* FetchedResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F52247365C00FBC798 /* FetchedResultsModel.swift */; };
 		96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F62247365C00FBC798 /* MediaImporter.swift */; };
 		96A2F8012247365D00FBC798 /* FetchedResultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */; };
-		96A2F8032247373400FBC798 /* MockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F8022247373400FBC798 /* MockData.plist */; };
 		96A2F8062247377F00FBC798 /* FetchedResultsModelTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */; };
 		96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8072247379200FBC798 /* FetchingTestBase.swift */; };
 		96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */; };
 		96A2F80C2247483900FBC798 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F80B2247483900FBC798 /* MockData.json */; };
+		96A2F80F22474B2900FBC798 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F80E22474B2900FBC798 /* MockData.swift */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 		96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */; };
 		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,11 +50,11 @@
 		96A2F7F52247365C00FBC798 /* FetchedResultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModel.swift; sourceTree = "<group>"; };
 		96A2F7F62247365C00FBC798 /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
 		96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsProvider.swift; sourceTree = "<group>"; };
-		96A2F8022247373400FBC798 /* MockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockData.plist; sourceTree = "<group>"; };
 		96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
 		96A2F8072247379200FBC798 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
 		96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
 		96A2F80B2247483900FBC798 /* MockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		96A2F80E22474B2900FBC798 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB112246DBE700C9F2AD /* Medi8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
 		96ACFB122246DBE700C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 				96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */,
 				96A2F7F12247365C00FBC798 /* ManagedObjectContextContainer.swift */,
 				96A2F7F62247365C00FBC798 /* MediaImporter.swift */,
-				96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */,
 				96A2F7EF2247365C00FBC798 /* NSManagedObjectContext+ObjectCreator.swift */,
 			);
 			path = "Core Data";
@@ -107,6 +106,16 @@
 				96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		96A2F80D22474AE400FBC798 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				96A2F80B2247483900FBC798 /* MockData.json */,
+				96A2F80E22474B2900FBC798 /* MockData.swift */,
+				96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		96ACFB042246DBE700C9F2AD = {
@@ -134,8 +143,7 @@
 				96A2F7EB2247365C00FBC798 /* Core Data */,
 				96ACFB122246DBE700C9F2AD /* Info.plist */,
 				96ACFB112246DBE700C9F2AD /* Medi8.h */,
-				96A2F80B2247483900FBC798 /* MockData.json */,
-				96A2F8022247373400FBC798 /* MockData.plist */,
+				96A2F80D22474AE400FBC798 /* Mock */,
 			);
 			path = Medi8;
 			sourceTree = "<group>";
@@ -251,7 +259,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A2F8032247373400FBC798 /* MockData.plist in Resources */,
 				96A2F80C2247483900FBC798 /* MockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +286,7 @@
 				96A2F7FD2247365D00FBC798 /* ManagedObjectContextContainer.swift in Sources */,
 				96A2F7FE2247365D00FBC798 /* Immediate.xcdatamodeld in Sources */,
 				96A2F7F92247365D00FBC798 /* FetchedResultsTableModel.swift in Sources */,
+				96A2F80F22474B2900FBC798 /* MockData.swift in Sources */,
 				96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
