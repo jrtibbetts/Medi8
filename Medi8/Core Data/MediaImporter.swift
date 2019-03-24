@@ -15,7 +15,7 @@ public protocol MediaImporter {
 }
 
 /// A short-style date formatter.
-fileprivate let dateFormatter: DateFormatter = {
+private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
 
@@ -75,7 +75,7 @@ public extension MediaImporter {
                 }
             }
 
-            let _ = ReleaseVersion(context: context) <~ {
+            _ = ReleaseVersion(context: context) <~ {
                 $0.parentRelease = masterRelease
                 $0.trackListing = TrackListing(context: context)
 
@@ -116,10 +116,10 @@ public extension MediaImporter {
 
 }
 
-/// Implemented by classes and structs that want to keep track of the progress
-/// of the media importer. The importer should ensure that delegate methods
-/// are called on the main thread, but this is not guaranteed.
-public protocol MediaImporterDelegate {
+/// Implemented by classes that want to keep track of the progress of the media
+/// importer. The importer should ensure that delegate methods are called on
+/// the main thread, but this is not guaranteed.
+public protocol MediaImporterDelegate: class {
 
     /// Called when the import is about to begin.
     func willStartImporting()

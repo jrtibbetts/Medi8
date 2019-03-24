@@ -6,7 +6,7 @@ import Stylobate
 
 class MockMediaImporter: MediaImporter {
 
-    private var delegate: MediaImporterDelegate?
+    private weak var delegate: MediaImporterDelegate?
 
     let context: NSManagedObjectContext
 
@@ -23,7 +23,7 @@ class MockMediaImporter: MediaImporter {
         let mockData: MockData = try JSONUtils.jsonObject(forFileNamed: "MockData",
                                                           ofType: "json",
                                                           inBundle: Bundle(for: type(of: self)))
-        try! mockData.releases.forEach { (release) in
+        try mockData.releases.forEach { (release) in
             if let artist = fetchOrCreateArtist(named: mockData.artist) {
                 add(releaseNamed: release.title, with: release.tracks, to: artist, in: context)
             }

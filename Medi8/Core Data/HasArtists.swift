@@ -36,4 +36,3 @@ extension Song: HasArtists {
 extension MasterRelease: HasArtists {
 
 }
-

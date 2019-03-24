@@ -51,10 +51,10 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
     }
 
     open func controller(_ controller: FRC,
-                           didChange anObject: Any,
-                           at indexPath: IndexPath?,
-                           for type: NSFetchedResultsChangeType,
-                           newIndexPath: IndexPath?) {
+                         didChange anObject: Any,
+                         at indexPath: IndexPath?,
+                         for type: NSFetchedResultsChangeType,
+                         newIndexPath: IndexPath?) {
         switch type {
         case .insert:
             collectionView.insertItems(at: [newIndexPath!])
