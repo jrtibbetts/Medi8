@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96A2F7EA2247197300FBC798 /* Immediate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB302246DC1B00C9F2AD /* Immediate.xcdatamodeld */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 		96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */; };
 		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96ACFB362246DC1B00C9F2AD /* MockMediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB292246DC1B00C9F2AD /* MockMediaImporter.swift */; };
+		96ACFB372246DC1C00C9F2AD /* FetchedResultsTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2A2246DC1B00C9F2AD /* FetchedResultsTableModel.swift */; };
+		96ACFB382246DC1C00C9F2AD /* HasArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2B2246DC1B00C9F2AD /* HasArtists.swift */; };
+		96ACFB392246DC1C00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2C2246DC1B00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift */; };
+		96ACFB3A2246DC1C00C9F2AD /* FetchedResultsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2D2246DC1B00C9F2AD /* FetchedResultsCollectionModel.swift */; };
+		96ACFB3C2246DC1C00C9F2AD /* ManagedObjectContextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB2F2246DC1B00C9F2AD /* ManagedObjectContextContainer.swift */; };
+		96ACFB3E2246DC1C00C9F2AD /* FetchedResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB332246DC1B00C9F2AD /* FetchedResultsModel.swift */; };
+		96ACFB3F2246DC1C00C9F2AD /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB342246DC1B00C9F2AD /* MediaImporter.swift */; };
+		96ACFB402246DC1C00C9F2AD /* FetchedResultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB352246DC1B00C9F2AD /* FetchedResultsProvider.swift */; };
+		96ACFB442246DC3C00C9F2AD /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB412246DC3C00C9F2AD /* FetchingTestBase.swift */; };
+		96ACFB452246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB432246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift */; };
+		96ACFB482246DC7200C9F2AD /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB472246DC7200C9F2AD /* Stylobate.framework */; };
+		96ACFB4A2246DEB600C9F2AD /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB492246DEB600C9F2AD /* MockMediaImporterTests.swift */; };
+		96ACFB4C2246DF2200C9F2AD /* MockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96ACFB4B2246DF2200C9F2AD /* MockData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +44,22 @@
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8Tests.swift; sourceTree = "<group>"; };
 		96ACFB1E2246DBE800C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96ACFB292246DC1B00C9F2AD /* MockMediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporter.swift; sourceTree = "<group>"; };
+		96ACFB2A2246DC1B00C9F2AD /* FetchedResultsTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsTableModel.swift; sourceTree = "<group>"; };
+		96ACFB2B2246DC1B00C9F2AD /* HasArtists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasArtists.swift; sourceTree = "<group>"; };
+		96ACFB2C2246DC1B00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+ObjectCreator.swift"; sourceTree = "<group>"; };
+		96ACFB2D2246DC1B00C9F2AD /* FetchedResultsCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsCollectionModel.swift; sourceTree = "<group>"; };
+		96ACFB2F2246DC1B00C9F2AD /* ManagedObjectContextContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextContainer.swift; sourceTree = "<group>"; };
+		96ACFB312246DC1B00C9F2AD /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
+		96ACFB322246DC1B00C9F2AD /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
+		96ACFB332246DC1B00C9F2AD /* FetchedResultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModel.swift; sourceTree = "<group>"; };
+		96ACFB342246DC1B00C9F2AD /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
+		96ACFB352246DC1B00C9F2AD /* FetchedResultsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsProvider.swift; sourceTree = "<group>"; };
+		96ACFB412246DC3C00C9F2AD /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchingTestBase.swift; path = ../../../nrith/Immediate/ImmediateTests/FetchingTestBase.swift; sourceTree = "<group>"; };
+		96ACFB432246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsModelTestBase.swift; sourceTree = "<group>"; };
+		96ACFB472246DC7200C9F2AD /* Stylobate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stylobate.framework; path = Carthage/Build/iOS/Stylobate.framework; sourceTree = "<group>"; };
+		96ACFB492246DEB600C9F2AD /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
+		96ACFB4B2246DF2200C9F2AD /* MockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MockData.plist; path = ../../../nrith/Immediate/Immediate/MockData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96ACFB482246DC7200C9F2AD /* Stylobate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +88,7 @@
 				96ACFB102246DBE700C9F2AD /* Medi8 */,
 				96ACFB1B2246DBE800C9F2AD /* Medi8Tests */,
 				96ACFB0F2246DBE700C9F2AD /* Products */,
+				96ACFB462246DC7200C9F2AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +104,10 @@
 		96ACFB102246DBE700C9F2AD /* Medi8 */ = {
 			isa = PBXGroup;
 			children = (
-				96ACFB112246DBE700C9F2AD /* Medi8.h */,
+				96ACFB282246DC1B00C9F2AD /* Core Data */,
 				96ACFB122246DBE700C9F2AD /* Info.plist */,
+				96ACFB112246DBE700C9F2AD /* Medi8.h */,
+				96ACFB4B2246DF2200C9F2AD /* MockData.plist */,
 			);
 			path = Medi8;
 			sourceTree = "<group>";
@@ -80,10 +115,48 @@
 		96ACFB1B2246DBE800C9F2AD /* Medi8Tests */ = {
 			isa = PBXGroup;
 			children = (
-				96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */,
+				96ACFB422246DC3C00C9F2AD /* Core Data */,
+				96ACFB412246DC3C00C9F2AD /* FetchingTestBase.swift */,
 				96ACFB1E2246DBE800C9F2AD /* Info.plist */,
+				96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */,
+				96ACFB492246DEB600C9F2AD /* MockMediaImporterTests.swift */,
 			);
 			path = Medi8Tests;
+			sourceTree = "<group>";
+		};
+		96ACFB282246DC1B00C9F2AD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				96ACFB2D2246DC1B00C9F2AD /* FetchedResultsCollectionModel.swift */,
+				96ACFB332246DC1B00C9F2AD /* FetchedResultsModel.swift */,
+				96ACFB352246DC1B00C9F2AD /* FetchedResultsProvider.swift */,
+				96ACFB2A2246DC1B00C9F2AD /* FetchedResultsTableModel.swift */,
+				96ACFB2B2246DC1B00C9F2AD /* HasArtists.swift */,
+				96ACFB302246DC1B00C9F2AD /* Immediate.xcdatamodeld */,
+				96ACFB2F2246DC1B00C9F2AD /* ManagedObjectContextContainer.swift */,
+				96ACFB342246DC1B00C9F2AD /* MediaImporter.swift */,
+				96ACFB292246DC1B00C9F2AD /* MockMediaImporter.swift */,
+				96ACFB2C2246DC1B00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift */,
+			);
+			name = "Core Data";
+			path = "../../../nrith/Immediate/Immediate/Core Data";
+			sourceTree = "<group>";
+		};
+		96ACFB422246DC3C00C9F2AD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				96ACFB432246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift */,
+			);
+			name = "Core Data";
+			path = "../../../nrith/Immediate/ImmediateTests/Core Data";
+			sourceTree = "<group>";
+		};
+		96ACFB462246DC7200C9F2AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96ACFB472246DC7200C9F2AD /* Stylobate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96ACFB4C2246DF2200C9F2AD /* MockData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96ACFB382246DC1C00C9F2AD /* HasArtists.swift in Sources */,
+				96ACFB392246DC1C00C9F2AD /* NSManagedObjectContext+ObjectCreator.swift in Sources */,
+				96ACFB3C2246DC1C00C9F2AD /* ManagedObjectContextContainer.swift in Sources */,
+				96ACFB362246DC1B00C9F2AD /* MockMediaImporter.swift in Sources */,
+				96ACFB3E2246DC1C00C9F2AD /* FetchedResultsModel.swift in Sources */,
+				96ACFB402246DC1C00C9F2AD /* FetchedResultsProvider.swift in Sources */,
+				96ACFB3F2246DC1C00C9F2AD /* MediaImporter.swift in Sources */,
+				96ACFB372246DC1C00C9F2AD /* FetchedResultsTableModel.swift in Sources */,
+				96ACFB3A2246DC1C00C9F2AD /* FetchedResultsCollectionModel.swift in Sources */,
+				96A2F7EA2247197300FBC798 /* Immediate.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96ACFB442246DC3C00C9F2AD /* FetchingTestBase.swift in Sources */,
 				96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */,
+				96ACFB4A2246DEB600C9F2AD /* MockMediaImporterTests.swift in Sources */,
+				96ACFB452246DC3C00C9F2AD /* FetchedResultsModelTestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +355,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +412,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -348,6 +433,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Medi8/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -355,7 +444,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.poikile.Medi8;
+				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Medi8;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -373,6 +462,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Medi8/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,7 +473,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.poikile.Medi8;
+				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Medi8;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -391,6 +484,7 @@
 		96ACFB262246DBE800C9F2AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				INFOPLIST_FILE = Medi8Tests/Info.plist;
@@ -398,8 +492,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.poikile.Medi8Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Medi8Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,6 +504,7 @@
 		96ACFB272246DBE800C9F2AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				INFOPLIST_FILE = Medi8Tests/Info.plist;
@@ -416,8 +512,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.poikile.Medi8Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Medi8Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,6 +552,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		96ACFB302246DC1B00C9F2AD /* Immediate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				96ACFB312246DC1B00C9F2AD /* Immediate.xcdatamodel */,
+				96ACFB322246DC1B00C9F2AD /* Immediate 2.xcdatamodel */,
+			);
+			currentVersion = 96ACFB322246DC1B00C9F2AD /* Immediate 2.xcdatamodel */;
+			path = Immediate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 96ACFB052246DBE700C9F2AD /* Project object */;
 }
