@@ -34,7 +34,7 @@ public extension MediaImporter {
     func fetchOrCreateArtist(named name: String, sortName: String? = nil) -> Artist? {
         // Artist.fetchRequest() doesn't work in unit tests.
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: IndividualArtist.self))
-        request.sortDescriptors = ["sortName".sortDescriptor()]
+        request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name == \"\(name)\"")
 
         return context.fetchOrCreateManagedObject(with: request) { (context) -> Artist in
@@ -66,7 +66,7 @@ public extension MediaImporter {
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
 
         return context.fetchOrCreateManagedObject(with: request) { (context) -> MasterRelease in
-           let release = MasterRelease(context: context) <~ {
+           let masterRelease = MasterRelease(context: context) <~ {
                 $0.title = name
                 $0.sortTitle = name
 
@@ -76,7 +76,7 @@ public extension MediaImporter {
             }
 
             let _ = ReleaseVersion(context: context) <~ {
-                $0.parentRelease = release
+                $0.parentRelease = masterRelease
                 $0.trackListing = TrackListing(context: context)
 
                 if let releaseDate = releaseDate {
@@ -85,7 +85,7 @@ public extension MediaImporter {
                 }
             }
 
-            return release
+            return masterRelease
         }
     }
 
@@ -155,21 +155,23 @@ public extension MediaImporterDelegate {
 
 }
 
-public extension String {
-
-    /// Get an `NSSortDescriptor` whose key is this string.
-    ///
-    /// - parameter ascending: `true` if the sort order should be ascending.
-    ///   The default is `true`.
-    public func sortDescriptor(ascending: Bool = true) -> NSSortDescriptor {
-        return NSSortDescriptor(key: self, ascending: ascending)
-    }
-
-}
-
+//public extension String {
+//
+//    /// Get an `NSSortDescriptor` whose key is this string. This makes it as
+//    /// easy as calling `"widgetCount".sortDescriptor(ascending: false)`.
+//    ///
+//    /// - parameter ascending: `true` if the sort order should be ascending.
+//    ///   The default is `true`.
+//    public func sortDescriptor(ascending: Bool = true) -> NSSortDescriptor {
+//        return NSSortDescriptor(key: self, ascending: ascending)
+//    }
+//
+//}
+//
 public extension KeyPath {
 
-    /// Get an `NSSortDescriptor` whose key is this key path.
+    /// Get an `NSSortDescriptor` whose key is this key path. Calling it like
+    /// `(\WidgetHolder.widgetCount).sortDescriptor(ascending: false)`
     ///
     /// - parameter ascending: `true` if the sort order should be ascending.
     ///   The default is `true`.
