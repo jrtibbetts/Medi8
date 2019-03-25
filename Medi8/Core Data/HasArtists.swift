@@ -20,7 +20,7 @@ extension HasArtists {
     /// A comma-separated concatenation of the artist names, or an empty string
     /// if there aren't any artists.
     public var artistName: String {
-        return artists?.compactMap{ ($0 as? Artist)?.name }.joined(separator: ", ") ?? ""
+        return artists?.compactMap { ($0 as? Artist)?.name }.joined(separator: ", ") ?? ""
     }
 
 }

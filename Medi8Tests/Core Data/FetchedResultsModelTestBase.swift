@@ -17,7 +17,7 @@ public protocol FetchedResultsModelTestBase {
 }
 
 public extension FetchedResultsModelTestBase {
-
+    
     public func testNumberOfSections() {
         // Populate the testing context.
         let artist1 = IndividualArtist(context: moContext!)
@@ -26,14 +26,14 @@ public extension FetchedResultsModelTestBase {
         let artist2 = IndividualArtist(context: moContext!)
         artist2.name = "Pancake Batter"
         artist2.sortName = "Batter, Pancake"
-
+        
         // Set up the fetched results controller.
         let request = NSFetchRequest<IndividualArtist>(entityName: "IndividualArtist")
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
-        let frc = NSFetchedResultsController<IndividualArtist>(fetchRequest: request,
-                                                               managedObjectContext: moContext!,
-                                                               sectionNameKeyPath:"sortName",
-                                                               cacheName: nil)
+        _ = NSFetchedResultsController<IndividualArtist>(fetchRequest: request,
+                                                         managedObjectContext: moContext!,
+                                                         sectionNameKeyPath: "sortName",
+                                                         cacheName: nil)
         let testModel = model()
         XCTAssertEqual(testModel.numberOfSections(), 2)
         XCTAssertEqual(testModel.numberOfItems(in: 0), 1)
