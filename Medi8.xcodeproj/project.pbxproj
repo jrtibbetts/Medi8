@@ -13,7 +13,7 @@
 		96A2F7FB2247365D00FBC798 /* NSManagedObjectContext+ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7EF2247365C00FBC798 /* NSManagedObjectContext+ObjectCreator.swift */; };
 		96A2F7FC2247365D00FBC798 /* FetchedResultsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F02247365C00FBC798 /* FetchedResultsCollectionModel.swift */; };
 		96A2F7FD2247365D00FBC798 /* ManagedObjectContextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F12247365C00FBC798 /* ManagedObjectContextContainer.swift */; };
-		96A2F7FE2247365D00FBC798 /* Immediate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */; };
+		96A2F7FE2247365D00FBC798 /* Medi8.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */; };
 		96A2F7FF2247365D00FBC798 /* FetchedResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F52247365C00FBC798 /* FetchedResultsModel.swift */; };
 		96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F62247365C00FBC798 /* MediaImporter.swift */; };
 		96A2F8012247365D00FBC798 /* FetchedResultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */; };
@@ -92,7 +92,7 @@
 				96A2F7F72247365C00FBC798 /* FetchedResultsProvider.swift */,
 				96A2F7ED2247365C00FBC798 /* FetchedResultsTableModel.swift */,
 				96A2F7EE2247365C00FBC798 /* HasArtists.swift */,
-				96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */,
+				96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */,
 				96A2F7F12247365C00FBC798 /* ManagedObjectContextContainer.swift */,
 				96A2F7F62247365C00FBC798 /* MediaImporter.swift */,
 				96A2F7EF2247365C00FBC798 /* NSManagedObjectContext+ObjectCreator.swift */,
@@ -284,7 +284,7 @@
 				96A2F7FA2247365D00FBC798 /* HasArtists.swift in Sources */,
 				96A2F8012247365D00FBC798 /* FetchedResultsProvider.swift in Sources */,
 				96A2F7FD2247365D00FBC798 /* ManagedObjectContextContainer.swift in Sources */,
-				96A2F7FE2247365D00FBC798 /* Immediate.xcdatamodeld in Sources */,
+				96A2F7FE2247365D00FBC798 /* Medi8.xcdatamodeld in Sources */,
 				96A2F7F92247365D00FBC798 /* FetchedResultsTableModel.swift in Sources */,
 				96A2F80F22474B2900FBC798 /* MockData.swift in Sources */,
 				96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */,
@@ -564,14 +564,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		96A2F7F22247365C00FBC798 /* Immediate.xcdatamodeld */ = {
+		96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				96A2F7F32247365C00FBC798 /* Immediate.xcdatamodel */,
 				96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */,
 			);
 			currentVersion = 96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */;
-			path = Immediate.xcdatamodeld;
+			path = Medi8.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
