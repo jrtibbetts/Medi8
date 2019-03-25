@@ -32,8 +32,7 @@ public extension MediaImporter {
     ///
     /// - returns: A new or fetched `Artist` with the given name.
     func fetchOrCreateArtist(named name: String, sortName: String? = nil) -> Artist? {
-        // Artist.fetchRequest() doesn't work in unit tests.
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: IndividualArtist.self))
+        let request: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name == \"\(name)\"")
 
@@ -60,8 +59,7 @@ public extension MediaImporter {
     func fetchOrCreateMasterRelease(named name: String,
                                     by artists: [Artist]? = nil,
                                     releaseDate: Date? = Date()) -> MasterRelease? {
-        // MasterRelease.fetchRequest() doesn't work in unit tests.
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: MasterRelease.self))
+        let request: NSFetchRequest<NSFetchRequestResult> = MasterRelease.fetchRequest()
         request.sortDescriptors = [(\MasterRelease.sortTitle).sortDescriptor(), (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
 
@@ -94,8 +92,7 @@ public extension MediaImporter {
     ///  - parameter name: The song title.
     ///  - parameter artist: The artist who performed the song.
     func fetchOrCreateSong(named name: String, by artist: Artist) -> Song? {
-        // Song.fetchRequest() doesn't work in unit tests.
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Song.self))
+        let request: NSFetchRequest<NSFetchRequestResult> = Song.fetchRequest()
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
 
