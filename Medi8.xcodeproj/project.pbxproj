@@ -104,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */,
+				96A2F8072247379200FBC798 /* FetchingTestBase.swift */,
+				96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -152,10 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				96A2F8042247377F00FBC798 /* Core Data */,
-				96A2F8072247379200FBC798 /* FetchingTestBase.swift */,
 				96ACFB1E2246DBE800C9F2AD /* Info.plist */,
 				96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */,
-				96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */,
 			);
 			path = Medi8Tests;
 			sourceTree = "<group>";
