@@ -104,9 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				96A2F8052247377F00FBC798 /* FetchedResultsModelTestBase.swift */,
+				96A2F8182249DC0300FBC798 /* FetchedResultsModelTests.swift */,
 				96A2F8072247379200FBC798 /* FetchingTestBase.swift */,
 				96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */,
-				96A2F8182249DC0300FBC798 /* FetchedResultsModelTests.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";

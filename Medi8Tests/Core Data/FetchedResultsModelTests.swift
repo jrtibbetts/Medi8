@@ -42,4 +42,23 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         return (tableView, model)
     }
 
+    func testCollectionModelNumberOfSectionsAndItems() {
+        let (collectionView, model) = collectionAndModel()
+        XCTAssertTrue(collectionView.dataSource === model)
+        XCTAssertEqual(collectionView.numberOfSections, 1)
+        XCTAssertEqual(collectionView.numberOfItems(inSection: 0), 14)
+    }
+
+    func collectionAndModel() -> (UICollectionView, FetchedResultsCollectionModel) {
+        let collectionView = UICollectionView(frame: CGRect(),
+                                              collectionViewLayout: UICollectionViewFlowLayout())
+        let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
+        fetchRequest.sortDescriptors = []
+        let frc = fetchedResultsController(for: fetchRequest)!
+        let model = FetchedResultsCollectionModel(collectionView, context: moContext!, fetchedResultsController: frc as! NSFetchedResultsController<NSManagedObject>)
+        collectionView.dataSource = model
+
+        return (collectionView, model)
+    }
+
 }
