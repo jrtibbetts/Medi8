@@ -66,34 +66,33 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
                         commit editingStyle: UITableViewCell.EditingStyle,
                         forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            if let controller = fetchedResultsController {
-                let context = controller.managedObjectContext
-                context.delete(controller.object(at: indexPath))
+            let controller = fetchedResultsController
+            let context = controller.managedObjectContext
+            context.delete(controller.object(at: indexPath))
 
-                do {
-                    try context.save()
-                } catch {
-                    // Replace this implementation with code to handle the error
-                    // appropriately.
-                    // fatalError() causes the application to generate a crash
-                    // log and terminate. You should not use this function in a
-                    // shipping application, although it may be useful during
-                    // development.
-                    let nserror = error as NSError
-                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-                }
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error
+                // appropriately.
+                // fatalError() causes the application to generate a crash
+                // log and terminate. You should not use this function in a
+                // shipping application, although it may be useful during
+                // development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
 
     public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return fetchedResultsController?.sectionIndexTitles
+        return fetchedResultsController.sectionIndexTitles
     }
 
     public func tableView(_ tableView: UITableView,
                           sectionForSectionIndexTitle title: String,
                           at index: Int) -> Int {
-        return fetchedResultsController?.section(forSectionIndexTitle: title, at: index) ?? 0
+        return fetchedResultsController.section(forSectionIndexTitle: title, at: index)
     }
 
     // MARK: - Fetched results controller
