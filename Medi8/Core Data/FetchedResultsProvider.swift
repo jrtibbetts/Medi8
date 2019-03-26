@@ -10,8 +10,10 @@ public protocol FetchedResultsProvider: ManagedObjectContextContainer, NSFetched
     /// Set up the fetched results controller. This has a default
     /// implementation, so implementers of this protocol usually don't need to
     /// provide their own implementation.
-    func fetchedResultsController(for fetchRequest: NSFetchRequest<ManagedObjectType>)
-        -> NSFetchedResultsController<ManagedObjectType>
+    func fetchedResultsController(for fetchRequest: NSFetchRequest<ManagedObjectType>,
+                                  sectionNameKeyPath: String?,
+                                  cacheName: String?)
+        -> NSFetchedResultsController<ManagedObjectType>?
     
 }
 
@@ -22,14 +24,20 @@ extension FetchedResultsProvider {
     ///
     /// - parameter fetchRequest: The request that's been configured with the
     ///   desired sort order and predicate.
-    public func fetchedResultsController(for fetchRequest: NSFetchRequest<ManagedObjectType>)
-        -> NSFetchedResultsController<ManagedObjectType> {
+    public func fetchedResultsController(for fetchRequest: NSFetchRequest<ManagedObjectType>,
+                                         sectionNameKeyPath: String? = nil,
+                                         cacheName: String? = nil)
+        -> NSFetchedResultsController<ManagedObjectType>? {
+            guard let moContext = moContext else {
+                return nil
+            }
+
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
-                                                                  managedObjectContext: moContext!,
-                                                                  sectionNameKeyPath: nil,
-                                                                  cacheName: nil /* "Master" */)
+                                                                  managedObjectContext: moContext,
+                                                                  sectionNameKeyPath: sectionNameKeyPath,
+                                                                  cacheName: cacheName /* "Master" */)
         fetchedResultsController.delegate = self
         
         do {
