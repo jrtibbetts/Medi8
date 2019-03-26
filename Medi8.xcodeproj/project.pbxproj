@@ -23,7 +23,6 @@
 		96A2F80C2247483900FBC798 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F80B2247483900FBC798 /* MockData.json */; };
 		96A2F80F22474B2900FBC798 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F80E22474B2900FBC798 /* MockData.swift */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
-		96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */; };
 		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96ACFB482246DC7200C9F2AD /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB472246DC7200C9F2AD /* Stylobate.framework */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		96ACFB112246DBE700C9F2AD /* Medi8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
 		96ACFB122246DBE700C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8Tests.swift; sourceTree = "<group>"; };
 		96ACFB1E2246DBE800C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96ACFB472246DC7200C9F2AD /* Stylobate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stylobate.framework; path = Carthage/Build/iOS/Stylobate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +153,6 @@
 			children = (
 				96A2F8042247377F00FBC798 /* Core Data */,
 				96ACFB1E2246DBE800C9F2AD /* Info.plist */,
-				96ACFB1C2246DBE800C9F2AD /* Medi8Tests.swift */,
 			);
 			path = Medi8Tests;
 			sourceTree = "<group>";
@@ -295,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACFB1D2246DBE800C9F2AD /* Medi8Tests.swift in Sources */,
 				96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */,
 				96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */,
 				96A2F8062247377F00FBC798 /* FetchedResultsModelTestBase.swift in Sources */,

@@ -9,7 +9,7 @@ class FetchingTestBase: XCTestCase {
     /// An `NSManagedObjectContext` backed by an in-memory store to make it
     /// suitable for unit testing. Based on an idea by
     /// https://www.andrewcbancroft.com/2015/01/13/unit-testing-model-layer-core-data-swift/
-    lazy var testingContext: NSManagedObjectContext = {
+    static var testingContext: NSManagedObjectContext = {
         let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: FetchedResultsModel.self)])!
         let stoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         try! stoordinator.addPersistentStore(ofType: NSInMemoryStoreType, configurationName: nil, at: nil, options: nil)
@@ -18,9 +18,9 @@ class FetchingTestBase: XCTestCase {
 
         return moc
     }()
-    
+
     override func tearDown() {
-        testingContext.reset()
+        FetchingTestBase.testingContext.reset()
         super.tearDown()
     }
 
