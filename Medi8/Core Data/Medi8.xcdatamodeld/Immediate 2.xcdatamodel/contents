@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="17B35a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B57c" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Artist" representedClassName=".Artist" isAbstract="YES" parentEntity="Notable" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="sortName" optional="YES" attributeType="String" syncable="YES"/>
@@ -66,7 +66,7 @@
         <attribute name="type" attributeType="String" defaultValueString="unknown" spotlightIndexingEnabled="YES" syncable="YES"/>
         <relationship name="artists" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Artist" inverseName="releases" inverseEntity="Artist" syncable="YES"/>
         <relationship name="musicianCredits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MusicianCredit" inverseName="musician" inverseEntity="MusicianCredit" syncable="YES"/>
-        <relationship name="versions" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="parentRelease" inverseEntity="ReleaseVersion" syncable="YES"/>
+        <relationship name="versions" toMany="YES" deletionRule="Cascade" destinationEntity="ReleaseVersion" inverseName="parentRelease" inverseEntity="ReleaseVersion" syncable="YES"/>
         <fetchIndex name="bySortTitleIndex">
             <fetchIndexElement property="sortTitle" type="Binary" order="ascending"/>
         </fetchIndex>
