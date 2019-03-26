@@ -5,7 +5,10 @@ import UIKit
 import CoreData
 
 /// A `FetchedResultsModel` for table views.
-open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource, UITableViewDelegate {
+open class FetchedResultsTableModel: FetchedResultsModel,
+                                     UITableViewDataSource,
+                                     UITableViewDelegate,
+                                     NSFetchedResultsControllerDelegate {
 
     /// The table view for which this model is a delegate and data source.
     let tableView: UITableView
@@ -24,6 +27,7 @@ open class FetchedResultsTableModel: FetchedResultsModel, UITableViewDataSource,
         super.init(context: context, fetchedResultsController: fetchedResultsController)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.fetchedResultsController.delegate = self
     }
 
     // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -72,6 +76,7 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
 
             do {
                 try context.save()
+                try controller.performFetch()
             } catch {
                 // Replace this implementation with code to handle the error
                 // appropriately.

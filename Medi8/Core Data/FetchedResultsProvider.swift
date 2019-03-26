@@ -37,7 +37,7 @@ extension FetchedResultsProvider {
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: moContext,
                                                                   sectionNameKeyPath: sectionNameKeyPath,
-                                                                  cacheName: cacheName /* "Master" */)
+                                                                  cacheName: cacheName)
         fetchedResultsController.delegate = self
         
         do {
