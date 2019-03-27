@@ -40,13 +40,9 @@ open class FetchedResultsCollectionModel: FetchedResultsModel,
                          for type: NSFetchedResultsChangeType) {
         let sectionIndices = IndexSet(integer: sectionIndex)
 
-        switch type {
-        case .insert:
+        if type == .insert {
             collectionView.insertSections(sectionIndices)
-        case .delete:
-            collectionView.deleteSections(sectionIndices)
-        default:
-            return
+            collectionView.reloadData()
         }
     }
 
@@ -57,9 +53,13 @@ open class FetchedResultsCollectionModel: FetchedResultsModel,
                          newIndexPath: IndexPath?) {
         switch type {
         case .insert:
-            collectionView.insertItems(at: [newIndexPath!])
+            break  // do nothing
         case .delete:
-            collectionView.deleteItems(at: [indexPath!])
+            if let indexPath = indexPath {
+                deleteElement(at: indexPath)
+                saveContext()
+                collectionView.reloadData()
+            }
         case .update:
             collectionView.reloadItems(at: [indexPath!])
         case .move:

@@ -32,6 +32,10 @@ open class FetchedResultsTableModel: FetchedResultsModel,
 
     // MARK: - UITableViewDataSource & UITableViewDelegate
 
+    open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return fetchedResultsController.sectionIndexTitles
+    }
+
     /// Get the number of sections from the fetched results controller.
     ///
     /// - parameter tableView: The table view.
@@ -71,25 +75,8 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
                         forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             deleteElement(at: indexPath)
-
-            do {
-                let context = fetchedResultsController.managedObjectContext
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error
-                // appropriately.
-                // fatalError() causes the application to generate a crash
-                // log and terminate. You should not use this function in a
-                // shipping application, although it may be useful during
-                // development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+            saveContext()
         }
-    }
-
-    open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return fetchedResultsController.sectionIndexTitles
     }
 
     open func tableView(_ tableView: UITableView,
