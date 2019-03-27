@@ -31,12 +31,12 @@ public extension MediaImporter {
     ///   `nil`, then the regular name will be used instead.
     ///
     /// - returns: A new or fetched `Artist` with the given name.
-    func fetchOrCreateArtist(named name: String, sortName: String? = nil) -> Artist? {
+    func fetchOrCreateArtist(named name: String, sortName: String? = nil) throws -> Artist? {
         let request: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name == \"\(name)\"")
 
-        return context.fetchOrCreateManagedObject(with: request) { (context) -> Artist in
+        return try context.fetchOrCreateManagedObject(with: request) { (context) -> Artist in
             print("Creating an artist named \(name)")
             let artist = IndividualArtist(context: context)
             artist.name = name
@@ -58,12 +58,12 @@ public extension MediaImporter {
     /// - returns: A new or fetched `MasterRelease`.
     func fetchOrCreateMasterRelease(named name: String,
                                     by artists: [Artist]? = nil,
-                                    releaseDate: Date? = Date()) -> MasterRelease? {
+                                    releaseDate: Date? = Date()) throws -> MasterRelease? {
         let request: NSFetchRequest<NSFetchRequestResult> = MasterRelease.fetchRequest()
         request.sortDescriptors = [(\MasterRelease.sortTitle).sortDescriptor(), (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
 
-        return context.fetchOrCreateManagedObject(with: request) { (context) -> MasterRelease in
+        return try context.fetchOrCreateManagedObject(with: request) { (context) -> MasterRelease in
            let masterRelease = MasterRelease(context: context) <~ {
                 $0.title = name
                 $0.sortTitle = name
@@ -91,12 +91,12 @@ public extension MediaImporter {
     ///
     ///  - parameter name: The song title.
     ///  - parameter artist: The artist who performed the song.
-    func fetchOrCreateSong(named name: String, by artist: Artist) -> Song? {
+    func fetchOrCreateSong(named name: String, by artist: Artist) throws -> Song? {
         let request: NSFetchRequest<NSFetchRequestResult> = Song.fetchRequest()
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
 
-        return context.fetchOrCreateManagedObject(with: request) { (context) -> Song in
+        return try context.fetchOrCreateManagedObject(with: request) { (context) -> Song in
             let song = Song(context: context)
             song.title = name
             artist.addToSongs(song)

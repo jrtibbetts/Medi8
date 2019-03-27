@@ -24,8 +24,8 @@ class MockMediaImporter: MediaImporter {
                                                           ofType: "json",
                                                           inBundle: Bundle(for: type(of: self)))
         try mockData.releases.forEach { (release) in
-            if let artist = fetchOrCreateArtist(named: mockData.artist) {
-                add(releaseNamed: release.title, with: release.tracks, to: artist)
+            if let artist = try fetchOrCreateArtist(named: mockData.artist) {
+                try add(releaseNamed: release.title, with: release.tracks, to: artist)
             }
 
             try context.save()
@@ -37,12 +37,12 @@ class MockMediaImporter: MediaImporter {
 
     func add(releaseNamed releaseTitle: String,
              with tracks: [MockData.Track],
-             to artist: Artist) {
-        let release = fetchOrCreateMasterRelease(named: releaseTitle, by: [artist])!
-        tracks.forEach { (track) in
-            release.versions?.forEach { (version) in
+             to artist: Artist) throws {
+        let release = try fetchOrCreateMasterRelease(named: releaseTitle, by: [artist])!
+        try tracks.forEach { (track) in
+            try release.versions?.forEach { (version) in
                 if let trackListing = (version as? ReleaseVersion)?.trackListing {
-                    add(songNamed: track.title,
+                    try add(songNamed: track.title,
                         artist: artist,
                         to: trackListing)
                 }
@@ -52,8 +52,8 @@ class MockMediaImporter: MediaImporter {
 
     func add(songNamed songTitle: String,
              artist: Artist,
-             to tracks: TrackListing) {
-        _ = fetchOrCreateSong(named: songTitle, by: artist)
+             to tracks: TrackListing) throws {
+        _ = try fetchOrCreateSong(named: songTitle, by: artist)
     }
 
 }

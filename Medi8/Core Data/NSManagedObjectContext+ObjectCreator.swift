@@ -14,14 +14,9 @@ public extension NSManagedObjectContext {
     /// - parameter initialize: A block that's called to create a new managed
     ///   object if no matching one was found.
     func fetchOrCreateManagedObject<T: NSManagedObject>(with request: NSFetchRequest<NSFetchRequestResult>,
-                                                        initialize: (NSManagedObjectContext) -> T) -> T? {
-        do {
-            // Fetch.................................or create.
-            return try fetch(request).first as? T ?? initialize(self)
-        } catch {
-            print("Failed to create a managed object of type \(T.self): \(error)")
-            return nil
-        }
+                                                        initialize: (NSManagedObjectContext) -> T) throws -> T {
+        // Fetch.................................or create.
+        return try fetch(request).first as? T ?? initialize(self)
     }
 
 }
