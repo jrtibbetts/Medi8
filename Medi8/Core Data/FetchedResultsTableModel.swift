@@ -90,27 +90,27 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
         }
     }
 
-    public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return fetchedResultsController.sectionIndexTitles
     }
 
-    public func tableView(_ tableView: UITableView,
-                          sectionForSectionIndexTitle title: String,
-                          at index: Int) -> Int {
+    open func tableView(_ tableView: UITableView,
+                        sectionForSectionIndexTitle title: String,
+                        at index: Int) -> Int {
         return fetchedResultsController.section(forSectionIndexTitle: title, at: index)
     }
 
     // MARK: - Fetched results controller
 
     /// Tell the table view that updates are about to begin.
-    public func controllerWillChangeContent(_ controller: FRC) {
+    open func controllerWillChangeContent(_ controller: FRC) {
         self.tableView.beginUpdates()
     }
 
-    public func controller(_ controller: FRC,
-                           didChange sectionInfo: NSFetchedResultsSectionInfo,
-                           atSectionIndex sectionIndex: Int,
-                           for type: NSFetchedResultsChangeType) {
+    open func controller(_ controller: FRC,
+                         didChange sectionInfo: NSFetchedResultsSectionInfo,
+                         atSectionIndex sectionIndex: Int,
+                         for type: NSFetchedResultsChangeType) {
         let sectionIndices = IndexSet(integer: sectionIndex)
 
         switch type {
@@ -123,11 +123,11 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
         }
     }
 
-    public func controller(_ controller: FRC,
-                           didChange anObject: Any,
-                           at indexPath: IndexPath?,
-                           for type: NSFetchedResultsChangeType,
-                           newIndexPath: IndexPath?) {
+    open func controller(_ controller: FRC,
+                         didChange anObject: Any,
+                         at indexPath: IndexPath?,
+                         for type: NSFetchedResultsChangeType,
+                         newIndexPath: IndexPath?) {
         switch type {
         case .insert:
             tableView.insertRows(at: [newIndexPath!], with: .fade)
@@ -140,7 +140,7 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
         }
     }
 
-    public func controllerDidChangeContent(_ controller: FRC) {
+    open func controllerDidChangeContent(_ controller: FRC) {
         self.tableView.endUpdates()
     }
 
@@ -150,7 +150,7 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
     // instead just implement controllerDidChangeContent: which notifies the
     // delegate that all section and object changes have been processed.
 
-    public func controllerDidChangeContent(controller: FRC) {
+    open func controllerDidChangeContent(controller: FRC) {
         // In the simplest, most efficient, case, reload the table view.
         self.tableView.reloadData()
     }
