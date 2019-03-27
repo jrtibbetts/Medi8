@@ -69,16 +69,12 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
     open func tableView(_ tableView: UITableView,
                         commit editingStyle: UITableViewCell.EditingStyle,
                         forRowAt indexPath: IndexPath) {
-        let controller = fetchedResultsController
-        let context = controller.managedObjectContext
-        let element = controller.object(at: indexPath)
-
         if editingStyle == .delete {
-            context.delete(element)
+            deleteElement(at: indexPath)
 
             do {
+                let context = fetchedResultsController.managedObjectContext
                 try context.save()
-                try controller.performFetch()
             } catch {
                 // Replace this implementation with code to handle the error
                 // appropriately.

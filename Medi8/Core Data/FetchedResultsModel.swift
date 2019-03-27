@@ -20,6 +20,17 @@ open class FetchedResultsModel: NSObject, ManagedObjectContextContainer {
 
     // MARK: - Utility methods for implementations to use
 
+    open func element(at indexPath: IndexPath) -> NSManagedObject? {
+        return fetchedResultsController.object(at: indexPath)
+    }
+
+    open func deleteElement(at indexPath: IndexPath) {
+        if let element = self.element(at: indexPath) {
+            let context = fetchedResultsController.managedObjectContext
+            context.delete(element)
+        }
+    }
+
     open func numberOfSections() -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
