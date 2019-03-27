@@ -19,9 +19,4 @@ class FetchingTestBase: XCTestCase {
         return moc
     }()
 
-    override func tearDown() {
-        FetchingTestBase.testingContext.reset()
-        super.tearDown()
-    }
-
 }

@@ -69,10 +69,12 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
     open func tableView(_ tableView: UITableView,
                         commit editingStyle: UITableViewCell.EditingStyle,
                         forRowAt indexPath: IndexPath) {
+        let controller = fetchedResultsController
+        let context = controller.managedObjectContext
+        let element = controller.object(at: indexPath)
+
         if editingStyle == .delete {
-            let controller = fetchedResultsController
-            let context = controller.managedObjectContext
-            context.delete(controller.object(at: indexPath))
+            context.delete(element)
 
             do {
                 try context.save()
@@ -103,11 +105,11 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
     // MARK: - Fetched results controller
 
     /// Tell the table view that updates are about to begin.
-    open func controllerWillChangeContent(_ controller: FRC) {
+    open func controllerWillChangeContent(_ controller: RequestResultFRC) {
         self.tableView.beginUpdates()
     }
 
-    open func controller(_ controller: FRC,
+    open func controller(_ controller: RequestResultFRC,
                          didChange sectionInfo: NSFetchedResultsSectionInfo,
                          atSectionIndex sectionIndex: Int,
                          for type: NSFetchedResultsChangeType) {
@@ -123,7 +125,7 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
         }
     }
 
-    open func controller(_ controller: FRC,
+    open func controller(_ controller: RequestResultFRC,
                          didChange anObject: Any,
                          at indexPath: IndexPath?,
                          for type: NSFetchedResultsChangeType,
@@ -140,7 +142,7 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
         }
     }
 
-    open func controllerDidChangeContent(_ controller: FRC) {
+    open func controllerDidChangeContent(_ controller: RequestResultFRC) {
         self.tableView.endUpdates()
     }
 
@@ -150,7 +152,7 @@ Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResu
     // instead just implement controllerDidChangeContent: which notifies the
     // delegate that all section and object changes have been processed.
 
-    open func controllerDidChangeContent(controller: FRC) {
+    open func controllerDidChangeContent(controller: RequestResultFRC) {
         // In the simplest, most efficient, case, reload the table view.
         self.tableView.reloadData()
     }

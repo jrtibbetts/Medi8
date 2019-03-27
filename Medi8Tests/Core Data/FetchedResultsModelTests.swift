@@ -36,7 +36,7 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
         fetchRequest.sortDescriptors = []
         let frc = fetchedResultsController(for: fetchRequest)!
-        let model = FetchedResultsTableModel(tableView, context: moContext!, fetchedResultsController: frc as! NSFetchedResultsController<NSManagedObject>)
+        let model = MockFetchedResultsTableModel(tableView, context: moContext!, fetchedResultsController: frc as! NSFetchedResultsController<NSManagedObject>)
         tableView.dataSource = model
 
         return (tableView, model)
@@ -59,6 +59,15 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         collectionView.dataSource = model
 
         return (collectionView, model)
+    }
+
+    class MockFetchedResultsTableModel: FetchedResultsTableModel {
+
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            return UITableViewCell()
+//            return UITableViewCell(style: .default, reuseIdentifier: "defaultCellID")
+        }
+
     }
 
 }

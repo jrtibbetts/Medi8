@@ -6,13 +6,14 @@ import CoreData
 /// models, backed by a `NSFetchedResultsController`.
 open class FetchedResultsModel: NSObject, ManagedObjectContextContainer {
 
-    public typealias FRC = NSFetchedResultsController<NSManagedObject>
+    public typealias ManagedObjectFRC = NSFetchedResultsController<NSManagedObject>
+    public typealias RequestResultFRC = NSFetchedResultsController<NSFetchRequestResult>
 
-    public var fetchedResultsController: FRC
+    public var fetchedResultsController: ManagedObjectFRC
     public var moContext: NSManagedObjectContext?
 
     public init(context: NSManagedObjectContext,
-                fetchedResultsController: FRC) {
+                fetchedResultsController: ManagedObjectFRC) {
         self.moContext = context
         self.fetchedResultsController = fetchedResultsController
     }

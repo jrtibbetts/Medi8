@@ -3,17 +3,21 @@
 import CoreData
 import UIKit
 
-open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewDataSource, UICollectionViewDelegate {
+open class FetchedResultsCollectionModel: FetchedResultsModel,
+    NSFetchedResultsControllerDelegate,
+    UICollectionViewDataSource,
+    UICollectionViewDelegate {
 
     weak var collectionView: UICollectionView!
 
     public init(_ collectionView: UICollectionView,
                 context: NSManagedObjectContext,
-                fetchedResultsController: FRC) {
+                fetchedResultsController: ManagedObjectFRC) {
         self.collectionView = collectionView
         super.init(context: context, fetchedResultsController: fetchedResultsController)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.fetchedResultsController.delegate = self
     }
 
     // MARK: - UICollectionViewDataSource & UICollectionViewDelegate
@@ -27,13 +31,14 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
                              cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
     }
+    
     // MARK: - Fetched results controller
 
-    open func controllerWillChangeContent(_ controller: FRC) {
+    open func controllerWillChangeContent(_ controller: RequestResultFRC) {
         // Collections don't have a beginUpdates() method like tables do.
     }
 
-    open func controller(_ controller: FRC,
+    open func controller(_ controller: RequestResultFRC,
                          didChange sectionInfo: NSFetchedResultsSectionInfo,
                          atSectionIndex sectionIndex: Int,
                          for type: NSFetchedResultsChangeType) {
@@ -49,7 +54,7 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
         }
     }
 
-    open func controller(_ controller: FRC,
+    open func controller(_ controller: RequestResultFRC,
                          didChange anObject: Any,
                          at indexPath: IndexPath?,
                          for type: NSFetchedResultsChangeType,
@@ -66,7 +71,7 @@ open class FetchedResultsCollectionModel: FetchedResultsModel, UICollectionViewD
         }
     }
     
-    open func controllerDidChangeContent(_ controller: FRC) {
+    open func controllerDidChangeContent(_ controller: RequestResultFRC) {
         // Collections don't have an endUpdates() method like tables do.
     }
 
