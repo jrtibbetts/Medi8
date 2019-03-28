@@ -1,8 +1,7 @@
 //  Copyright © 2017 Poikile Creations. All rights reserved.
 
-import MediaPlayer
-import UIKit
 import CoreData
+import UIKit
 
 /// A `FetchedResultsModel` for table views.
 open class FetchedResultsTableModel: FetchedResultsModel,
@@ -59,9 +58,7 @@ open class FetchedResultsTableModel: FetchedResultsModel,
     // override it and *not* call `super.tableView(_, cellForRowAt:)`.
     open func tableView(_ tableView: UITableView,
                         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        preconditionFailure("""
-Looks like someone didn't override tableView(_,cellForRowAt:) in the FetchedResultsTableModel.
-""")
+        return UITableViewCell(style: .default, reuseIdentifier: "tableCell")
     }
 
     open func tableView(_ tableView: UITableView,
