@@ -28,12 +28,6 @@ public extension FetchedResultsModelTestBase {
         artist2.sortName = "Batter, Pancake"
         
         // Set up the fetched results controller.
-        let request = NSFetchRequest<IndividualArtist>(entityName: "IndividualArtist")
-        request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
-        _ = NSFetchedResultsController<IndividualArtist>(fetchRequest: request,
-                                                         managedObjectContext: moContext!,
-                                                         sectionNameKeyPath: "sortName",
-                                                         cacheName: nil)
         let testModel = model()
         XCTAssertEqual(testModel.numberOfSections(), 2)
         XCTAssertEqual(testModel.numberOfItems(in: 0), 1)

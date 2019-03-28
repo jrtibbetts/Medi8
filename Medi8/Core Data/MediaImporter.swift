@@ -72,17 +72,23 @@ public extension MediaImporter {
                 masterRelease.addToArtists(NSOrderedSet(array: artists))
             }
             
-            let releaseVersion = ReleaseVersion(context: context)
-            releaseVersion.parentRelease = masterRelease
-            releaseVersion.trackListing = TrackListing(context: context)
-            
-            if let releaseDate = releaseDate {
-                let releaseDateString = dateFormatter.string(from: releaseDate)
-                releaseVersion.releaseDate?.adding(releaseDateString)
-            }
-            
+            let releaseVersion = try! fetchOrCreateReleaseVersion(releaseDate: releaseDate)
+            releaseVersion?.parentRelease = masterRelease
+
             return masterRelease
         }
+    }
+
+    func fetchOrCreateReleaseVersion(releaseDate: Date?) throws -> ReleaseVersion? {
+        let releaseVersion = ReleaseVersion(context: context)
+        releaseVersion.trackListing = TrackListing(context: context)
+
+        if let releaseDate = releaseDate {
+            let releaseDateString = dateFormatter.string(from: releaseDate)
+            releaseVersion.releaseDate?.adding(releaseDateString)
+        }
+
+        return releaseVersion
     }
 
     /// Fetch or create a `Song`. This will also create a `Recording` for it.
