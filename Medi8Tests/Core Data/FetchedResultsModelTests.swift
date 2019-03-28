@@ -10,12 +10,14 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
 
     var moContext: NSManagedObjectContext? = FetchingTestBase.testingContext
 
-    override class func setUp() {
+    func importMedia() {
         let mediaImporter = MockMediaImporter(context: FetchingTestBase.testingContext)
         try! mediaImporter.importMedia()
     }
 
     func testTableModelNumberOfSectionsAndRows() {
+        importMedia()
+
         let (tableView, model) = tableAndModel()
         XCTAssertTrue(tableView.dataSource === model)
         XCTAssertEqual(tableView.numberOfSections, 1)
@@ -42,7 +44,9 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         return (tableView, model)
     }
 
-    func testCollectionModelNumberOfSectionsAndItems() {
+    func testCollectionModelNumberOfSectionsAndItems() throws {
+        importMedia()
+        
         let (collectionView, model) = collectionAndModel()
         XCTAssertTrue(collectionView.dataSource === model)
         XCTAssertEqual(collectionView.numberOfSections, 1)

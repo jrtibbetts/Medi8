@@ -4,7 +4,6 @@ import CoreData
 import UIKit
 
 open class FetchedResultsCollectionModel: FetchedResultsModel,
-    NSFetchedResultsControllerDelegate,
     UICollectionViewDataSource,
     UICollectionViewDelegate {
 
@@ -17,7 +16,6 @@ open class FetchedResultsCollectionModel: FetchedResultsModel,
         super.init(context: context, fetchedResultsController: fetchedResultsController)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.fetchedResultsController.delegate = self
     }
 
     // MARK: - UICollectionViewDataSource & UICollectionViewDelegate
@@ -32,39 +30,4 @@ open class FetchedResultsCollectionModel: FetchedResultsModel,
         return UICollectionViewCell()
     }
     
-    // MARK: - Fetched results controller
-
-    open func controller(_ controller: RequestResultFRC,
-                         didChange sectionInfo: NSFetchedResultsSectionInfo,
-                         atSectionIndex sectionIndex: Int,
-                         for type: NSFetchedResultsChangeType) {
-        let sectionIndices = IndexSet(integer: sectionIndex)
-
-        if type == .insert {
-            collectionView.insertSections(sectionIndices)
-            collectionView.reloadData()
-        }
-    }
-
-    open func controller(_ controller: RequestResultFRC,
-                         didChange anObject: Any,
-                         at indexPath: IndexPath?,
-                         for type: NSFetchedResultsChangeType,
-                         newIndexPath: IndexPath?) {
-        switch type {
-        case .insert:
-            break  // do nothing
-        case .delete:
-            if let indexPath = indexPath {
-                deleteElement(at: indexPath)
-                saveContext()
-                collectionView.reloadData()
-            }
-        case .update:
-            collectionView.reloadItems(at: [indexPath!])
-        case .move:
-            collectionView.moveItem(at: indexPath!, to: newIndexPath!)
-        }
-    }
-
 }

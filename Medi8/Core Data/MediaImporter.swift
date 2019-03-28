@@ -62,27 +62,25 @@ public extension MediaImporter {
         let request: NSFetchRequest<NSFetchRequestResult> = MasterRelease.fetchRequest()
         request.sortDescriptors = [(\MasterRelease.sortTitle).sortDescriptor(), (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title == \"\(name)\"")
-
+        
         return try context.fetchOrCreateManagedObject(with: request) { (context) -> MasterRelease in
-           let masterRelease = MasterRelease(context: context) <~ {
-                $0.title = name
-                $0.sortTitle = name
-
-                if let artists = artists {
-                    $0.addToArtists(NSOrderedSet(array: artists))
-                }
+            let masterRelease = MasterRelease(context: context)
+            masterRelease.title = name
+            masterRelease.sortTitle = name
+            
+            if let artists = artists {
+                masterRelease.addToArtists(NSOrderedSet(array: artists))
             }
-
-            _ = ReleaseVersion(context: context) <~ {
-                $0.parentRelease = masterRelease
-                $0.trackListing = TrackListing(context: context)
-
-                if let releaseDate = releaseDate {
-                    let releaseDateString = dateFormatter.string(from: releaseDate)
-                    $0.releaseDate?.adding(releaseDateString)
-                }
+            
+            let releaseVersion = ReleaseVersion(context: context)
+            releaseVersion.parentRelease = masterRelease
+            releaseVersion.trackListing = TrackListing(context: context)
+            
+            if let releaseDate = releaseDate {
+                let releaseDateString = dateFormatter.string(from: releaseDate)
+                releaseVersion.releaseDate?.adding(releaseDateString)
             }
-
+            
             return masterRelease
         }
     }
