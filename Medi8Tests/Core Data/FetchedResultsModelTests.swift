@@ -19,19 +19,19 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
 
     // MARK: - FetchedResultsTableModel Tests
 
-    func testTableModelNumberOfSectionsAndRows() {
+    func testTableModelNumberOfSectionsAndRows() throws {
         importMedia()
 
-        let (tableView, model) = tableAndModel()
+        let (tableView, model) = try tableAndModel()
         XCTAssertTrue(tableView.dataSource === model)
         XCTAssertEqual(tableView.numberOfSections, 1)
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 14)
     }
 
-    func testTableModelDeleteItem() {
+    func testTableModelDeleteItem() throws {
         importMedia()
 
-        let (tableView, model) = tableAndModel()
+        let (tableView, model) = try tableAndModel()
         let path = IndexPath(row: 9, section: 0)
         XCTAssertFalse(model.tableView(tableView, canEditRowAt: path))
         model.tableView(tableView, commit: .delete, forRowAt: path)
@@ -42,19 +42,19 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 13)
     }
 
-    func testTableModelCell() {
+    func testTableModelCell() throws {
         importMedia()
 
-        let (tableView, model) = tableAndModel()
+        let (tableView, model) = try tableAndModel()
         let path = IndexPath(row: 9, section: 0)
         _ = model.tableView(tableView, cellForRowAt: path)
     }
 
-    func tableAndModel() -> (UITableView, FetchedResultsTableModel) {
+    func tableAndModel() throws -> (UITableView, FetchedResultsTableModel) {
         let tableView = UITableView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
         let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
         fetchRequest.sortDescriptors = []
-        let frc = fetchedResultsController(for: fetchRequest)!
+        let frc = try fetchedResultsController(for: fetchRequest)!
         let model = FetchedResultsTableModel(tableView,
                                              context: moContext!,
                                              fetchedResultsController: frc as! ManagedObjectFRC)
@@ -68,26 +68,26 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
     func testCollectionModelNumberOfSectionsAndItems() throws {
         importMedia()
         
-        let (collectionView, model) = collectionAndModel()
+        let (collectionView, model) = try collectionAndModel()
         XCTAssertTrue(collectionView.dataSource === model)
         XCTAssertEqual(collectionView.numberOfSections, 1)
         XCTAssertEqual(collectionView.numberOfItems(inSection: 0), 14)
     }
 
-    func testCollectionModelCell() {
+    func testCollectionModelCell() throws {
         importMedia()
 
-        let (collectionView, model) = collectionAndModel()
+        let (collectionView, model) = try collectionAndModel()
         let path = IndexPath(row: 9, section: 0)
         _ = model.collectionView(collectionView, cellForItemAt: path)
     }
 
-    func collectionAndModel() -> (UICollectionView, FetchedResultsCollectionModel) {
+    func collectionAndModel() throws -> (UICollectionView, FetchedResultsCollectionModel) {
         let collectionView = UICollectionView(frame: CGRect(),
                                               collectionViewLayout: UICollectionViewFlowLayout())
         let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
         fetchRequest.sortDescriptors = []
-        let frc = fetchedResultsController(for: fetchRequest)!
+        let frc = try fetchedResultsController(for: fetchRequest)!
         let model = FetchedResultsCollectionModel(collectionView,
                                                   context: moContext!,
                                                   fetchedResultsController: frc as! ManagedObjectFRC)

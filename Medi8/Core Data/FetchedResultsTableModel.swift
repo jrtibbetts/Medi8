@@ -72,7 +72,13 @@ open class FetchedResultsTableModel: FetchedResultsModel,
                         forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             deleteElement(at: indexPath)
-            saveContext()
+
+            do {
+                try saveContext()
+                try fetchedResultsController.performFetch()
+            } catch {
+                // How can we handle the error?
+            }
         }
     }
 
