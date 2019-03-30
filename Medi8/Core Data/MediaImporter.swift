@@ -170,7 +170,7 @@ public extension KeyPath {
     ///
     /// - parameter ascending: `true` if the sort order should be ascending.
     ///   The default is `true`.
-    public func sortDescriptor(ascending: Bool = true) -> NSSortDescriptor {
+    func sortDescriptor(ascending: Bool = true) -> NSSortDescriptor {
         return NSSortDescriptor(keyPath: self, ascending: ascending)
     }
 

@@ -18,7 +18,7 @@ public protocol FetchedResultsModelTestBase {
 
 public extension FetchedResultsModelTestBase {
     
-    public func testNumberOfSections() {
+    func testNumberOfSections() {
         // Populate the testing context.
         let artist1 = IndividualArtist(context: moContext!)
         artist1.name = "Pondiferous Flatulence"
