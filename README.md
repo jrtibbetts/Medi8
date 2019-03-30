@@ -1,10 +1,10 @@
 # Medi8
-[![Build Status](https://travis-ci.org/jrtibbetts/Medi8.svg?branch=master)](https://travis-ci.org/jrtibbetts/Medi8)
-![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![CodeCov](https://img.shields.io/codecov/c/github/jrtibbetts/Medi8.svg)
-[![Codebeat](https://codebeat.co/badges/9db4672f-1ffc-4981-a7d0-3bb71e97cd62)](https://codebeat.co/projects/github-com-jrtibbetts-medi8-master)
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+What language is it? ![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
+How can I integrate it into my project? [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+Is it licensed?[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+Does it *build*? [![Build Status](https://travis-ci.org/jrtibbetts/Medi8.svg?branch=master)](https://travis-ci.org/jrtibbetts/Medi8)
+Is it *tested*? [![Codecov](https://codecov.io/gh/jrtibbetts/Medi8/branch/master/graph/badge.svg)](https://codecov.io/gh/jrtibbetts/Medi8)
+Is it *correct*? [![Codebeat](https://codebeat.co/badges/9db4672f-1ffc-4981-a7d0-3bb71e97cd62)](https://codebeat.co/projects/github-com-jrtibbetts-medi8-master)
 
 ### Usage & installation instructions coming soon...
 
