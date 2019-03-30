@@ -2,12 +2,12 @@
 
 import CoreData
 
+public typealias ManagedObjectFRC = NSFetchedResultsController<NSManagedObject>
+public typealias RequestResultFRC = NSFetchedResultsController<NSFetchRequestResult>
+
 /// A model class that can be used as the base class of collection and table
 /// models, backed by a `NSFetchedResultsController`.
 open class FetchedResultsModel: NSObject, ManagedObjectContextContainer {
-
-    public typealias ManagedObjectFRC = NSFetchedResultsController<NSManagedObject>
-    public typealias RequestResultFRC = NSFetchedResultsController<NSFetchRequestResult>
 
     public var fetchedResultsController: ManagedObjectFRC
     public var moContext: NSManagedObjectContext?

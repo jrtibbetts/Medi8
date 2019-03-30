@@ -38,7 +38,9 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
         fetchRequest.sortDescriptors = []
         let frc = fetchedResultsController(for: fetchRequest)!
-        let model = FetchedResultsTableModel(tableView, context: moContext!, fetchedResultsController: frc as! NSFetchedResultsController<NSManagedObject>)
+        let model = FetchedResultsTableModel(tableView,
+                                             context: moContext!,
+                                             fetchedResultsController: frc as! ManagedObjectFRC)
         tableView.dataSource = model
 
         return (tableView, model)
@@ -59,7 +61,9 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
         fetchRequest.sortDescriptors = []
         let frc = fetchedResultsController(for: fetchRequest)!
-        let model = FetchedResultsCollectionModel(collectionView, context: moContext!, fetchedResultsController: frc as! NSFetchedResultsController<NSManagedObject>)
+        let model = FetchedResultsCollectionModel(collectionView,
+                                                  context: moContext!,
+                                                  fetchedResultsController: frc as! ManagedObjectFRC)
         collectionView.dataSource = model
 
         return (collectionView, model)
