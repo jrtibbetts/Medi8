@@ -125,6 +125,8 @@ open class FetchedResultsTableModel: FetchedResultsModel,
             tableView.reloadRows(at: [indexPath!], with: .automatic)
         case .move:
             tableView.moveRow(at: indexPath!, to: newIndexPath!)
+        @unknown default:
+            break
         }
     }
 
