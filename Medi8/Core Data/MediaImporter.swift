@@ -14,14 +14,6 @@ public protocol MediaImporter {
 
 }
 
-/// A short-style date formatter.
-private let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-
-    return formatter
-}()
-
 public extension MediaImporter {
 
     /// Fetch or create an `Artist`.
@@ -71,9 +63,14 @@ public extension MediaImporter {
             if let artists = artists {
                 masterRelease.addToArtists(NSOrderedSet(array: artists))
             }
-            
-            let releaseVersion = try! fetchOrCreateReleaseVersion(releaseDate: releaseDate)
-            releaseVersion?.parentRelease = masterRelease
+
+            do {
+                if let releaseVersion = try fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
+                    releaseVersion.parentRelease = masterRelease
+                }
+            } catch {
+
+            }
 
             return masterRelease
         }
@@ -84,8 +81,9 @@ public extension MediaImporter {
         releaseVersion.trackListing = TrackListing(context: context)
 
         if let releaseDate = releaseDate {
-            let releaseDateString = dateFormatter.string(from: releaseDate)
-            releaseVersion.releaseDate?.adding(releaseDateString)
+            let releaseDateObject = ReleaseDate(context: context)
+            releaseDateObject.date = releaseDate
+            releaseVersion.releaseDate?.adding(releaseDateObject)
         }
 
         return releaseVersion
