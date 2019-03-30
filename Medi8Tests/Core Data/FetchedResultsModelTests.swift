@@ -6,14 +6,18 @@ import XCTest
 
 class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
 
-    typealias ManagedObjectType = MasterRelease
-
     var moContext: NSManagedObjectContext? = FetchingTestBase.testingContext
 
     func importMedia() {
         let mediaImporter = MockMediaImporter(context: FetchingTestBase.testingContext)
         try! mediaImporter.importMedia()
     }
+
+    // MARK: - FetchedResultsProvider
+
+    typealias ManagedObjectType = MasterRelease
+
+    // MARK: - FetchedResultsTableModel Tests
 
     func testTableModelNumberOfSectionsAndRows() {
         importMedia()
@@ -38,6 +42,14 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 13)
     }
 
+    func testTableModelCell() {
+        importMedia()
+
+        let (tableView, model) = tableAndModel()
+        let path = IndexPath(row: 9, section: 0)
+        _ = model.tableView(tableView, cellForRowAt: path)
+    }
+
     func tableAndModel() -> (UITableView, FetchedResultsTableModel) {
         let tableView = UITableView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 400.0))
         let fetchRequest = NSFetchRequest<MasterRelease>(entityName: "MasterRelease")
@@ -51,6 +63,8 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         return (tableView, model)
     }
 
+    // MARK: - FetchedResultsCollectionModel Tests
+
     func testCollectionModelNumberOfSectionsAndItems() throws {
         importMedia()
         
@@ -58,6 +72,14 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         XCTAssertTrue(collectionView.dataSource === model)
         XCTAssertEqual(collectionView.numberOfSections, 1)
         XCTAssertEqual(collectionView.numberOfItems(inSection: 0), 14)
+    }
+
+    func testCollectionModelCell() {
+        importMedia()
+
+        let (collectionView, model) = collectionAndModel()
+        let path = IndexPath(row: 9, section: 0)
+        _ = model.collectionView(collectionView, cellForItemAt: path)
     }
 
     func collectionAndModel() -> (UICollectionView, FetchedResultsCollectionModel) {
