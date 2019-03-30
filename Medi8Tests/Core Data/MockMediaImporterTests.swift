@@ -15,22 +15,6 @@ class MockMediaImporterTests: FetchingTestBase {
         XCTAssertNil(delegate.importError)
     }
 
-    class Delegate: NSObject, MediaImporterDelegate {
-
-        var finishedImporting: Bool = false
-        var importError: Any?
-        var startedImporting: Bool = false
-
-        func didStartImporting() {
-            startedImporting = true
-        }
-
-        func didFinishImporting(with error: Any?) {
-            finishedImporting = true
-            importError = error
-        }
-    }
-
     func testFullModel() throws {
         let importer = MockMediaImporter(context: FetchingTestBase.testingContext)
         try importer.importMedia()
@@ -47,6 +31,25 @@ class MockMediaImporterTests: FetchingTestBase {
         XCTAssertEqual(beatlesSongs!.count, 206)
         freeAsABird.removeFromArtists(theBeatles)
         XCTAssertEqual(beatlesSongs!.count, 205)
+    }
+
+    class Delegate: NSObject, MediaImporterDelegate {
+
+        var finishedImporting: Bool = false
+
+        var importError: Any?
+
+        var startedImporting: Bool = false
+
+        func didStartImporting() {
+            startedImporting = true
+        }
+
+        func didFinishImporting(with error: Any?) {
+            finishedImporting = true
+            importError = error
+        }
+        
     }
 
 }

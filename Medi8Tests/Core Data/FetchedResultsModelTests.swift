@@ -22,7 +22,12 @@ class FetchedResultsModelTests: FetchingTestBase, FetchedResultsProvider {
         XCTAssertTrue(tableView.dataSource === model)
         XCTAssertEqual(tableView.numberOfSections, 1)
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 14)
+    }
 
+    func testTableModelDeleteItem() {
+        importMedia()
+
+        let (tableView, model) = tableAndModel()
         let path = IndexPath(row: 9, section: 0)
         XCTAssertFalse(model.tableView(tableView, canEditRowAt: path))
         model.tableView(tableView, commit: .delete, forRowAt: path)
