@@ -27,12 +27,12 @@ class MockMediaImporter: MediaImporter {
             if let artist = try fetchOrCreateArtist(named: mockData.artist) {
                 try add(releaseNamed: release.title, with: release.tracks, to: artist)
             }
-
-            try context.save()
-
-            delegate?.willFinishImporting()
-            delegate?.didFinishImporting(with: nil)
         }
+
+        try context.save()
+
+        delegate?.willFinishImporting()
+        delegate?.didFinishImporting(with: nil)
     }
 
     func add(releaseNamed releaseTitle: String,
@@ -41,18 +41,13 @@ class MockMediaImporter: MediaImporter {
         let release = try fetchOrCreateMasterRelease(named: releaseTitle, by: [artist])!
         try tracks.forEach { (track) in
             try release.versions?.forEach { (version) in
-                if let trackListing = (version as? ReleaseVersion)?.trackListing {
-                    try add(songNamed: track.title,
-                        artist: artist,
-                        to: trackListing)
-                }
+                try add(songNamed: track.title, artist: artist)
             }
         }
     }
 
     func add(songNamed songTitle: String,
-             artist: Artist,
-             to tracks: TrackListing) throws {
+             artist: Artist) throws {
         _ = try fetchOrCreateSong(named: songTitle, by: artist)
     }
 
