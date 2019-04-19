@@ -26,7 +26,7 @@ public extension MediaImporter {
     func fetchOrCreateArtist(named name: String, sortName: String? = nil) throws -> Artist? {
         let request: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
-        request.predicate = NSPredicate(format: "name == \"\(name)\"")
+        request.predicate = NSPredicate(format: "name = %@", name)
 
         return try context.fetchOrCreateManagedObject(with: request) { (context) -> Artist in
             print("Creating an artist named \(name)")
@@ -54,8 +54,8 @@ public extension MediaImporter {
         let request: NSFetchRequest<NSFetchRequestResult> = MasterRelease.fetchRequest()
         request.sortDescriptors = [(\MasterRelease.sortTitle).sortDescriptor(),
                                    (\MasterRelease.title).sortDescriptor()]
-        request.predicate = NSPredicate(format: "title == \"\(name)\"")
-        
+        request.predicate = NSPredicate(format: "title = %@", name)
+
         return try context.fetchOrCreateManagedObject(with: request) { (context) -> MasterRelease in
             let masterRelease = MasterRelease(context: context)
             masterRelease.title = name
@@ -97,7 +97,7 @@ public extension MediaImporter {
     func fetchOrCreateSong(named name: String, by artist: Artist) throws -> Song? {
         let request: NSFetchRequest<NSFetchRequestResult> = Song.fetchRequest()
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
-        request.predicate = NSPredicate(format: "title == \"\(name)\"")
+        request.predicate = NSPredicate(format: "title = %@", name)
 
         return try context.fetchOrCreateManagedObject(with: request) { (context) -> Song in
             let song = Song(context: context)
