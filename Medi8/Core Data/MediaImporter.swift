@@ -6,10 +6,10 @@ import Stylobate
 /// Implemented by classes that populate a Core Data context with media info.
 open class MediaImporter: NSObject {
     
-    public var delegate: Delegate?
+    open var delegate: Delegate?
     
     /// The managed object context into which the data will be imported.
-    public var context: NSManagedObjectContext!
+    open var context: NSManagedObjectContext!
     
     /// Fetch or create an `Artist`.
     ///
@@ -111,19 +111,19 @@ open class MediaImporter: NSObject {
     /// the main thread, but this is not guaranteed.
     open class Delegate: NSObject {
         
-        func willStartImporting() {
+        open func willStartImporting() {
             // By default, do nothing.
         }
         
-        func didStartImporting() {
+        open func didStartImporting() {
             // By default, do nothing.
         }
         
-        func willFinishImporting() {
+        open func willFinishImporting() {
             // By default, do nothing.
         }
         
-        func didFinishImporting(with error: Any?) {
+        open func didFinishImporting(with error: Any?) {
             // By default, do nothing.
         }
         
