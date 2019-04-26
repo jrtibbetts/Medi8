@@ -2,6 +2,7 @@
 
 @testable import Medi8
 import CoreData
+//import Stylobate
 import XCTest
 
 class FetchingTestBase: XCTestCase {
@@ -12,7 +13,7 @@ class FetchingTestBase: XCTestCase {
     static var testingContext: NSManagedObjectContext = {
         let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 
-        let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: FetchedResultsModel.self)])!
+        let model = NSManagedObjectModel.mergedModel(from: [Bundle(for: Medi8.self)])!
         let stoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
 
         do {

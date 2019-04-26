@@ -20,7 +20,7 @@ open class MediaImporter: NSObject {
     /// - returns: A new or fetched `Artist` with the given name.
     open func fetchOrCreateArtist(named name: String,
                                   sortName: String? = nil) throws -> Artist? {
-        let request: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()
+        let request: NSFetchRequest<Artist> = Artist.fetchRequest()
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name = %@", name)
         
@@ -47,7 +47,7 @@ open class MediaImporter: NSObject {
     open func fetchOrCreateMasterRelease(named name: String,
                                          by artists: [Artist]? = nil,
                                          releaseDate: Date? = Date()) throws -> MasterRelease? {
-        let request: NSFetchRequest<NSFetchRequestResult> = MasterRelease.fetchRequest()
+        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequest()
         request.sortDescriptors = [(\MasterRelease.sortTitle).sortDescriptor(),
                                    (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
@@ -92,7 +92,7 @@ open class MediaImporter: NSObject {
     ///  - parameter artist: The artist who performed the song.
     open func fetchOrCreateSong(named name: String,
                                 by artist: Artist) throws -> Song? {
-        let request: NSFetchRequest<NSFetchRequestResult> = Song.fetchRequest()
+        let request: NSFetchRequest<Song> = Song.fetchRequest()
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
         
