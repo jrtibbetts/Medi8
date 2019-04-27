@@ -24,7 +24,7 @@ open class MediaImporter: NSObject {
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name = %@", name)
         
-        return try context.fetchOrCreateManagedObject(with: request) { (context) -> Artist in
+        return try context.fetchOrCreate(with: request) { (context) -> Artist in
             print("Creating an artist named \(name)")
             let artist = IndividualArtist(context: context)
             artist.name = name
@@ -52,7 +52,7 @@ open class MediaImporter: NSObject {
                                    (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
         
-        return try context.fetchOrCreateManagedObject(with: request) { (context) -> MasterRelease in
+        return try context.fetchOrCreate(with: request) { (context) -> MasterRelease in
             let masterRelease = MasterRelease(context: context)
             masterRelease.title = name
             masterRelease.sortTitle = name
@@ -96,7 +96,7 @@ open class MediaImporter: NSObject {
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
         
-        return try context.fetchOrCreateManagedObject(with: request) { (context) -> Song in
+        return try context.fetchOrCreate(with: request) { (context) -> Song in
             let song = Song(context: context)
             song.title = name
             artist.addToSongs(song)
@@ -127,32 +127,6 @@ open class MediaImporter: NSObject {
             // By default, do nothing.
         }
         
-    }
-    
-}
-
-//public extension String {
-//
-//    /// Get an `NSSortDescriptor` whose key is this string. This makes it as
-//    /// easy as calling `"widgetCount".sortDescriptor(ascending: false)`.
-//    ///
-//    /// - parameter ascending: `true` if the sort order should be ascending.
-//    ///   The default is `true`.
-//    public func sortDescriptor(ascending: Bool = true) -> NSSortDescriptor {
-//        return NSSortDescriptor(key: self, ascending: ascending)
-//    }
-//
-//}
-//
-public extension KeyPath {
-    
-    /// Get an `NSSortDescriptor` whose key is this key path. Calling it like
-    /// `(\WidgetHolder.widgetCount).sortDescriptor(ascending: false)`
-    ///
-    /// - parameter ascending: `true` if the sort order should be ascending.
-    ///   The default is `true`.
-    func sortDescriptor(ascending: Bool = true) -> NSSortDescriptor {
-        return NSSortDescriptor(keyPath: self, ascending: ascending)
     }
     
 }
