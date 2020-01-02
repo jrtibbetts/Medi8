@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9659768B23BEB46000FD3B98 /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 9659768A23BEB46000FD3B98 /* Stylobate */; };
 		968102062272B825003E6D82 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968102052272B825003E6D82 /* Medi8.swift */; };
 		96A2F7F82247365D00FBC798 /* MockMediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */; };
 		96A2F7FE2247365D00FBC798 /* Medi8.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */; };
@@ -17,7 +18,6 @@
 		96A2F80F22474B2900FBC798 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F80E22474B2900FBC798 /* MockData.swift */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96ACFB482246DC7200C9F2AD /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB472246DC7200C9F2AD /* Stylobate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		96ACFB122246DBE700C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB1E2246DBE800C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96ACFB472246DC7200C9F2AD /* Stylobate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stylobate.framework; path = Carthage/Build/iOS/Stylobate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACFB482246DC7200C9F2AD /* Stylobate.framework in Frameworks */,
+				9659768B23BEB46000FD3B98 /* Stylobate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +101,6 @@
 				96ACFB102246DBE700C9F2AD /* Medi8 */,
 				96ACFB1B2246DBE800C9F2AD /* Medi8Tests */,
 				96ACFB0F2246DBE700C9F2AD /* Products */,
-				96ACFB462246DC7200C9F2AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,14 +134,6 @@
 			path = Medi8Tests;
 			sourceTree = "<group>";
 		};
-		96ACFB462246DC7200C9F2AD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				96ACFB472246DC7200C9F2AD /* Stylobate.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -172,6 +162,9 @@
 			dependencies = (
 			);
 			name = Medi8;
+			packageProductDependencies = (
+				9659768A23BEB46000FD3B98 /* Stylobate */,
+			);
 			productName = Medi8;
 			productReference = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */;
 			productType = "com.apple.product-type.framework";
@@ -223,6 +216,9 @@
 				Base,
 			);
 			mainGroup = 96ACFB042246DBE700C9F2AD;
+			packageReferences = (
+				9659768923BEB46000FD3B98 /* XCRemoteSwiftPackageReference "Stylobate" */,
+			);
 			productRefGroup = 96ACFB0F2246DBE700C9F2AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,6 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -394,6 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -427,6 +425,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Medi8;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -456,6 +455,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.poikile.Medi8;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -535,6 +535,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9659768923BEB46000FD3B98 /* XCRemoteSwiftPackageReference "Stylobate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrtibbetts/Stylobate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.27.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9659768A23BEB46000FD3B98 /* Stylobate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9659768923BEB46000FD3B98 /* XCRemoteSwiftPackageReference "Stylobate" */;
+			productName = Stylobate;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */ = {
