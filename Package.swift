@@ -22,6 +22,7 @@ let pkg = Package(
     targets: [
         .target(
             name: "Medi8",
+            dependencies: ["Stylobate"],
             path: "Medi8"
         )
     ]
