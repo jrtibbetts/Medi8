@@ -15,7 +15,9 @@ let pkg = Package(
         )
     ],
 
-    dependencies: [ ],
+    dependencies: [
+        .package(url: "https://github.com/jrtibbetts/Stylobate.git", from: "0.27.0")
+    ],
 
     targets: [
         .target(
