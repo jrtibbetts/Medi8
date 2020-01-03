@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9659768C23BED63000FD3B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		968102052272B825003E6D82 /* Medi8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8.swift; sourceTree = "<group>"; };
 		96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporter.swift; sourceTree = "<group>"; };
 		96A2F7F32247365C00FBC798 /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		96ACFB042246DBE700C9F2AD = {
 			isa = PBXGroup;
 			children = (
+				9659768C23BED63000FD3B98 /* README.md */,
 				96ACFB102246DBE700C9F2AD /* Medi8 */,
 				96ACFB1B2246DBE800C9F2AD /* Medi8Tests */,
 				96ACFB0F2246DBE700C9F2AD /* Products */,
