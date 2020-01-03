@@ -16,7 +16,7 @@ let pkg = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/jrtibbetts/Stylobate.git", from: "0.27.0")
+        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .upToNextMajor(from: "0.27.0"))
     ],
 
     targets: [
