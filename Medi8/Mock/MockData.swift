@@ -20,7 +20,7 @@ public struct MockData: Codable {
         public var comment: String
         public var year: Int
         public var composer: String
-        
+
     }
-    
+
 }

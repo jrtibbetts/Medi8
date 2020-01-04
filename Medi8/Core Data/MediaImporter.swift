@@ -5,12 +5,12 @@ import Stylobate
 
 /// Implemented by classes that populate a Core Data context with media info.
 open class MediaImporter: NSObject {
-    
-    open var delegate: Delegate?
-    
+
+    open weak var delegate: Delegate?
+
     /// The managed object context into which the data will be imported.
     open var context: NSManagedObjectContext!
-    
+
     /// Fetch or create an `Artist`.
     ///
     /// - parameter name: The artist's name.
@@ -23,17 +23,17 @@ open class MediaImporter: NSObject {
         let request: NSFetchRequest<Artist> = Artist.fetchRequest()
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name = %@", name)
-        
+
         return try context.fetchOrCreate(with: request) { (context) -> Artist in
             print("Creating an artist named \(name)")
             let artist = IndividualArtist(context: context)
             artist.name = name
             artist.sortName = sortName ?? name
-            
+
             return artist
         }
     }
-    
+
     /// Fetch or create a `MasterRelease`. This will also create a single
     /// `ReleaseVersion` and `TrackListing` for it.
     ///
@@ -51,41 +51,41 @@ open class MediaImporter: NSObject {
         request.sortDescriptors = [(\MasterRelease.sortTitle).sortDescriptor(),
                                    (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
-        
+
         return try context.fetchOrCreate(with: request) { (context) -> MasterRelease in
             let masterRelease = MasterRelease(context: context)
             masterRelease.title = name
             masterRelease.sortTitle = name
-            
+
             if let artists = artists {
                 masterRelease.addToArtists(NSOrderedSet(array: artists))
             }
-            
+
             do {
                 if let releaseVersion = try fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
                     releaseVersion.parentRelease = masterRelease
                 }
             } catch {
-                
+
             }
-            
+
             return masterRelease
         }
     }
-    
+
     open func fetchOrCreateReleaseVersion(releaseDate: Date?) throws -> ReleaseVersion? {
         let releaseVersion = ReleaseVersion(context: context)
         releaseVersion.trackListing = TrackListing(context: context)
-        
+
         if let releaseDate = releaseDate {
             let releaseDateObject = ReleaseDate(context: context)
             releaseDateObject.date = releaseDate
             releaseVersion.releaseDate?.adding(releaseDateObject)
         }
-        
+
         return releaseVersion
     }
-    
+
     /// Fetch or create a `Song`. This will also create a `Recording` for it.
     ///
     ///  - parameter name: The song title.
@@ -95,38 +95,38 @@ open class MediaImporter: NSObject {
         let request: NSFetchRequest<Song> = Song.fetchRequest()
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
-        
+
         return try context.fetchOrCreate(with: request) { (context) -> Song in
             let song = Song(context: context)
             song.title = name
             artist.addToSongs(song)
             Recording(context: context).addToSongs(song)
-            
+
             return song
         }
     }
-    
+
     /// Implemented by classes that want to keep track of the progress of the media
     /// importer. The importer should ensure that delegate methods are called on
     /// the main thread, but this is not guaranteed.
     open class Delegate: NSObject {
-        
+
         open func willStartImporting() {
             // By default, do nothing.
         }
-        
+
         open func didStartImporting() {
             // By default, do nothing.
         }
-        
+
         open func willFinishImporting() {
             // By default, do nothing.
         }
-        
+
         open func didFinishImporting(with error: Any?) {
             // By default, do nothing.
         }
-        
+
     }
-    
+
 }

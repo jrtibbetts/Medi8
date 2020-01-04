@@ -38,7 +38,7 @@ class MockMediaImporter: MediaImporter {
              to artist: Artist) throws {
         let release = try fetchOrCreateMasterRelease(named: releaseTitle, by: [artist])!
         try tracks.forEach { (track) in
-            try release.versions?.forEach { (version) in
+            try release.versions?.forEach { _ in
                 try add(songNamed: track.title, artist: artist)
             }
         }
