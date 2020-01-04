@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Stylobate",
+        "repositoryURL": "https://github.com/jrtibbetts/Stylobate.git",
+        "state": {
+          "branch": null,
+          "revision": "c7b3a14339ef43fd34ef1b09e5ad7e306a777253",
+          "version": "0.27.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
