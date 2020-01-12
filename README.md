@@ -3,9 +3,9 @@
 Medi8 is a Core Data model for music media. It's designed to aggregate data from multiple
 online databases, including [Discogs](https://discogs.com) and
 [MusicBrainz](https://musicbrainz.org), although its schema is independent of all of them, and
-does not provide support for importing from or exporting to any of them itself. My other
+does not provide support for importing from or exporting to any of them itself. (My other
 projects, such as [SwiftDiscogs](https://github.com/jrtibbetts/SwiftDiscogs) and
-[SwiftMusicbrainz](https://github.com/jrtibbetts/SwiftMusicbrainz), are intended to do that.
+[SwiftMusicbrainz](https://github.com/jrtibbetts/SwiftMusicbrainz), are intended to do that.)
 
 ## The Details
 
