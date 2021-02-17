@@ -1,0 +1,3 @@
+[submodule "Frameworks/Stylobate"]
+	path = Frameworks/Stylobate
+	url = git@github.com:jrtibbetts/Stylobate.git

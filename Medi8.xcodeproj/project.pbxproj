@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		968102062272B825003E6D82 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968102052272B825003E6D82 /* Medi8.swift */; };
-		9691E9FC23C04EFC00FDEECC /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 9691E9FB23C04EFC00FDEECC /* Stylobate */; };
-		96A2F7F82247365D00FBC798 /* MockMediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */; };
-		96A2F7FE2247365D00FBC798 /* Medi8.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */; };
-		96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F7F62247365C00FBC798 /* MediaImporter.swift */; };
-		96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8072247379200FBC798 /* FetchingTestBase.swift */; };
-		96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */; };
-		96A2F80C2247483900FBC798 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F80B2247483900FBC798 /* MockData.json */; };
-		96A2F80F22474B2900FBC798 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F80E22474B2900FBC798 /* MockData.swift */; };
+		9613659C25DB8F2C009A1627 /* Medi8.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9613659125DB8F2C009A1627 /* Medi8.xcdatamodeld */; };
+		9613659E25DB8F2C009A1627 /* MockMediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659625DB8F2C009A1627 /* MockMediaImporter.swift */; };
+		9613659F25DB8F2C009A1627 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659725DB8F2C009A1627 /* MockData.swift */; };
+		961365A025DB8F2C009A1627 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9613659825DB8F2C009A1627 /* MockData.json */; };
+		961365A125DB8F2C009A1627 /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 9613659925DB8F2C009A1627 /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		961365AF25DB8F50009A1627 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961365AC25DB8F50009A1627 /* FetchingTestBase.swift */; };
+		961365B025DB8F50009A1627 /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961365AD25DB8F50009A1627 /* MockMediaImporterTests.swift */; };
+		961366B725DCBEFB009A1627 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659425DB8F2C009A1627 /* MediaImporter.swift */; };
+		961366B825DCBEFB009A1627 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659A25DB8F2C009A1627 /* Medi8.swift */; };
+		961366CB25DCC1AB009A1627 /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 961366CA25DCC1AB009A1627 /* Stylobate */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
-		96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ACFB112246DBE700C9F2AD /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,22 +30,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		961366A925DB8FEA009A1627 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9613659225DB8F2C009A1627 /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
+		9613659325DB8F2C009A1627 /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
+		9613659425DB8F2C009A1627 /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
+		9613659625DB8F2C009A1627 /* MockMediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporter.swift; sourceTree = "<group>"; };
+		9613659725DB8F2C009A1627 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		9613659825DB8F2C009A1627 /* MockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		9613659925DB8F2C009A1627 /* Medi8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
+		9613659A25DB8F2C009A1627 /* Medi8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medi8.swift; sourceTree = "<group>"; };
+		9613659B25DB8F2C009A1627 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961365AC25DB8F50009A1627 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
+		961365AD25DB8F50009A1627 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
+		961365AE25DB8F50009A1627 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961366C825DCC162009A1627 /* Stylobate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stylobate; sourceTree = "<group>"; };
 		9659768C23BED63000FD3B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		968102052272B825003E6D82 /* Medi8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8.swift; sourceTree = "<group>"; };
-		96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporter.swift; sourceTree = "<group>"; };
-		96A2F7F32247365C00FBC798 /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
-		96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
-		96A2F7F62247365C00FBC798 /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
-		96A2F8072247379200FBC798 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
-		96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
-		96A2F80B2247483900FBC798 /* MockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
-		96A2F80E22474B2900FBC798 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96ACFB112246DBE700C9F2AD /* Medi8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
-		96ACFB122246DBE700C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96ACFB1E2246DBE800C9F2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9691E9FC23C04EFC00FDEECC /* Stylobate in Frameworks */,
+				961366CB25DCC1AB009A1627 /* Stylobate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,40 +82,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		96A2F7EB2247365C00FBC798 /* Core Data */ = {
+		9613658F25DB8F2C009A1627 /* Medi8 */ = {
 			isa = PBXGroup;
 			children = (
-				96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */,
-				96A2F7F62247365C00FBC798 /* MediaImporter.swift */,
+				9613659925DB8F2C009A1627 /* Medi8.h */,
+				9613659B25DB8F2C009A1627 /* Info.plist */,
+				9613659A25DB8F2C009A1627 /* Medi8.swift */,
+				9613659025DB8F2C009A1627 /* Core Data */,
+				9613659525DB8F2C009A1627 /* Mock */,
+			);
+			path = Medi8;
+			sourceTree = "<group>";
+		};
+		9613659025DB8F2C009A1627 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				9613659425DB8F2C009A1627 /* MediaImporter.swift */,
+				9613659125DB8F2C009A1627 /* Medi8.xcdatamodeld */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
-		96A2F8042247377F00FBC798 /* Core Data */ = {
+		9613659525DB8F2C009A1627 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				96A2F8072247379200FBC798 /* FetchingTestBase.swift */,
-				96A2F8092247383600FBC798 /* MockMediaImporterTests.swift */,
-			);
-			path = "Core Data";
-			sourceTree = "<group>";
-		};
-		96A2F80D22474AE400FBC798 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				96A2F80B2247483900FBC798 /* MockData.json */,
-				96A2F80E22474B2900FBC798 /* MockData.swift */,
-				96A2F7EC2247365C00FBC798 /* MockMediaImporter.swift */,
+				9613659825DB8F2C009A1627 /* MockData.json */,
+				9613659725DB8F2C009A1627 /* MockData.swift */,
+				9613659625DB8F2C009A1627 /* MockMediaImporter.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		961365AA25DB8F50009A1627 /* Medi8Tests */ = {
+			isa = PBXGroup;
+			children = (
+				961365AE25DB8F50009A1627 /* Info.plist */,
+				961365AB25DB8F50009A1627 /* Core Data */,
+			);
+			path = Medi8Tests;
+			sourceTree = "<group>";
+		};
+		961365AB25DB8F50009A1627 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				961365AC25DB8F50009A1627 /* FetchingTestBase.swift */,
+				961365AD25DB8F50009A1627 /* MockMediaImporterTests.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		961365BC25DB8FC3009A1627 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				961366C825DCC162009A1627 /* Stylobate */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		96ACFB042246DBE700C9F2AD = {
 			isa = PBXGroup;
 			children = (
 				9659768C23BED63000FD3B98 /* README.md */,
-				96ACFB102246DBE700C9F2AD /* Medi8 */,
-				96ACFB1B2246DBE800C9F2AD /* Medi8Tests */,
+				961365BC25DB8FC3009A1627 /* Frameworks */,
+				9613658F25DB8F2C009A1627 /* Medi8 */,
+				961365AA25DB8F50009A1627 /* Medi8Tests */,
 				96ACFB0F2246DBE700C9F2AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,27 +159,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96ACFB102246DBE700C9F2AD /* Medi8 */ = {
-			isa = PBXGroup;
-			children = (
-				96A2F7EB2247365C00FBC798 /* Core Data */,
-				96ACFB122246DBE700C9F2AD /* Info.plist */,
-				96ACFB112246DBE700C9F2AD /* Medi8.h */,
-				96A2F80D22474AE400FBC798 /* Mock */,
-				968102052272B825003E6D82 /* Medi8.swift */,
-			);
-			path = Medi8;
-			sourceTree = "<group>";
-		};
-		96ACFB1B2246DBE800C9F2AD /* Medi8Tests */ = {
-			isa = PBXGroup;
-			children = (
-				96A2F8042247377F00FBC798 /* Core Data */,
-				96ACFB1E2246DBE800C9F2AD /* Info.plist */,
-			);
-			path = Medi8Tests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -143,7 +166,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACFB1F2246DBE800C9F2AD /* Medi8.h in Headers */,
+				961365A125DB8F2C009A1627 /* Medi8.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +182,7 @@
 				96ACFB0B2246DBE700C9F2AD /* Frameworks */,
 				96ACFB0C2246DBE700C9F2AD /* Resources */,
 				96B1C01423C041CC003FB3DE /* ShellScript */,
+				961366A925DB8FEA009A1627 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,7 +190,7 @@
 			);
 			name = Medi8;
 			packageProductDependencies = (
-				9691E9FB23C04EFC00FDEECC /* Stylobate */,
+				961366CA25DCC1AB009A1627 /* Stylobate */,
 			);
 			productName = Medi8;
 			productReference = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */;
@@ -197,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Poikile Creations";
 				TargetAttributes = {
 					96ACFB0D2246DBE700C9F2AD = {
@@ -220,7 +244,6 @@
 			);
 			mainGroup = 96ACFB042246DBE700C9F2AD;
 			packageReferences = (
-				9691E9FA23C04EFC00FDEECC /* XCRemoteSwiftPackageReference "Stylobate" */,
 			);
 			productRefGroup = 96ACFB0F2246DBE700C9F2AD /* Products */;
 			projectDirPath = "";
@@ -237,7 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A2F80C2247483900FBC798 /* MockData.json in Resources */,
+				961365A025DB8F2C009A1627 /* MockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A2F7F82247365D00FBC798 /* MockMediaImporter.swift in Sources */,
-				96A2F7FE2247365D00FBC798 /* Medi8.xcdatamodeld in Sources */,
-				96A2F80F22474B2900FBC798 /* MockData.swift in Sources */,
-				96A2F8002247365D00FBC798 /* MediaImporter.swift in Sources */,
-				968102062272B825003E6D82 /* Medi8.swift in Sources */,
+				9613659C25DB8F2C009A1627 /* Medi8.xcdatamodeld in Sources */,
+				9613659F25DB8F2C009A1627 /* MockData.swift in Sources */,
+				9613659E25DB8F2C009A1627 /* MockMediaImporter.swift in Sources */,
+				961366B825DCBEFB009A1627 /* Medi8.swift in Sources */,
+				961366B725DCBEFB009A1627 /* MediaImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A2F8082247379200FBC798 /* FetchingTestBase.swift in Sources */,
-				96A2F80A2247383600FBC798 /* MockMediaImporterTests.swift in Sources */,
+				961365B025DB8F50009A1627 /* MockMediaImporterTests.swift in Sources */,
+				961365AF25DB8F50009A1627 /* FetchingTestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +353,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -356,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -395,6 +419,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -415,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -441,6 +466,8 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Medi8/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +495,8 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Medi8/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,33 +583,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		9691E9FA23C04EFC00FDEECC /* XCRemoteSwiftPackageReference "Stylobate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jrtibbetts/Stylobate";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.27.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		9691E9FB23C04EFC00FDEECC /* Stylobate */ = {
+		961366CA25DCC1AB009A1627 /* Stylobate */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9691E9FA23C04EFC00FDEECC /* XCRemoteSwiftPackageReference "Stylobate" */;
 			productName = Stylobate;
 		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		96A2F7F22247365C00FBC798 /* Medi8.xcdatamodeld */ = {
+		9613659125DB8F2C009A1627 /* Medi8.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				96A2F7F32247365C00FBC798 /* Immediate.xcdatamodel */,
-				96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */,
+				9613659225DB8F2C009A1627 /* Immediate.xcdatamodel */,
+				9613659325DB8F2C009A1627 /* Immediate 2.xcdatamodel */,
 			);
-			currentVersion = 96A2F7F42247365C00FBC798 /* Immediate 2.xcdatamodel */;
+			currentVersion = 9613659325DB8F2C009A1627 /* Immediate 2.xcdatamodel */;
 			path = Medi8.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
