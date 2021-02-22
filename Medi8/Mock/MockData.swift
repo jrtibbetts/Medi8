@@ -15,6 +15,7 @@ public struct MockData: Codable {
     }
 
     public struct Track: Codable {
+
         public var title: String
         public var duration: String
         public var comment: String

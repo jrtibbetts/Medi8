@@ -62,15 +62,11 @@ open class MediaImporter: NSObject {
             if let artists = artists {
                 masterRelease.addToArtists(NSOrderedSet(array: artists))
             }
-
-            do {
-                if let releaseVersion = try fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
-                    releaseVersion.parentRelease = masterRelease
-                }
-            } catch {
-
+            
+            if let releaseVersion = try? fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
+                releaseVersion.parentRelease = masterRelease
             }
-
+            
             return masterRelease
         }
     }
