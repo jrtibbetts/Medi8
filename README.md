@@ -15,8 +15,8 @@ How can I integrate it into my project? [![Carthage compatible](https://img.shie
 
 Is it licensed? [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
-Does it *build*? [![Build Status](https://travis-ci.org/jrtibbetts/Medi8.svg?branch=master)](https://travis-ci.org/jrtibbetts/Medi8)
+Does it *build*? [![Build Status](https://travis-ci.org/jrtibbetts/Medi8.svg?branch=main)](https://travis-ci.org/jrtibbetts/Medi8)
 
-Is it *tested*? [![Codecov](https://codecov.io/gh/jrtibbetts/Medi8/branch/master/graph/badge.svg)](https://codecov.io/gh/jrtibbetts/Medi8)
+Is it *tested*? [![Codecov](https://codecov.io/gh/jrtibbetts/Medi8/branch/main/graph/badge.svg)](https://codecov.io/gh/jrtibbetts/Medi8)
 
-Is it *correct*? [![Codebeat](https://codebeat.co/badges/9db4672f-1ffc-4981-a7d0-3bb71e97cd62)](https://codebeat.co/projects/github-com-jrtibbetts-medi8-master)
+Is it *correct*? [![codebeat badge](https://codebeat.co/badges/6e481297-1745-4a0c-9ac7-70f41fb6ea74)](https://codebeat.co/projects/github-com-jrtibbetts-medi8-main)
