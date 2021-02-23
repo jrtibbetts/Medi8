@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,9 @@
 		961365B025DB8F50009A1627 /* MockMediaImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961365AD25DB8F50009A1627 /* MockMediaImporterTests.swift */; };
 		961366B725DCBEFB009A1627 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659425DB8F2C009A1627 /* MediaImporter.swift */; };
 		961366B825DCBEFB009A1627 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659A25DB8F2C009A1627 /* Medi8.swift */; };
-		961366CB25DCC1AB009A1627 /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 961366CA25DCC1AB009A1627 /* Stylobate */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
+		96C79FE425E4CEA7002B57DD /* Stylobate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C79FDD25E4CE9A002B57DD /* Stylobate.framework */; };
+		96C79FE525E4CEA7002B57DD /* Stylobate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96C79FDD25E4CE9A002B57DD /* Stylobate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,20 @@
 			remoteGlobalIDString = 96ACFB0D2246DBE700C9F2AD;
 			remoteInfo = Medi8;
 		};
+		96C79FDC25E4CE9A002B57DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96C79FD725E4CE9A002B57DD /* Stylobate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96EDF25D209F90B2009496FA;
+			remoteInfo = Stylobate;
+		};
+		96C79FDE25E4CE9A002B57DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96C79FD725E4CE9A002B57DD /* Stylobate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96EDF266209F90B2009496FA;
+			remoteInfo = StylobateTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				96C79FE525E4CEA7002B57DD /* Stylobate.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,10 +72,10 @@
 		961365AC25DB8F50009A1627 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
 		961365AD25DB8F50009A1627 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
 		961365AE25DB8F50009A1627 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		961366C825DCC162009A1627 /* Stylobate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stylobate; sourceTree = "<group>"; };
 		9659768C23BED63000FD3B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C79FD725E4CE9A002B57DD /* Stylobate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Stylobate.xcodeproj; path = Stylobate/Stylobate.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961366CB25DCC1AB009A1627 /* Stylobate in Frameworks */,
+				96C79FE425E4CEA7002B57DD /* Stylobate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,22 +147,15 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
-		961365BC25DB8FC3009A1627 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				961366C825DCC162009A1627 /* Stylobate */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		96ACFB042246DBE700C9F2AD = {
 			isa = PBXGroup;
 			children = (
 				9659768C23BED63000FD3B98 /* README.md */,
-				961365BC25DB8FC3009A1627 /* Frameworks */,
 				9613658F25DB8F2C009A1627 /* Medi8 */,
 				961365AA25DB8F50009A1627 /* Medi8Tests */,
 				96ACFB0F2246DBE700C9F2AD /* Products */,
+				96C79FD625E4CE42002B57DD /* Submodules */,
+				96C79FE325E4CEA7002B57DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +166,30 @@
 				96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		96C79FD625E4CE42002B57DD /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				96C79FD725E4CE9A002B57DD /* Stylobate.xcodeproj */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		96C79FD825E4CE9A002B57DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96C79FDD25E4CE9A002B57DD /* Stylobate.framework */,
+				96C79FDF25E4CE9A002B57DD /* StylobateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96C79FE325E4CEA7002B57DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +223,6 @@
 			);
 			name = Medi8;
 			packageProductDependencies = (
-				961366CA25DCC1AB009A1627 /* Stylobate */,
 			);
 			productName = Medi8;
 			productReference = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */;
@@ -247,6 +279,12 @@
 			);
 			productRefGroup = 96ACFB0F2246DBE700C9F2AD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 96C79FD825E4CE9A002B57DD /* Products */;
+					ProjectRef = 96C79FD725E4CE9A002B57DD /* Stylobate.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				96ACFB0D2246DBE700C9F2AD /* Medi8 */,
@@ -254,6 +292,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		96C79FDD25E4CE9A002B57DD /* Stylobate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Stylobate.framework;
+			remoteRef = 96C79FDC25E4CE9A002B57DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		96C79FDF25E4CE9A002B57DD /* StylobateTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StylobateTests.xctest;
+			remoteRef = 96C79FDE25E4CE9A002B57DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		96ACFB0C2246DBE700C9F2AD /* Resources */ = {
@@ -582,13 +637,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		961366CA25DCC1AB009A1627 /* Stylobate */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Stylobate;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9613659125DB8F2C009A1627 /* Medi8.xcdatamodeld */ = {
