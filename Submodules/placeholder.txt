@@ -1,0 +1,2 @@
+This is here so that the Submodules folder can be checked into git. Without it,
+git won't create the Submodules folder when it initializes submodules.
