@@ -6,7 +6,7 @@ import Stylobate
 
 class MockMediaImporter: MediaImporter {
 
-    init(context: NSManagedObjectContext, delegate: Delegate? = nil) {
+    init(context: NSManagedObjectContext, delegate: MediaImporterDelegate? = nil) {
         super.init()
 
         self.context = context

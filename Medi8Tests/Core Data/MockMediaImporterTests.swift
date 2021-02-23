@@ -35,7 +35,7 @@ class MockMediaImporterTests: FetchingTestBase {
         XCTAssertEqual(beatlesSongs!.count, 205)
     }
 
-    class Delegate: MediaImporter.Delegate {
+    class Delegate: MediaImporterDelegate {
 
         var finishedImporting: Bool = false
 
@@ -43,11 +43,11 @@ class MockMediaImporterTests: FetchingTestBase {
 
         var startedImporting: Bool = false
 
-        override func didStartImporting() {
+        func didStartImporting() {
             startedImporting = true
         }
 
-        override func didFinishImporting(with error: Any?) {
+        func didFinishImporting(with error: Any?) {
             finishedImporting = true
             importError = error
         }
