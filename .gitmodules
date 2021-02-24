@@ -1,3 +1,3 @@
 [submodule "Submodules/Stylobate"]
 	path = Submodules/Stylobate
-	url = git@github.com:/jrtibbetts/Stylobate.git
+	url = https://github.com/jrtibbetts/Stylobate
