@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "Stylobate",
-        "repositoryURL": "https://github.com/jrtibbetts/Stylobate.git",
+        "repositoryURL": "https://github.com/jrtibbetts/Stylobate",
         "state": {
           "branch": "bug/015-fix-swiftlint-crap",
-          "revision": "9eb15785e3f0785a0e3163954eccc09e78e901b3",
+          "revision": "c4cdcf9a084a4d6910c9ed44babc089fcb9c5bb4",
           "version": null
         }
       }

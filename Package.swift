@@ -1,11 +1,13 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 import PackageDescription
 
 let pkg = Package(
     name: "Medi8",
 
     platforms: [
-        .iOS(.v10)
+        .iOS(.v14),
+        .macOS(.v11),
+        .tvOS(.v14)
     ],
 
     products: [
@@ -16,14 +18,23 @@ let pkg = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .upToNextMajor(from: "0.27.0"))
+        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .branch("bug/015-fix-swiftlint-crap"))
     ],
 
     targets: [
         .target(
             name: "Medi8",
             dependencies: ["Stylobate"],
-            path: "Medi8"
+            path: "Medi8",
+            resources: [
+                .copy("Mock/MockData.json"),
+                .process("Core Data/Medi8.xcdatamodeld")
+            ]
+        ),
+        .testTarget(
+            name: "Medi8Tests",
+            dependencies: ["Medi8"],
+            path: "Medi8Tests"
         )
     ]
 )
