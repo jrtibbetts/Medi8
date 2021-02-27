@@ -2,7 +2,6 @@
 
 @testable import Medi8
 import CoreData
-//import Stylobate
 import XCTest
 
 class FetchingTestBase: XCTestCase {
@@ -11,22 +10,22 @@ class FetchingTestBase: XCTestCase {
     /// suitable for unit testing. Based on an idea by
     /// https://www.andrewcbancroft.com/2015/01/13/unit-testing-model-layer-core-data-swift/
     static var testingContext: NSManagedObjectContext = {
-        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-
         let model = NSManagedObjectModel.mergedModel(from: [Medi8.bundle])!
-        let stoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
-
-        do {
-            try stoordinator.addPersistentStore(ofType: NSInMemoryStoreType,
-                                                configurationName: nil,
-                                                at: nil,
-                                                options: nil)
-            moc.persistentStoreCoordinator = stoordinator
-        } catch {
-            preconditionFailure("The FetchingTestBase couldn't set up a persistent in-memory store")
+        let container = NSPersistentContainer(name: "Medi8", managedObjectModel: model)
+        let inMemoryStoreDescription = NSPersistentStoreDescription()
+        inMemoryStoreDescription.type = NSInMemoryStoreType
+        container.persistentStoreDescriptions = [inMemoryStoreDescription]
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error {
+                fatalError("Persistent store \(storeDescription.type) failed: \(error.localizedDescription)")
+            } else {
+                print("Successfully loaded \(storeDescription.type)")
+            }
         }
 
-        return moc
+        print("Container context: \(container.viewContext)")
+
+        return container.viewContext
     }()
 
 }
