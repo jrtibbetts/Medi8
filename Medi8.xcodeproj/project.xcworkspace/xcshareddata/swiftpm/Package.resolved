@@ -5,8 +5,8 @@
         "package": "Stylobate",
         "repositoryURL": "https://github.com/jrtibbetts/Stylobate",
         "state": {
-          "branch": "bug/015-fix-swiftlint-crap",
-          "revision": "c4cdcf9a084a4d6910c9ed44babc089fcb9c5bb4",
+          "branch": "main",
+          "revision": "1102510b399a9662045d73a367b6419676ec9f75",
           "version": null
         }
       }

@@ -587,7 +587,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrtibbetts/Stylobate";
 			requirement = {
-				branch = "bug/015-fix-swiftlint-crap";
+				branch = main;
 				kind = branch;
 			};
 		};

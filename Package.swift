@@ -18,7 +18,7 @@ let pkg = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .branch("bug/015-fix-swiftlint-crap"))
+        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .branch("main"))
     ],
 
     targets: [
