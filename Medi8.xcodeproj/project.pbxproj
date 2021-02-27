@@ -17,6 +17,7 @@
 		961366B725DCBEFB009A1627 /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659425DB8F2C009A1627 /* MediaImporter.swift */; };
 		961366B825DCBEFB009A1627 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659A25DB8F2C009A1627 /* Medi8.swift */; };
 		969EBF9825E89AD90008DE91 /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 969EBF9725E89AD90008DE91 /* Stylobate */; };
+		969EBFA225EA2B460008DE91 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EBFA125EA2B460008DE91 /* PersistentContainer.swift */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		961365AD25DB8F50009A1627 /* MockMediaImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMediaImporterTests.swift; sourceTree = "<group>"; };
 		961365AE25DB8F50009A1627 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9659768C23BED63000FD3B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		969EBFA125EA2B460008DE91 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9613659425DB8F2C009A1627 /* MediaImporter.swift */,
+				969EBFA125EA2B460008DE91 /* PersistentContainer.swift */,
 				9613659125DB8F2C009A1627 /* Medi8.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -301,6 +304,7 @@
 				9613659C25DB8F2C009A1627 /* Medi8.xcdatamodeld in Sources */,
 				9613659F25DB8F2C009A1627 /* MockData.swift in Sources */,
 				9613659E25DB8F2C009A1627 /* MockMediaImporter.swift in Sources */,
+				969EBFA225EA2B460008DE91 /* PersistentContainer.swift in Sources */,
 				961366B825DCBEFB009A1627 /* Medi8.swift in Sources */,
 				961366B725DCBEFB009A1627 /* MediaImporter.swift in Sources */,
 			);
