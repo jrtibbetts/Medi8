@@ -6,7 +6,7 @@ import XCTest
 
 class FetchingTestBase: XCTestCase {
 
-    static var persistentContainer = Medi8PersistenContainer(inMemoryOnly: true)
+    static var persistentContainer = Medi8PersistentContainer(inMemoryOnly: true)
 
     /// An `NSManagedObjectContext` backed by an in-memory store to make it
     /// suitable for unit testing. Based on an idea by
