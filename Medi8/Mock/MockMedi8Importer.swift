@@ -4,7 +4,7 @@ import CoreData
 import MediaPlayer
 import Stylobate
 
-class MockMediaImporter: MediaImporter {
+class MockMedi8Importer: Medi8Importer {
 
     init(context: NSManagedObjectContext, delegate: MediaImporterDelegate? = nil) {
         super.init()

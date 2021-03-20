@@ -5,7 +5,7 @@ import Stylobate
 import CoreData
 
 /// An NSPersistentContainer for the Medi8 data model.
-open class PersistentContainer: NSPersistentContainer {
+open class Medi8PersistenContainer: NSPersistentContainer {
 
     public init(inMemoryOnly: Bool = false) {
         let model = NSManagedObjectModel.mergedModel(from: [Medi8.bundle])!

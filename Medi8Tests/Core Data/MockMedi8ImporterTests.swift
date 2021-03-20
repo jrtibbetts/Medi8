@@ -6,11 +6,11 @@ import XCTest
 
 // swiftlint:disable force_cast
 
-class MockMediaImporterTests: FetchingTestBase {
+class MockMedi8ImporterTests: FetchingTestBase {
 
     func testImportMedia() throws {
         let delegate = Delegate()
-        let importer = MockMediaImporter(context: FetchingTestBase.testingContext, delegate: delegate)
+        let importer = MockMedi8Importer(context: FetchingTestBase.testingContext, delegate: delegate)
         try importer.importMedia()
         XCTAssertTrue(delegate.finishedImporting)
         XCTAssertTrue(delegate.startedImporting)
@@ -18,7 +18,7 @@ class MockMediaImporterTests: FetchingTestBase {
     }
 
     func testFullModel() throws {
-        let importer = MockMediaImporter(context: FetchingTestBase.testingContext)
+        let importer = MockMedi8Importer(context: FetchingTestBase.testingContext)
         try importer.importMedia()
 
         let artistRequest: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()

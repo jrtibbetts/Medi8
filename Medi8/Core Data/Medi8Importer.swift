@@ -6,7 +6,7 @@ import Stylobate
 // swiftlint:disable inclusive_language
 
 /// Implemented by classes that populate a Core Data context with media info.
-open class MediaImporter: NSObject {
+open class Medi8Importer: NSObject {
 
     open weak var delegate: MediaImporterDelegate?
 
