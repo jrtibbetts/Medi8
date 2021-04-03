@@ -27,14 +27,16 @@ let pkg = Package(
             dependencies: ["Stylobate"],
             path: "Medi8",
             resources: [
-                .copy("Mock/MockData.json"),
                 .process("Core Data/Medi8.xcdatamodeld")
             ]
         ),
         .testTarget(
             name: "Medi8Tests",
             dependencies: ["Medi8"],
-            path: "Medi8Tests"
+            path: "Medi8Tests",
+            resources: [
+                .copy("Core Data/MockData.json"),
+            ]
         )
     ]
 )

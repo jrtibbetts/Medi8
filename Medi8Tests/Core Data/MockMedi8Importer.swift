@@ -2,6 +2,7 @@
 
 import CoreData
 import MediaPlayer
+import Medi8
 import Stylobate
 
 class MockMedi8Importer: Medi8Importer {
@@ -18,7 +19,7 @@ class MockMedi8Importer: Medi8Importer {
         // Load the music that's in this bundle.
         let mockData: MockData = try JSONUtils.jsonObject(forFileNamed: "MockData",
                                                           ofType: "json",
-                                                          inBundle: Medi8.bundle)
+                                                          inBundle: Medi8Tests.resourceBundle)
         try mockData.releases.forEach { (release) in
             if let artist = try fetchOrCreateArtist(named: mockData.artist) {
                 try add(releaseNamed: release.title, with: release.tracks, to: artist)
