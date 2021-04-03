@@ -8,7 +8,7 @@ import CoreData
 open class Medi8PersistentContainer: NSPersistentContainer {
 
     public init(inMemoryOnly: Bool = false) {
-        let model = NSManagedObjectModel.mergedModel(from: [Medi8.bundle])!
+        let model = NSManagedObjectModel.mergedModel(from: [Bundle.module])!
         super.init(name: "Medi8", managedObjectModel: model)
 
         if inMemoryOnly {

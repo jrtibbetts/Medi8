@@ -20,7 +20,7 @@ class MockMedi8Importer: Medi8Importer {
         // Load the music that's in this bundle.
         let mockData: MockData = try JSONUtils.jsonObject(forFileNamed: "MockData",
                                                           ofType: "json",
-                                                          inBundle: Medi8.bundle)
+                                                          inBundle: Bundle.module)
         try mockData.releases.forEach { (release) in
             if let artist = try fetchOrCreateArtist(named: mockData.artist) {
                 try add(releaseNamed: release.title, with: release.tracks, to: artist)
