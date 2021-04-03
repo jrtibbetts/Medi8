@@ -7,9 +7,7 @@ import Stylobate
 class MockMedi8Importer: Medi8Importer {
 
     init(context: NSManagedObjectContext, delegate: MediaImporterDelegate? = nil) {
-        super.init()
-
-        self.context = context
+        super.init(context)
         self.delegate = delegate
     }
 

@@ -11,7 +11,12 @@ open class Medi8Importer: NSObject {
     open weak var delegate: MediaImporterDelegate?
 
     /// The managed object context into which the data will be imported.
-    open var context: NSManagedObjectContext!
+    open var context: NSManagedObjectContext
+
+    public init(_ context: NSManagedObjectContext) {
+        self.context = context
+        super.init()
+    }
 
     /// Fetch or create an `Artist`.
     ///
