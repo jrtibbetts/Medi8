@@ -10,7 +10,7 @@ class MockMedi8ImporterTests: FetchingTestBase {
 
     func testImportMedia() throws {
         let delegate = Delegate()
-        let importer = MockMedi8Importer(context: FetchingTestBase.testingContext, delegate: delegate)
+        let importer = MockMedi8Importer(context: Self.testingContext, delegate: delegate)
         try importer.importMedia()
         XCTAssertTrue(delegate.finishedImporting)
         XCTAssertTrue(delegate.startedImporting)
@@ -18,21 +18,29 @@ class MockMedi8ImporterTests: FetchingTestBase {
     }
 
     func testFullModel() throws {
-        let importer = MockMedi8Importer(context: FetchingTestBase.testingContext)
+        let importer = MockMedi8Importer(context: Self.testingContext)
         try importer.importMedia()
 
         let artistRequest: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()
-        let theBeatles = try FetchingTestBase.testingContext.fetch(artistRequest)[0] as! Artist
+        let theBeatles = try Self.testingContext.fetch(artistRequest)[0] as! Artist
         let beatlesSongs = theBeatles.songs
         XCTAssertNotNil(beatlesSongs)
         XCTAssertEqual(beatlesSongs!.count, 205)
 
-        let freeAsABird = Song(context: FetchingTestBase.testingContext)
+        let freeAsABird = Song(context: Self.testingContext)
         freeAsABird.title = "Free as a Bird"
         theBeatles.addToSongs(freeAsABird)
         XCTAssertEqual(beatlesSongs!.count, 206)
         freeAsABird.removeFromArtists(theBeatles)
         XCTAssertEqual(beatlesSongs!.count, 205)
+    }
+
+    func testArtist() throws {
+        let importer = MockMedi8Importer(context: Self.testingContext)
+        try importer.importMedia()
+
+        let artist = Artist.named("The Beatles", context: Self.testingContext)
+        XCTAssertNotNil(artist)
     }
 
     class Delegate: MediaImporterDelegate {

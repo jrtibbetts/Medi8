@@ -76,6 +76,11 @@ open class MediaPlayerImporter: Medi8Importer {
                 }
 
             for song in songs {
+                if let title = song.title,
+                   let artistName = song.artist,
+                   let artist = Artist.named(artistName, context: context) {
+                    _ = try? fetchOrCreateSong(named: title, by: artist)
+                }
             }
 
             DispatchQueue.main.async { [weak self] in

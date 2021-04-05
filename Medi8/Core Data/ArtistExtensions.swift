@@ -1,0 +1,18 @@
+//  Created by Jason R Tibbetts on 4/5/21.
+
+import CoreData
+import Foundation
+
+public extension Artist {
+
+    static func named(_ name: String,
+                      context: NSManagedObjectContext) -> Artist? {
+        let sortByName = (\Artist.name).sortDescriptor()
+        let predicate = NSPredicate(format: "name = '\(name)'")
+        let fetchRequest = Artist.fetchRequest(sortDescriptors: [sortByName],
+                                               predicate: predicate)
+
+        return try? context.fetch(fetchRequest).first as? Artist
+    }
+
+}
