@@ -18,6 +18,8 @@ open class Medi8Importer: NSObject {
         super.init()
     }
 
+    // MARK: - Artists
+
     /// Fetch or create an `Artist`.
     ///
     /// - parameter name: The artist's name.
@@ -40,6 +42,8 @@ open class Medi8Importer: NSObject {
             return artist
         }
     }
+
+    // MARK: - Releases
 
     /// Fetch or create a `MasterRelease`. This will also create a single
     /// `ReleaseVersion` and `TrackListing` for it.
@@ -88,6 +92,8 @@ open class Medi8Importer: NSObject {
 
         return releaseVersion
     }
+
+    // MARK: - Songs
 
     /// Fetch or create a `Song`. This will also create a `Recording` for it.
     ///

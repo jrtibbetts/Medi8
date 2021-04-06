@@ -68,10 +68,10 @@ open class MediaPlayerImporter: Medi8Importer {
             let artistNames = songs
                 .compactMap { ArtistName($0.artist ?? "", sortName: $0.sortArtist) }
 
-            let sortedArtists = Set<ArtistName>(artistNames)
+            _ = Set<ArtistName>(artistNames)
                 .sorted()
                 .compactMap { (artistName) -> Artist? in
-                    print("Importing artist \(artistName.sortName)")
+                    print("Importing artist \(artistName.name)")
                     return try? fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
                 }
 
@@ -106,6 +106,7 @@ open class MediaPlayerImporter: Medi8Importer {
     }
 
     struct ArtistName: Hashable, Comparable {
+
         var name: String
         var sortName: String
 
@@ -121,16 +122,6 @@ open class MediaPlayerImporter: Medi8Importer {
         static func < (lhs: ArtistName, rhs: ArtistName) -> Bool {
             return lhs.sortName < rhs.sortName
         }
-    }
-
-}
-
-private extension Artist {
-
-    convenience init(_ artistName: MediaPlayerImporter.ArtistName, context: NSManagedObjectContext) {
-        self.init(context: context)
-        self.name = artistName.name
-        self.sortName = artistName.sortName
     }
 
 }
