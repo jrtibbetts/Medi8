@@ -90,7 +90,7 @@ open class MediaPlayerImporter: Medi8Importer {
         }
     }
 
-    public override init(_ context: NSManagedObjectContext) {
+    public override init(_ context: NSManagedObjectContext = Medi8PersistentContainer.sharedInMemoryContainer.viewContext) {
         self.authStatus = .notDetermined
         super.init(context)
 

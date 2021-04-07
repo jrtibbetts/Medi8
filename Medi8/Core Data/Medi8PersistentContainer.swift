@@ -7,6 +7,8 @@ import CoreData
 /// An NSPersistentContainer for the Medi8 data model.
 open class Medi8PersistentContainer: NSPersistentContainer {
 
+    public static var sharedInMemoryContainer = Medi8PersistentContainer(inMemoryOnly: true)
+
     public init(inMemoryOnly: Bool = false) {
         let model = NSManagedObjectModel.mergedModel(from: [Medi8.bundle])!
         super.init(name: "Medi8", managedObjectModel: model)
