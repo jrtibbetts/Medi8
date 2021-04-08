@@ -28,18 +28,15 @@ open class Medi8Importer: NSObject {
     ///
     /// - returns: A new or fetched `Artist` with the given name.
     open func fetchOrCreateArtist(named name: String,
-                                  sortName: String? = nil) throws -> Artist? {
-        let request: NSFetchRequest<Artist> = Artist.fetchRequest()
+                                  sortName: String? = nil) throws -> IndividualArtist? {
+        let request: NSFetchRequest<IndividualArtist> = IndividualArtist.fetchRequest()
         request.sortDescriptors = [(\IndividualArtist.sortName).sortDescriptor()]
         request.predicate = NSPredicate(format: "name = %@", name)
 
-        return try context.fetchOrCreate(with: request) { (context) -> Artist in
+        return try context.fetchOrCreate(withRequest: request) { (artist) in
             print("Creating an artist named \(name)")
-            let artist = IndividualArtist(context: context)
             artist.name = name
             artist.sortName = sortName ?? name
-
-            return artist
         }
     }
 
@@ -63,8 +60,7 @@ open class Medi8Importer: NSObject {
                                    (\MasterRelease.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
 
-        return try context.fetchOrCreate(with: request) { (context) -> MasterRelease in
-            let masterRelease = MasterRelease(context: context)
+        return try context.fetchOrCreate(withRequest: request) { (masterRelease) in
             masterRelease.title = name
             masterRelease.sortTitle = name
 
@@ -75,8 +71,6 @@ open class Medi8Importer: NSObject {
             if let releaseVersion = try? fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
                 releaseVersion.parentRelease = masterRelease
             }
-
-            return masterRelease
         }
     }
 
@@ -105,13 +99,10 @@ open class Medi8Importer: NSObject {
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
         request.predicate = NSPredicate(format: "title = %@", name)
 
-        return try context.fetchOrCreate(with: request) { (context) -> Song in
-            let song = Song(context: context)
+        return try context.fetchOrCreate(withRequest: request) { (song) in
             song.title = name
             artist.addToSongs(song)
             Recording(context: context).addToSongs(song)
-
-            return song
         }
     }
 
