@@ -50,6 +50,22 @@ open class MediaPlayerImporter: Medi8Importer {
     func importPlaylists() {
         finishedImportingPlaylists = false
         dispatchQueue.sync { [unowned self] in
+            let playlists = MPMediaQuery.playlists().collections ?? []
+
+            for playlist in playlists {
+                let medi8Playlist = Playlist(context: self.context)
+                medi8Playlist.mediaItemPersistentID = Int64(playlist.persistentID)
+                medi8Playlist.title = playlist.title
+
+                let medi8Tracklist = TrackListing(context: self.context)
+                medi8Playlist.tracks = medi8Tracklist
+
+                for song in playlist.items {
+                    if let medi8SongVersion = SongVersion.withMediaID(Int64(song.persistentID), context: context) {
+                        medi8Tracklist.addToSongVersions(medi8SongVersion)
+                    }
+                }
+            }
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingPlaylists = true
