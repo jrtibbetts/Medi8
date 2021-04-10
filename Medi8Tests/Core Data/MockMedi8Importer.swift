@@ -45,7 +45,7 @@ class MockMedi8Importer: Medi8Importer {
 
     func add(songNamed songTitle: String,
              artist: Artist) throws {
-        _ = try fetchOrCreateSong(named: songTitle, by: artist)
+        _ = try fetchOrCreateSong(title: songTitle, by: artist)
     }
 
 }

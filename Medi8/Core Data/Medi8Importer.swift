@@ -93,16 +93,30 @@ open class Medi8Importer: NSObject {
     ///
     ///  - parameter name: The song title.
     ///  - parameter artist: The artist who performed the song.
-    open func fetchOrCreateSong(named name: String,
+    open func fetchOrCreateSong(title: String,
                                 by artist: Artist) throws -> Song? {
         let request: NSFetchRequest<Song> = Song.fetchRequest()
         request.sortDescriptors = [(\Song.title).sortDescriptor()]
-        request.predicate = NSPredicate(format: "title = %@", name)
+        request.predicate = NSPredicate(format: "title = %@", title)
 
         return try context.fetchOrCreate(withRequest: request) { (song) in
-            song.title = name
+            song.title = title
             artist.addToSongs(song)
             Recording(context: context).addToSongs(song)
+        }
+    }
+
+    open func fetchOrCreateSongVersion(title: String,
+                                       sortTitle: String?,
+                                       song: Song) throws -> SongVersion? {
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest()
+        request.sortDescriptors = [(\SongVersion.title).sortDescriptor()]
+        request.predicate = NSPredicate(format: "title = %@", title)
+
+        return try context.fetchOrCreate(withRequest: request) { (songVersion) in
+            songVersion.title = title
+            songVersion.sortTitle = sortTitle
+
         }
     }
 

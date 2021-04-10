@@ -39,7 +39,7 @@ open class MediaPlayerImporter: Medi8Importer {
     open func importAlbums() {
         finishedImportingAlbums = false
         dispatchQueue.async {
-            let albums = MPMediaQuery.albums().collections ?? []
+//            let albums = MPMediaQuery.albums().collections ?? []
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingAlbums = true
@@ -50,7 +50,7 @@ open class MediaPlayerImporter: Medi8Importer {
     func importPlaylists() {
         finishedImportingPlaylists = false
         dispatchQueue.async { [weak self] in
-            let playlists = MPMediaQuery.playlists().collections ?? []
+//            let playlists = MPMediaQuery.playlists().collections ?? []
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingPlaylists = true
@@ -58,8 +58,7 @@ open class MediaPlayerImporter: Medi8Importer {
         }
     }
 
-    func importSongs() {
-        finishedImportingSongs = false
+    func importArtists() {
         finishedImportingArtists = false
 
         dispatchQueue.async { [unowned self] in
@@ -75,17 +74,28 @@ open class MediaPlayerImporter: Medi8Importer {
                     return try? fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
                 }
 
+            DispatchQueue.main.async { [weak self] in
+                self?.finishedImportingArtists = true
+            }
+        }
+    }
+
+    func importSongs() {
+        finishedImportingSongs = false
+
+        dispatchQueue.async { [unowned self] in
+            let songs = MPMediaQuery.songs().items ?? []
+
             for song in songs {
                 if let title = song.title,
                    let artistName = song.artist,
                    let artist = Artist.named(artistName, context: context) {
-                    _ = try? fetchOrCreateSong(named: title, by: artist)
+                    var song = try? fetchOrCreateSong(title: title, by: artist)
                 }
             }
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingSongs = true
-                self?.finishedImportingArtists = true
             }
         }
     }
@@ -98,11 +108,40 @@ open class MediaPlayerImporter: Medi8Importer {
             self?.authStatus = authStatus
 
             if authStatus == .authorized {
+                self?.importArtists()
+                self?.importSongs()
                 self?.importAlbums()
                 self?.importPlaylists()
-                self?.importSongs()
             }
         }
+    }
+
+    open func fetchOrCreateSong(mediaItem: MPMediaItem, artist: Artist) throws -> Song? {
+        guard let song = try super.fetchOrCreateSong(title: mediaItem.title ?? "(untitled)",
+                                                     by: artist) else {
+            return nil
+        }
+
+        // Create a corresponding SongVersion. These will be merged later.
+        _ = try? fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
+
+        return song
+    }
+
+    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, song: Song) throws -> SongVersion? {
+        guard let version = try super.fetchOrCreateSongVersion(title: mediaItem.title ?? "(untitled)",
+                                                               sortTitle: mediaItem.sortTitle,
+                                                               song: song) else {
+            return nil
+        }
+
+        if let lyricString = mediaItem.lyrics {
+            let lyrics = Lyrics(context: context)
+            lyrics.text = lyricString
+            version.lyrics = lyrics
+        }
+
+        return version
     }
 
     struct ArtistName: Hashable, Comparable {
@@ -126,15 +165,19 @@ open class MediaPlayerImporter: Medi8Importer {
 
 }
 
-private extension Song {
+private extension SongVersion {
 
-    convenience init(_ mediaLibrarySong: MPMediaItem, context: NSManagedObjectContext) {
+    convenience init(_ mediaItem: MPMediaItem, context: NSManagedObjectContext) {
         self.init(context: context)
-        self.title = mediaLibrarySong.title
+        self.title = mediaItem.title
+        self.sortTitle = mediaItem.sortTitle
+        self.mediaItemPersistentID = Int64(mediaItem.persistentID)
 
-//        if let lyricString = mediaLibrarySong.lyrics {
-//            let lyrics = Lyrics(context: context)
-//            lyrics.text = lyricString
-//        }
+        if let lyricString = mediaItem.lyrics {
+            let lyrics = Lyrics(context: context)
+            lyrics.text = lyricString
+            self.lyrics = lyrics
+        }
     }
+
 }
