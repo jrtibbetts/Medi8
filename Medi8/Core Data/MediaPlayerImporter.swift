@@ -38,7 +38,7 @@ open class MediaPlayerImporter: Medi8Importer {
 
     open func importAlbums() {
         finishedImportingAlbums = false
-        dispatchQueue.async {
+        dispatchQueue.sync { [unowned self] in
 //            let albums = MPMediaQuery.albums().collections ?? []
 
             DispatchQueue.main.async { [weak self] in
@@ -49,8 +49,7 @@ open class MediaPlayerImporter: Medi8Importer {
 
     func importPlaylists() {
         finishedImportingPlaylists = false
-        dispatchQueue.async { [weak self] in
-//            let playlists = MPMediaQuery.playlists().collections ?? []
+        dispatchQueue.sync { [unowned self] in
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingPlaylists = true
@@ -61,7 +60,7 @@ open class MediaPlayerImporter: Medi8Importer {
     func importArtists() {
         finishedImportingArtists = false
 
-        dispatchQueue.async { [unowned self] in
+        dispatchQueue.sync { [unowned self] in
             let songs = MPMediaQuery.songs().items ?? []
 
             let artistNames = songs
@@ -83,7 +82,7 @@ open class MediaPlayerImporter: Medi8Importer {
     func importSongs() {
         finishedImportingSongs = false
 
-        dispatchQueue.async { [unowned self] in
+        dispatchQueue.sync { [unowned self] in
             let songs = MPMediaQuery.songs().items ?? []
 
             for song in songs {
