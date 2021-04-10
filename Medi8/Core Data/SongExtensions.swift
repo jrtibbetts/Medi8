@@ -27,7 +27,13 @@ public extension SongVersion {
 
         let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest(sortDescriptors: [(\SongVersion.mediaItemPersistentID).sortDescriptor()],
                                                                             predicate: NSPredicate(format: "mediaItemPersistentID = \(persistentId)"))
-        return try? context.fetch(request).first
+
+        do {
+            return try context.fetch(request).first
+        } catch {
+            print("Failed to find a song version with a persistentID of \(persistentId): \(error.localizedDescription)")
+            return nil
+        }
     }
 
 }

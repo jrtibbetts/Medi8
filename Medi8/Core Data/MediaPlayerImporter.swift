@@ -92,7 +92,13 @@ open class MediaPlayerImporter: Medi8Importer {
                 .sorted()
                 .compactMap { (artistName) -> Artist? in
                     print("Importing artist \(artistName.name)")
-                    return try? fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
+
+                    do {
+                        return try fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
+                    } catch {
+                        print("Failed to create artist named '\(artistName.name)': \(error.localizedDescription)")
+                        return nil
+                    }
                 }
 
             do {
@@ -117,7 +123,11 @@ open class MediaPlayerImporter: Medi8Importer {
                 if let title = song.title,
                    let artistName = song.artist,
                    let artist = Artist.named(artistName, context: context) {
-                    _ = try? fetchOrCreateSong(title: title, by: artist)
+                    do {
+                        _ = try fetchOrCreateSong(title: title, by: artist)
+                    } catch {
+                        print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
+                    }
                 }
             }
 
@@ -156,7 +166,11 @@ open class MediaPlayerImporter: Medi8Importer {
         }
 
         // Create a corresponding SongVersion. These will be merged later.
-        _ = try? fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
+        do {
+            _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
+        } catch {
+            print("Failed to create a song version for \(mediaItem.title ?? "unknown")")
+        }
 
         return song
     }

@@ -18,7 +18,12 @@ public extension Artist {
         let fetchRequest = Artist.fetchRequest(sortDescriptors: [sortByName],
                                                predicate: predicate)
 
-        return try? context.fetch(fetchRequest).first as? Artist
+        do {
+            return try context.fetch(fetchRequest).first as? Artist
+        } catch {
+            print("Failed to look up an artist named '\(name)': \(error.localizedDescription)")
+            return nil
+        }
     }
 
 }

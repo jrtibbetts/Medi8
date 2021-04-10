@@ -68,8 +68,12 @@ open class Medi8Importer: NSObject {
                 masterRelease.addToArtists(NSOrderedSet(array: artists))
             }
 
-            if let releaseVersion = try? fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
-                releaseVersion.parentRelease = masterRelease
+            do {
+                if let releaseVersion = try fetchOrCreateReleaseVersion(releaseDate: releaseDate) {
+                    releaseVersion.parentRelease = masterRelease
+                }
+            } catch {
+                print("Failed to create a release version: \(error.localizedDescription)")
             }
         }
     }
