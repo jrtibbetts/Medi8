@@ -90,7 +90,7 @@ open class MediaPlayerImporter: Medi8Importer {
                 if let title = song.title,
                    let artistName = song.artist,
                    let artist = Artist.named(artistName, context: context) {
-                    var song = try? fetchOrCreateSong(title: title, by: artist)
+                    _ = try? fetchOrCreateSong(title: title, by: artist)
                 }
             }
 
@@ -135,6 +135,8 @@ open class MediaPlayerImporter: Medi8Importer {
             return nil
         }
 
+        version.mediaItemPersistentID = Int64(mediaItem.persistentID)
+
         if let lyricString = mediaItem.lyrics {
             let lyrics = Lyrics(context: context)
             lyrics.text = lyricString
@@ -160,23 +162,6 @@ open class MediaPlayerImporter: Medi8Importer {
 
         static func < (lhs: ArtistName, rhs: ArtistName) -> Bool {
             return lhs.sortName < rhs.sortName
-        }
-    }
-
-}
-
-private extension SongVersion {
-
-    convenience init(_ mediaItem: MPMediaItem, context: NSManagedObjectContext) {
-        self.init(context: context)
-        self.title = mediaItem.title
-        self.sortTitle = mediaItem.sortTitle
-        self.mediaItemPersistentID = Int64(mediaItem.persistentID)
-
-        if let lyricString = mediaItem.lyrics {
-            let lyrics = Lyrics(context: context)
-            lyrics.text = lyricString
-            self.lyrics = lyrics
         }
     }
 

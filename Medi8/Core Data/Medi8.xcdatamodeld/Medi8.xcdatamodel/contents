@@ -152,7 +152,7 @@
         <attribute name="aka" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
         <attribute name="alternativeTitle" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
         <attribute name="amazonId" optional="YES" attributeType="String"/>
-        <attribute name="appleMusicID" optional="YES" attributeType="String"/>
+        <attribute name="appleMusicID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="duration" optional="YES" attributeType="String"/>
         <attribute name="localUrlString" optional="YES" attributeType="String"/>
         <attribute name="mediaItemPersistentID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>

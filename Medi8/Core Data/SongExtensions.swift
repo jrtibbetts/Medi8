@@ -16,3 +16,18 @@ public extension Song {
     }
 
 }
+
+public extension SongVersion {
+
+    static func withMediaID(_ persistentId: Int64?,
+                            context: NSManagedObjectContext) -> SongVersion? {
+        guard let persistentId = persistentId else {
+            return nil
+        }
+
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest(sortDescriptors: [(\SongVersion.mediaItemPersistentID).sortDescriptor()],
+                                                                            predicate: NSPredicate(format: "mediaItemPersistentID = \(persistentId)"))
+        return try? context.fetch(request).first
+    }
+
+}
