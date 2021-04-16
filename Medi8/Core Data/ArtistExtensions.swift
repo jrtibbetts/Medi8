@@ -5,11 +5,13 @@ import Foundation
 
 public extension Artist {
 
+    #if !os(macOS)
     internal convenience init(_ artistName: MediaPlayerImporter.ArtistName, context: NSManagedObjectContext) {
         self.init(context: context)
         self.name = artistName.name
         self.sortName = artistName.sortName
     }
+    #endif
 
     static func named(_ name: String,
                       context: NSManagedObjectContext) -> Artist? {

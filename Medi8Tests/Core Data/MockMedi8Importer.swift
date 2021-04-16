@@ -1,7 +1,6 @@
 //  Copyright © 2017 Poikile Creations. All rights reserved.
 
 import CoreData
-import MediaPlayer
 import Medi8
 import Stylobate
 

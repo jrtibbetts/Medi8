@@ -1,8 +1,7 @@
 //  Copyright © 2021 Poikile Creations. All rights reserved.
 
-import Stylobate
-
 import CoreData
+import Stylobate
 
 /// An NSPersistentContainer for the Medi8 data model.
 open class Medi8PersistentContainer: NSPersistentContainer {

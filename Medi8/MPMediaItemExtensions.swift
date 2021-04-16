@@ -1,5 +1,6 @@
 //  Created by Jason R Tibbetts on 4/1/21.
 
+#if !os(macOS)
 import Foundation
 import MediaPlayer
 
@@ -22,3 +23,4 @@ public extension MPMediaItem {
     }
 
 }
+#endif

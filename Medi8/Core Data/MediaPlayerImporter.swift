@@ -1,5 +1,6 @@
 //  Created by Jason R Tibbetts on 4/3/21.
 
+#if !os(macOS)
 import CoreData
 import MediaPlayer
 import SwiftUI
@@ -213,3 +214,4 @@ open class MediaPlayerImporter: Medi8Importer {
     }
 
 }
+#endif
