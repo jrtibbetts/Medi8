@@ -129,7 +129,7 @@ open class Medi8Importer: NSObject {
 /// Implemented by classes that want to keep track of the progress of the media
 /// importer. The importer should ensure that delegate methods are called on
 /// the main thread, but this is not guaranteed.
-public protocol MediaImporterDelegate: class {
+public protocol MediaImporterDelegate: AnyObject {
 
     func willStartImporting()
 
