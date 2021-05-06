@@ -3,6 +3,6 @@ language: swift
 os: osx
 osx_image: xcode12.2
 script:
-  xcodebuild -scheme Medi8 -destination 'platform=iOS Simulator,OS=14.5,name=iPhone 12 Pro' test
+  xcodebuild -scheme Medi8 -destination 'platform=iOS Simulator,OS=14.2,name=iPhone 12 Pro' test
 after_success:
   bash <(curl -s https://codecov.io/bash)
