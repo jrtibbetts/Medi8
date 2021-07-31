@@ -1,7 +1,24 @@
 //  Created by Jason R Tibbetts on 4/15/21.
 
 import Foundation
+
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import MediaPlayer
+
+public typealias PlaybackState = MPMusicPlaybackState
+
+#elseif os(macOS)
+
+// MARK: - macOS Media Player
+
+public enum PlaybackState: Int {
+    case paused
+    case playing
+    case stopped
+}
+
+#endif
 
 /// Implemented by classes that can load, play, pause, and skip media items. On
 /// iOS, this is implemented by the `MPMusicPlayerController`; on macOS, I'm
