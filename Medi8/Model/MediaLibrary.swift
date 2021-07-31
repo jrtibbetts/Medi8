@@ -33,12 +33,14 @@ public class MediaLibrary: ObservableObject {
 
     func allVersionsOf(_ song: Song) -> [Song]? {
         return songs
-            .filter { $0.songTitle == song.songTitle && $0.artistName == song.artistName }
+            .filter { $0.title == song.title && $0.artistName == song.artistName }
     }
 
 }
 
 public class MockMediaLibrary: MediaLibrary {
+
+    private let context = Medi8PersistentContainer.sharedInMemoryContext
 
     public override init() {
         super.init()
@@ -48,77 +50,71 @@ public class MockMediaLibrary: MediaLibrary {
     }
 
     override func refreshSongs() {
-        let albumTitle = "A Kiss in the Dreamhouse"
-        let artistName = "Siouxsie and The Banshees"
-        let comment = "1982/11/05 UK \"A Kiss in the Dreamhouse\" LP (Polydor POLD 5064)"
+        let siouxsie = Artist(context: context)
+        siouxsie.name = "Siouxsie and The Banshees"
+        siouxsie.sortName = nil
 
-        songs = [("Cascade", 266, comment),
-                 ("Green Fingers", 216, comment),
-                 ("Obsession", 231, comment),
+        let release = MasterRelease(context: context)
+        release.title = "A Kiss in the Dreamhouse"
+        release.artists = [siouxsie]
+
+        let releaseVersion = ReleaseVersion(context: context)
+        releaseVersion.parentRelease = release
+        let comment = "1982/11/05 UK \"A Kiss in the Dreamhouse\" LP (Polydor POLD 5064)"
+        let tracklist = TrackListing(context: context)
+
+        songs = [("Cascade", 266.0, comment),
+                 ("Green Fingers", 216.0, comment),
+                 ("Obsession", 231.0, comment),
                  ("She's a Carnival", 220, comment),
-                 ("Circle", 323, comment),
-                 ("Melt!", 228, comment),
-                 ("Painted Bird", 256, comment),
-                 ("Cocoon", 269, comment),
-                 ("Slowdive", 265, "1982/10/01 UK \"Slowdive\" 7\" single (Polydor POSP 510)"),
-                 ("Fireworks (12\" version)", 277, "1982/05/21 UK \"Fireworks\" 12\" single (Polydor POSPX 450)"),
-                 ("Slowdive (12\" version)", 349, "1982/10/01 UK \"Slowdive\" 12\" single (Polydor POSPX 510)"),
-                 ("Painted Bird (Workhouse demo)", 229, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"),
-                 ("Cascade (Workhouse demo)", 354, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)")
+                 ("Circle", 323.0, comment),
+                 ("Melt!", 228.0, comment),
+                 ("Painted Bird", 256.0, comment),
+                 ("Cocoon", 269.0, comment),
+                 ("Slowdive", 265.0, "1982/10/01 UK \"Slowdive\" 7\" single (Polydor POSP 510)"),
+                 ("Fireworks (12\" version)", 277.0, "1982/05/21 UK \"Fireworks\" 12\" single (Polydor POSPX 450)"),
+                 ("Slowdive (12\" version)", 349.0, "1982/10/01 UK \"Slowdive\" 12\" single (Polydor POSPX 510)"),
+                 ("Painted Bird (Workhouse demo)", 229.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"),
+                 ("Cascade (Workhouse demo)", 354.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)")
         ].enumerated()
         .map { (trackNumber, arg1) in
             let (title, duration, comment) = arg1
 
-            var song = Song(context: Medi8PersistentContainer.sharedInMemoryContext)
-            song.albumArtistName = artistName
-            song.albumID = 99
-            song.albumTitle = albumTitle
-            song.albumTrackNumber = trackNumber + 1
-            song.artistName = artistName
-            song.comments = comment
-            song.discNumber = 1
-            song.id = UInt64((trackNumber + 1) + 30)
+            let song = Song(context: context)
+            song.title = title
+            song.artists = [siouxsie]
             song.lyrics = nil
-            song.playbackDuration = TimeInterval(duration)
-            song.songTitle = title
-            song.sortArtistName = artistName)
+
+            let songVersion = SongVersion(context: context)
+            songVersion.comment = comment
+            songVersion.duration = duration
+            tracklist.addToSongVersions(songVersion)
         }
 
-        var fireworks = Song(context: Medi8PersistentContainer.sharedInMemoryContext)
-        fireworks.albumArtistName = artistName
-        fireworks.albumID = 100
-        fireworks.albumTitle = "Fireworks"
-        fireworks.albumTrackNumber = 1
-        fireworks.artistName = artistName
-        fireworks.comments = nil
-        fireworks.discNumber = 1
-        fireworks.id = 12312
-        fireworks.lyrics = nil
-        fireworks.playbackDuration = 203
-        fireworks.songTitle = "Fireworks"
-        fireworks.sortArtistName = artistName
-        songs.append(fireworks)
+        let fireworksRelease = MasterRelease(context: context)
+        fireworksRelease.title = "Fireworks"
+        fireworksRelease.artists = [siouxsie]
 
-        let siouxsie = Artist(context: Medi8PersistentContainer.sharedInMemoryContext)
-        siouxsie.name = "Siouxsie and The Banshees"
-        siouxsie.sortName = nil
+        let fireworksReleaseVersion = ReleaseVersion(context: context)
+        fireworksReleaseVersion.parentRelease = fireworksRelease
+
+        let fireworksSong = Song(context: context)
+        fireworksSong.title = "Fireworks"
+        fireworksSong.lyrics = nil
+
+        let fireworksSongVersion = SongVersion(context: context)
+        fireworksSongVersion.comment = nil
+        fireworksSongVersion.duration = 203.0
     }
 
     override func refreshAlbums() {
-        albums = [
-            MockAlbum(artistName: "Siouxsie and The Banshees",
-                      id: 99,
-                      songs: songs.dropLast(),
-                      title: "A Kiss in the Dreamhouse"),
-            MockAlbum(artistName: "Siouxsie and The Banshees",
-                      id: 100,
-                      songs: [songs.last!],
-                      title: "Fireworks")
-        ]
     }
 
     override func refreshPlaylists() {
-        playlists = [MockPlaylist(persistentID: 23, songs: [songs[0], songs[3], songs[9]], title: "Siouxsie Hits")]
+        let playlist = Playlist(context: context)
+        playlist.title = "Siouxsie Hits"
+        let trackListing = TrackListing(context: context)
+//        trackListing.songVersions = [try? context.fetch(SongVersion.fetchRequestForAll())].flatMap
     }
 
 }
