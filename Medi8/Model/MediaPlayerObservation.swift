@@ -3,7 +3,7 @@
 import Combine
 import Foundation
 
-public class MediaPlayerObservation: ObservableObject {
+open class MediaPlayerObservation: ObservableObject {
 
     @Published public var nowPlayingItem: Song?
 

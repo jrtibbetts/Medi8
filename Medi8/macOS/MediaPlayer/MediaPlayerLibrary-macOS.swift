@@ -106,7 +106,4 @@ extension ITLibArtwork: Artwork {
 
 }
 
-extension ITLibArtist: Artist {
-    
-}
 #endif

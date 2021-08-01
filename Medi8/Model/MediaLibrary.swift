@@ -3,17 +3,17 @@
 import MediaPlayer
 import SwiftUI
 
-public class MediaLibrary: ObservableObject {
+open class MediaLibrary: ObservableObject {
 
-    @Published var albums = [Album]()
+    @Published public var albums = [Album]()
 
-    @Published var artists = [Artist]()
+    @Published public var artists = [Artist]()
 
-    @Published var playlists = [Playlist]()
+    @Published public var playlists = [Playlist]()
 
-    @Published var songs = [Song]()
+    @Published public var songs = [Song]()
 
-    @Published var finishedImporting: Bool = true
+    @Published public var finishedImporting: Bool = true
 
     #if !os(macOS)
     @Published var authStatus: MPMediaLibraryAuthorizationStatus = .authorized
@@ -29,11 +29,6 @@ public class MediaLibrary: ObservableObject {
     }
 
     init() {
-    }
-
-    func allVersionsOf(_ song: Song) -> [Song]? {
-        return songs
-            .filter { $0.title == song.title && $0.artistName == song.artistName }
     }
 
 }
@@ -89,6 +84,8 @@ public class MockMediaLibrary: MediaLibrary {
             songVersion.comment = comment
             songVersion.duration = duration
             tracklist.addToSongVersions(songVersion)
+
+            return song
         }
 
         let fireworksRelease = MasterRelease(context: context)

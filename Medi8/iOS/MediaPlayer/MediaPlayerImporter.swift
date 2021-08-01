@@ -1,6 +1,8 @@
 //  Created by Jason R Tibbetts on 4/3/21.
 
 #if !os(macOS)
+
+import Combine
 import CoreData
 import MediaPlayer
 import SwiftUI
@@ -54,9 +56,9 @@ open class MediaPlayerImporter: Medi8Importer {
             let playlists = MPMediaQuery.playlists().collections ?? []
 
             for playlist in playlists {
-                let medi8Playlist = Playlist(context: self.context)
+                let medi8Playlist: Playlist = Playlist(context: self.context)
                 medi8Playlist.mediaItemPersistentID = Int64(playlist.persistentID)
-                medi8Playlist.title = playlist.title
+                medi8Playlist.title = playlist.value(forProperty: MPMediaPlaylistPropertyName) as? String
 
                 let medi8Tracklist = TrackListing(context: self.context)
                 medi8Playlist.tracks = medi8Tracklist
@@ -118,14 +120,16 @@ open class MediaPlayerImporter: Medi8Importer {
         finishedImportingSongs = false
 
         dispatchQueue.sync { [unowned self] in
-            let songs = MPMediaQuery.songs().items ?? []
+            let mediaItems = MPMediaQuery.songs().items ?? []
 
-            for song in songs {
-                if let title = song.title,
-                   let artistName = song.artist,
-                   let artist = Artist.named(artistName, context: context) {
+            for mediaItem in mediaItems {
+                if let title = mediaItem.title,
+                   let artistName = mediaItem.artist {
+
                     do {
-                        _ = try fetchOrCreateSong(title: title, by: artist)
+                        let artist = try fetchOrCreateArtist(named: artistName, sortName: mediaItem.sortArtistName)
+                        let song = try fetchOrCreateSong(title: title, by: artist)
+                        let songVersion = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
                     } catch {
                         print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
                     }
@@ -176,14 +180,15 @@ open class MediaPlayerImporter: Medi8Importer {
         return song
     }
 
-    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, song: Song) throws -> SongVersion? {
-        guard let version = try super.fetchOrCreateSongVersion(title: mediaItem.title ?? "(untitled)",
-                                                               sortTitle: mediaItem.sortTitle,
-                                                               song: song) else {
-            return nil
-        }
-
+    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, song: Song?) throws -> SongVersion? {
+        let version = SongVersion(context: context)
+        version.comment = mediaItem.comments
+        version.duration = mediaItem.playbackDuration
         version.mediaItemPersistentID = Int64(mediaItem.persistentID)
+
+        if mediaItem.title != song?.title {
+            version.alternativeTitle = mediaItem.title
+        }
 
         if let lyricString = mediaItem.lyrics {
             let lyrics = Lyrics(context: context)

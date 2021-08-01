@@ -29,7 +29,7 @@ public protocol MediaPlayer {
 
     var currentPlaybackTime: TimeInterval { get set }
 
-    var nowPlayingSong: Song? { get }
+    var nowPlayingSong: MPMediaItem? { get }
 
     var playbackState: PlaybackState { get }
 
@@ -41,7 +41,7 @@ public protocol MediaPlayer {
 
     func prepareToPlay()
 
-    func setQueue(with: [Song])
+    func setQueue(with: [MPMediaItem])
 
     func skipToBeginning()
 
@@ -67,13 +67,13 @@ open class MockMediaPlayer: ObservableObject, MediaPlayer {
 
     public var currentPlaybackRate: Float = 0.0
 
-    public var nowPlayingSong: Song? = nil
+    public var nowPlayingSong: MPMediaItem? = nil
 
     public func prepareToPlay() {
 
     }
 
-    public func setQueue(with songs: [Song]) {
+    public func setQueue(with songs: [MPMediaItem]) {
 
     }
 

@@ -18,6 +18,8 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
 
     @Published public var shuffleState: MPMusicShuffleMode = .default
 
+    private var context = Medi8PersistentContainer.sharedInMemoryContext
+
     private var notifier: NotificationCenter = .default
 
     private var nowPlayingItemObserver: NSObjectProtocol? {
@@ -54,7 +56,9 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
 
         nowPlayingItemObserver = notifier.addObserver(forName: .MPMusicPlayerControllerNowPlayingItemDidChange,
                                                       object: self.musicPlayer, queue: nil) { [weak self] (notification) in
-            self?.nowPlayingItem = self?.musicPlayer.nowPlayingItem
+            if let strongSelf = self {
+                strongSelf.nowPlayingItem = strongSelf.musicPlayer.nowPlayingItem?.song(strongSelf.context)
+            }
         }
     }
 

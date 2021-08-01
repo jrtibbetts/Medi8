@@ -1,7 +1,9 @@
 //  Created by Jason R Tibbetts on 4/1/21.
 
+import CoreData
 import Foundation
 import MediaPlayer
+import CryptoKit
 
 #if os(iOS)
 
@@ -25,7 +27,7 @@ public extension MPMediaItem {
 
 }
 
-extension MPMediaItem: Song {
+extension MPMediaItem {
 
     public var albumArtistName: String? {
         return artistName
@@ -49,6 +51,13 @@ extension MPMediaItem: Song {
         } else {
             return nil
         }
+    }
+
+    public func song(_ context: NSManagedObjectContext) -> Song? {
+        let request: NSFetchRequest<Song> = Song.fetchRequest()
+        request.predicate = NSPredicate(format: "mediaItemPersistentID = %d", persistentID)
+
+        return try? context.fetch(request).first
     }
 
     public var sortArtistName: String {
