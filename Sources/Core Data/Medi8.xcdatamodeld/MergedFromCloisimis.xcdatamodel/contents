@@ -138,6 +138,7 @@
         <relationship name="trackListing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="releaseVersion" inverseEntity="TrackListing"/>
     </entity>
     <entity name="Song" representedClassName="Song" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="sortTitle" optional="YES" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Artist" inverseName="songs" inverseEntity="Artist"/>
         <relationship name="composers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="composedSongs" inverseEntity="Artist"/>
@@ -198,7 +199,7 @@
         <element name="ReleaseDate" positionX="-108" positionY="749" width="128" height="74"/>
         <element name="ReleaseFormat" positionX="295" positionY="608" width="128" height="59"/>
         <element name="ReleaseVersion" positionX="124" positionY="566" width="128" height="134"/>
-        <element name="Song" positionX="-360" positionY="126" width="128" height="119"/>
+        <element name="Song" positionX="-360" positionY="126" width="128" height="134"/>
         <element name="SongVersion" positionX="-317" positionY="414" width="128" height="254"/>
         <element name="TrackListing" positionX="-110" positionY="432" width="128" height="74"/>
     </elements>

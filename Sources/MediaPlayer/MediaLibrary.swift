@@ -18,15 +18,59 @@ open class MediaLibrary: ObservableObject {
         self.context = context
     }
 
+    // MARK: - Artists
+
+    public func artist(_ name: String) -> Artist? {
+        let fetchRequest: NSFetchRequest<Artist> = Artist.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name = %@", name)
+
+        return try? context.fetch(fetchRequest).first
+    }
+
+    public func artist(sortName: String) -> Artist? {
+        let fetchRequest: NSFetchRequest<Artist> = Artist.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "sortName = %@ || name = %@", sortName, sortName)
+
+        return try? context.fetch(fetchRequest).first
+    }
+
+    // MARK: - Songs
+
+    public func song(_ title: String) -> Song? {
+        let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "title = %@", title)
+
+        return try? context.fetch(fetchRequest).first
+    }
+
+    public func song(sortTitle: String) -> Song? {
+        let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "sortTitle = %@ || title = %@", sortTitle, sortTitle)
+
+        return try? context.fetch(fetchRequest).first
+    }
+
+    // MARK: - SongVersions
+
+    public func songVersion(iTunesPersistentID: Int64) -> SongVersion? {
+        let fetchRequest: NSFetchRequest<SongVersion> = SongVersion.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "mediaItemPersistentID = %@", iTunesPersistentID)
+
+        return try? context.fetch(fetchRequest).first
+    }
+
 }
 
 public class MockMediaLibrary: MediaLibrary {
 
     public init() {
         super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
+
+        loadSongs()
+        loadPlaylists()
     }
 
-    public func refreshSongs() {
+    public func loadSongs() {
         let siouxsie = Artist(context: context)
         siouxsie.name = "Siouxsie and The Banshees"
         siouxsie.sortName = nil
@@ -82,7 +126,7 @@ public class MockMediaLibrary: MediaLibrary {
         fireworksSongVersion.duration = 203.0
     }
 
-    public func refreshPlaylists() {
+    public func loadPlaylists() {
         let playlist = Playlist(context: context)
         playlist.title = "Siouxsie Hits"
         let trackListing = TrackListing(context: context)
