@@ -1,50 +1,32 @@
 //  Created by Jason R Tibbetts on 3/19/21.
 
+import CoreData
 import MediaPlayer
 import SwiftUI
 
 open class MediaLibrary: ObservableObject {
 
-    @Published public var albums = [Album]()
-
-    @Published public var artists = [Artist]()
-
-    @Published public var playlists = [Playlist]()
-
-    @Published public var songs = [Song]()
-
     @Published public var finishedImporting: Bool = true
 
+    public var context: NSManagedObjectContext
+
     #if !os(macOS)
-    @Published var authStatus: MPMediaLibraryAuthorizationStatus = .authorized
+    @Published public var authStatus: MPMediaLibraryAuthorizationStatus = .authorized
     #endif
 
-    func refreshAlbums() {
-    }
-
-    func refreshPlaylists() {
-    }
-
-    func refreshSongs() {
-    }
-
-    init() {
+    public init(context: NSManagedObjectContext) {
+        self.context = context
     }
 
 }
 
 public class MockMediaLibrary: MediaLibrary {
 
-    private let context = Medi8PersistentContainer.sharedInMemoryContext
-
-    public override init() {
-        super.init()
-        refreshSongs()
-        refreshAlbums()
-        refreshPlaylists()
+    public init() {
+        super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
     }
 
-    override func refreshSongs() {
+    public func refreshSongs() {
         let siouxsie = Artist(context: context)
         siouxsie.name = "Siouxsie and The Banshees"
         siouxsie.sortName = nil
@@ -58,7 +40,8 @@ public class MockMediaLibrary: MediaLibrary {
         let comment = "1982/11/05 UK \"A Kiss in the Dreamhouse\" LP (Polydor POLD 5064)"
         let tracklist = TrackListing(context: context)
 
-        songs = [("Cascade", 266.0, comment),
+        for songData: (title: String, duration: Double, comment: String) in
+                [("Cascade", 266.0, comment),
                  ("Green Fingers", 216.0, comment),
                  ("Obsession", 231.0, comment),
                  ("She's a Carnival", 220, comment),
@@ -71,21 +54,16 @@ public class MockMediaLibrary: MediaLibrary {
                  ("Slowdive (12\" version)", 349.0, "1982/10/01 UK \"Slowdive\" 12\" single (Polydor POSPX 510)"),
                  ("Painted Bird (Workhouse demo)", 229.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"),
                  ("Cascade (Workhouse demo)", 354.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)")
-        ].enumerated()
-        .map { (trackNumber, arg1) in
-            let (title, duration, comment) = arg1
-
+                ] {
             let song = Song(context: context)
-            song.title = title
+            song.title = songData.title
             song.artists = [siouxsie]
             song.lyrics = nil
 
             let songVersion = SongVersion(context: context)
-            songVersion.comment = comment
-            songVersion.duration = duration
+            songVersion.comment = songData.comment
+            songVersion.duration = songData.duration
             tracklist.addToSongVersions(songVersion)
-
-            return song
         }
 
         let fireworksRelease = MasterRelease(context: context)
@@ -104,10 +82,7 @@ public class MockMediaLibrary: MediaLibrary {
         fireworksSongVersion.duration = 203.0
     }
 
-    override func refreshAlbums() {
-    }
-
-    override func refreshPlaylists() {
+    public func refreshPlaylists() {
         let playlist = Playlist(context: context)
         playlist.title = "Siouxsie Hits"
         let trackListing = TrackListing(context: context)

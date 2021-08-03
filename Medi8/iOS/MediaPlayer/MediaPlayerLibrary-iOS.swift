@@ -9,8 +9,6 @@ import MediaPlayer
 /// Inspiration: https://stackoverflow.com/questions/58435382/how-to-show-mpmediaitem-artwork-in-a-swiftui-list
 public class MediaPlayerLibrary: MediaLibrary {
 
-    var context: NSManagedObjectContext = Medi8PersistentContainer.sharedInMemoryContext
-
     public static let musicPlayer: MPMusicPlayerController = .applicationQueuePlayer
 
     private var dispatchQueue = DispatchQueue(label: "MediaLibrary")
@@ -46,12 +44,13 @@ public class MediaPlayerLibrary: MediaLibrary {
         && finishedImportingSongs
     }
 
-    override public init() {
-        super.init()
+    public init() {
+        super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
         authStatus = .notDetermined
         finishedImporting = false
         let importer = MediaPlayerImporter(context)
     }
+
 }
 
 #endif
