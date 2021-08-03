@@ -13,37 +13,6 @@ public class MediaPlayerLibrary: MediaLibrary {
 
     private var dispatchQueue = DispatchQueue(label: "MediaLibrary")
 
-    private var finishedImportingAlbums = false {
-        didSet {
-            updateImportStatus()
-        }
-    }
-
-    private var finishedImportingArtists = false {
-        didSet {
-            updateImportStatus()
-        }
-    }
-
-    private var finishedImportingPlaylists = false {
-        didSet {
-            updateImportStatus()
-        }
-    }
-
-    private var finishedImportingSongs = false {
-        didSet {
-            updateImportStatus()
-        }
-    }
-
-    private func updateImportStatus() {
-        finishedImporting = finishedImportingAlbums
-        && finishedImportingArtists
-        && finishedImportingPlaylists
-        && finishedImportingSongs
-    }
-
     public init() {
         super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
         authStatus = .notDetermined
