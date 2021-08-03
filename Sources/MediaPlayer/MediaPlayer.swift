@@ -69,49 +69,53 @@ open class MockMediaPlayer: ObservableObject, MediaPlayer {
 
     public var nowPlayingSong: MPMediaItem? = nil
 
-    public func prepareToPlay() {
+    public init() {
 
     }
 
-    public func setQueue(with songs: [MPMediaItem]) {
+    open func prepareToPlay() {
 
     }
 
-    public func play() {
+    open func setQueue(with songs: [MPMediaItem]) {
+
+    }
+
+    open func play() {
         playbackState = .playing
     }
 
-    public func pause() {
+    open func pause() {
         playbackState = .paused
     }
 
-    public func stop() {
+    open func stop() {
         playbackState = .stopped
     }
 
-    public func beginSeekingForward() {
+    open func beginSeekingForward() {
         // nothing
     }
 
-    public func beginSeekingBackward() {
+    open func beginSeekingBackward() {
         // nothing
     }
 
-    public func endSeeking() {
+    open func endSeeking() {
         // nothing
     }
 
     // MediaPlayer
 
-    public func skipToBeginning() {
+    open func skipToBeginning() {
 
     }
 
-    public func skipToNextItem() {
+    open func skipToNextItem() {
 
     }
 
-    public func skipToPreviousItem() {
+    open func skipToPreviousItem() {
 
     }
 
