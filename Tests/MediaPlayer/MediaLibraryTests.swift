@@ -37,7 +37,7 @@ class MediaLibraryTests: FetchingTestBase {
     func testAllSongs() {
         let songs = mediaLibrary.allSongs()
         XCTAssertNotNil(songs)
-        XCTAssertEqual(songs?.count, 13)
+        XCTAssertEqual(songs?.count, 14)
     }
 
     // MARK: - Releases
@@ -46,6 +46,9 @@ class MediaLibraryTests: FetchingTestBase {
         let releases = mediaLibrary.allMasterReleases()
         XCTAssertNotNil(releases)
         XCTAssertEqual(releases?.count, 2)
+
+        let firstRelease = releases!.first!
+        XCTAssertEqual(firstRelease.versions?.count, 1)
     }
 
 }

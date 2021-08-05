@@ -31,4 +31,25 @@ open class Medi8PersistentContainer: NSPersistentContainer {
         }
     }
 
+    public func clearAll() {
+        guard !persistentStoreCoordinator.persistentStores.isEmpty else {
+            print("No persistent store have been loaded. Nothing to clear.")
+            return
+        }
+
+        for entityName in ["Song", "SongVersion", "MasterRelease", "ReleaseVersion", "Artist"] {
+            let fetchAllRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            fetchAllRequest.predicate = NSPredicate(value: true)
+
+            do {
+                try viewContext.fetch(fetchAllRequest).forEach { (result) in
+                    viewContext.delete(result as! NSManagedObject)
+                }
+                print("succeeded")
+            } catch {
+                print("failed: (error.localizedDescription)")
+            }
+        }
+    }
+
 }

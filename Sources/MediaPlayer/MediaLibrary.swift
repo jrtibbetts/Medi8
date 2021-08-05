@@ -85,7 +85,8 @@ open class MediaLibrary: ObservableObject {
 
     public static var allMasterReleasesRequest: NSFetchRequest<MasterRelease> = {
         let sortBySortTitleAscending = (\MasterRelease.sortTitle).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: [sortBySortTitleAscending])
+        let sortByTitleAscending = (\MasterRelease.title).sortDescriptor(ascending: true)
+        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
 
         return request
     }()
@@ -105,6 +106,7 @@ public class MockMediaLibrary: MediaLibrary {
     public init() {
         super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
 
+        Medi8PersistentContainer.sharedInMemoryContainer.clearAll()
         loadSongs()
         loadPlaylists()
     }
@@ -116,6 +118,7 @@ public class MockMediaLibrary: MediaLibrary {
 
         let release = MasterRelease(context: context)
         release.title = "A Kiss in the Dreamhouse"
+        release.sortTitle = "Kiss in the Dreamhouse"
         release.artists = [siouxsie]
 
         let releaseVersion = ReleaseVersion(context: context)
