@@ -7,6 +7,7 @@
         <relationship name="datesActive" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateRange" inverseName="artists" inverseEntity="DateRange"/>
         <relationship name="releases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MasterRelease" inverseName="artists" inverseEntity="MasterRelease"/>
         <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="artists" inverseEntity="Song"/>
+        <relationship name="songVersions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SongVersion" inverseName="artists" inverseEntity="SongVersion"/>
         <fetchIndex name="byNameIndex">
             <fetchIndexElement property="name" type="Binary" order="ascending"/>
         </fetchIndex>
@@ -101,6 +102,7 @@
     </entity>
     <entity name="Playlist" representedClassName="Playlist" syncable="YES" codeGenerationType="class">
         <attribute name="mediaItemPersistentID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sortTitle" optional="YES" attributeType="String"/>
         <attribute name="title" attributeType="String" spotlightIndexingEnabled="YES"/>
         <relationship name="tracks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="playlists" inverseEntity="TrackListing"/>
         <fetchedProperty name="fetchedProperty" optional="YES">
@@ -140,6 +142,7 @@
         <relationship name="trackListing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="releaseVersion" inverseEntity="TrackListing"/>
     </entity>
     <entity name="Song" representedClassName="Song" parentEntity="Notable" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
         <attribute name="sortTitle" optional="YES" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Artist" inverseName="songs" inverseEntity="Artist"/>
@@ -160,6 +163,7 @@
         <attribute name="mediaItemPersistentID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="remoteUrlString" optional="YES" attributeType="String"/>
         <attribute name="spotifyId" optional="YES" attributeType="String"/>
+        <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="songVersions" inverseEntity="Artist"/>
         <relationship name="lyrics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lyrics" inverseName="songVersions" inverseEntity="Lyrics"/>
         <relationship name="recording" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recording" inverseName="songVersions" inverseEntity="Recording"/>
         <relationship name="song" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="versions" inverseEntity="Song"/>
@@ -180,7 +184,7 @@
         <relationship name="songVersions" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SongVersion" inverseName="trackListings" inverseEntity="SongVersion"/>
     </entity>
     <elements>
-        <element name="Artist" positionX="295" positionY="135" width="128" height="133"/>
+        <element name="Artist" positionX="295" positionY="135" width="128" height="148"/>
         <element name="Band" positionX="459" positionY="252" width="128" height="44"/>
         <element name="CatalogInfo" positionX="-108" positionY="621" width="128" height="89"/>
         <element name="Country" positionX="-315" positionY="677" width="128" height="89"/>
@@ -195,14 +199,14 @@
         <element name="Musician" positionX="297" positionY="416" width="128" height="44"/>
         <element name="MusicianCredit" positionX="297" positionY="495" width="128" height="74"/>
         <element name="Notable" positionX="-29" positionY="62" width="128" height="59"/>
-        <element name="Playlist" positionX="-360" positionY="216" width="128" height="95"/>
+        <element name="Playlist" positionX="-360" positionY="216" width="128" height="131"/>
         <element name="Recording" positionX="-335" positionY="269" width="128" height="59"/>
         <element name="RecordLabel" positionX="126" positionY="743" width="128" height="89"/>
         <element name="ReleaseDate" positionX="-108" positionY="749" width="128" height="89"/>
         <element name="ReleaseFormat" positionX="295" positionY="608" width="128" height="59"/>
         <element name="ReleaseVersion" positionX="124" positionY="566" width="128" height="148"/>
-        <element name="Song" positionX="-360" positionY="126" width="128" height="134"/>
-        <element name="SongVersion" positionX="-317" positionY="414" width="128" height="254"/>
+        <element name="Song" positionX="-360" positionY="126" width="128" height="163"/>
+        <element name="SongVersion" positionX="-317" positionY="414" width="128" height="283"/>
         <element name="TrackListing" positionX="-110" positionY="432" width="128" height="74"/>
     </elements>
 </model>
