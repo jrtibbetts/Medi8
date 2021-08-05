@@ -29,3 +29,7 @@ public extension Artist {
     }
 
 }
+
+extention Artist: HasName {
+
+}

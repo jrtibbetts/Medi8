@@ -16,3 +16,7 @@ public extension MasterRelease {
     }
 
 }
+
+extension MasterRelease: HasTitle {
+    
+}
