@@ -85,7 +85,7 @@ open class Medi8Importer: NSObject {
         if let releaseDate = releaseDate {
             let releaseDateObject = ReleaseDate(context: context)
             releaseDateObject.date = releaseDate
-            releaseVersion.releaseDate?.adding(releaseDateObject)
+            releaseVersion.releaseDate = releaseDateObject
         }
 
         return releaseVersion

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19141.11" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19186" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Artist" representedClassName="Artist" isAbstract="YES" parentEntity="Notable" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" spotlightIndexingEnabled="YES"/>
         <attribute name="sortName" optional="YES" attributeType="String"/>
@@ -66,6 +66,7 @@
         <attribute name="type" attributeType="String" defaultValueString="unknown" spotlightIndexingEnabled="YES"/>
         <relationship name="artists" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Artist" inverseName="releases" inverseEntity="Artist"/>
         <relationship name="musicianCredits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MusicianCredit" inverseName="musician" inverseEntity="MusicianCredit"/>
+        <relationship name="releaseDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReleaseDate" inverseName="masterReleases" inverseEntity="ReleaseDate"/>
         <relationship name="versions" toMany="YES" deletionRule="Cascade" destinationEntity="ReleaseVersion" inverseName="parentRelease" inverseEntity="ReleaseVersion"/>
         <fetchIndex name="bySortTitleIndex">
             <fetchIndexElement property="sortTitle" type="Binary" order="ascending"/>
@@ -122,6 +123,7 @@
     <entity name="ReleaseDate" representedClassName="ReleaseDate" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="releaseDates" inverseEntity="Country"/>
+        <relationship name="masterReleases" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MasterRelease" inverseName="releaseDate" inverseEntity="MasterRelease"/>
         <relationship name="releaseVersions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseVersion" inverseName="releaseDate" inverseEntity="ReleaseVersion"/>
     </entity>
     <entity name="ReleaseFormat" representedClassName="ReleaseFormat" syncable="YES" codeGenerationType="class">
@@ -134,7 +136,7 @@
         <relationship name="catalogInfos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CatalogInfo" inverseName="releaseVersion" inverseEntity="CatalogInfo"/>
         <relationship name="formats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseFormat" inverseName="releaseVersions" inverseEntity="ReleaseFormat"/>
         <relationship name="parentRelease" maxCount="1" deletionRule="Nullify" destinationEntity="MasterRelease" inverseName="versions" inverseEntity="MasterRelease"/>
-        <relationship name="releaseDate" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReleaseDate" inverseName="releaseVersions" inverseEntity="ReleaseDate"/>
+        <relationship name="releaseDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReleaseDate" inverseName="releaseVersions" inverseEntity="ReleaseDate"/>
         <relationship name="trackListing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackListing" inverseName="releaseVersion" inverseEntity="TrackListing"/>
     </entity>
     <entity name="Song" representedClassName="Song" parentEntity="Notable" syncable="YES" codeGenerationType="class">
@@ -178,7 +180,7 @@
         <relationship name="songVersions" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SongVersion" inverseName="trackListings" inverseEntity="SongVersion"/>
     </entity>
     <elements>
-        <element name="Artist" positionX="295" positionY="135" width="128" height="119"/>
+        <element name="Artist" positionX="295" positionY="135" width="128" height="133"/>
         <element name="Band" positionX="459" positionY="252" width="128" height="44"/>
         <element name="CatalogInfo" positionX="-108" positionY="621" width="128" height="89"/>
         <element name="Country" positionX="-315" positionY="677" width="128" height="89"/>
@@ -187,7 +189,7 @@
         <element name="Instrument" positionX="468" positionY="495" width="128" height="59"/>
         <element name="InstrumentType" positionX="466" positionY="612" width="128" height="59"/>
         <element name="Lyrics" positionX="-567" positionY="468" width="128" height="74"/>
-        <element name="MasterRelease" positionX="126" positionY="270" width="128" height="209"/>
+        <element name="MasterRelease" positionX="126" positionY="270" width="128" height="224"/>
         <element name="MediaType" positionX="297" positionY="746" width="128" height="59"/>
         <element name="MemberOfBand" positionX="466" positionY="378" width="128" height="74"/>
         <element name="Musician" positionX="297" positionY="416" width="128" height="44"/>
@@ -196,9 +198,9 @@
         <element name="Playlist" positionX="-360" positionY="216" width="128" height="95"/>
         <element name="Recording" positionX="-335" positionY="269" width="128" height="59"/>
         <element name="RecordLabel" positionX="126" positionY="743" width="128" height="89"/>
-        <element name="ReleaseDate" positionX="-108" positionY="749" width="128" height="74"/>
+        <element name="ReleaseDate" positionX="-108" positionY="749" width="128" height="89"/>
         <element name="ReleaseFormat" positionX="295" positionY="608" width="128" height="59"/>
-        <element name="ReleaseVersion" positionX="124" positionY="566" width="128" height="134"/>
+        <element name="ReleaseVersion" positionX="124" positionY="566" width="128" height="148"/>
         <element name="Song" positionX="-360" positionY="126" width="128" height="134"/>
         <element name="SongVersion" positionX="-317" positionY="414" width="128" height="254"/>
         <element name="TrackListing" positionX="-110" positionY="432" width="128" height="74"/>
