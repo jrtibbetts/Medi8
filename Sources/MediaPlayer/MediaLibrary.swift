@@ -20,6 +20,17 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Artists
 
+    public static var allArtistsRequest: NSFetchRequest<Artist> = {
+        let request: NSFetchRequest<Artist> = Artist.fetchRequestForAll()
+        request.sortDescriptors = [(\Artist.sortName).sortDescriptor(ascending: true)]
+
+        return request
+    }()
+
+    public func allArtists() -> [Artist]? {
+        return try? context.fetch(Self.allArtistsRequest)
+    }
+
     public func artist(_ name: String) -> Artist? {
         let fetchRequest: NSFetchRequest<Artist> = Artist.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "name = %@", name)
@@ -35,6 +46,17 @@ open class MediaLibrary: ObservableObject {
     }
 
     // MARK: - Songs
+
+    public static var allSongsRequest: NSFetchRequest<Song> = {
+        let sortBySortTitleAscending = (\Song.sortTitle).sortDescriptor(ascending: true)
+        let request: NSFetchRequest<Song> = Song.fetchRequestForAll(sortedBy: [sortBySortTitleAscending])
+
+        return request
+    }()
+
+    public func allSongs() -> [Song]? {
+        return try? context.fetch(Self.allSongsRequest)
+    }
 
     public func song(_ title: String) -> Song? {
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
@@ -57,6 +79,23 @@ open class MediaLibrary: ObservableObject {
         fetchRequest.predicate = NSPredicate(format: "mediaItemPersistentID = %@", iTunesPersistentID)
 
         return try? context.fetch(fetchRequest).first
+    }
+
+    // MARK: - Releases
+
+    public static var allMasterReleasesRequest: NSFetchRequest<MasterRelease> = {
+        let sortBySortTitleAscending = (\MasterRelease.sortTitle).sortDescriptor(ascending: true)
+        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: [sortBySortTitleAscending])
+
+        return request
+    }()
+
+    public func allMasterReleases() -> [MasterRelease]? {
+        return try? context.fetch(Self.allMasterReleasesRequest)
+    }
+
+    public func allAlbums() -> [MasterRelease]? {
+        return allMasterReleases()
     }
 
 }
@@ -129,8 +168,6 @@ public class MockMediaLibrary: MediaLibrary {
     public func loadPlaylists() {
         let playlist = Playlist(context: context)
         playlist.title = "Siouxsie Hits"
-        let trackListing = TrackListing(context: context)
-//        trackListing.songVersions = [try? context.fetch(SongVersion.fetchRequestForAll())].flatMap
     }
 
 }
