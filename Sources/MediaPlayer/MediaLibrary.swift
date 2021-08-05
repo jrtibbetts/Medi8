@@ -27,7 +27,7 @@ open class MediaLibrary: ObservableObject {
         return request
     }()
 
-    public func allArtists() -> [Artist]? {
+    public var artists: [Artist]? {
         return try? context.fetch(Self.allArtistsRequest)
     }
 
@@ -54,7 +54,7 @@ open class MediaLibrary: ObservableObject {
         return request
     }()
 
-    public func allSongs() -> [Song]? {
+    public var songs: [Song]? {
         return try? context.fetch(Self.allSongsRequest)
     }
 
@@ -91,12 +91,26 @@ open class MediaLibrary: ObservableObject {
         return request
     }()
 
-    public func allMasterReleases() -> [MasterRelease]? {
+    public var masterReleases: [MasterRelease]? {
         return try? context.fetch(Self.allMasterReleasesRequest)
     }
 
-    public func allAlbums() -> [MasterRelease]? {
-        return allMasterReleases()
+    public var albums: [MasterRelease]? {
+        return masterReleases
+    }
+
+    // MARK: - Playlists
+
+    public static var allPlaylistsRequest: NSFetchRequest<Playlist> = {
+        let sortBySortTitleAscending = (\Playlist.sortTitle).sortDescriptor(ascending: true)
+        let sortByTitleAscending = (\Playlist.title).sortDescriptor(ascending: true)
+        let request: NSFetchRequest<Playlist> = Playlist.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
+
+        return request
+    }()
+
+    public var playlists: [Playlist]? {
+        return try? context.fetch(Self.allPlaylistsRequest)
     }
 
 }

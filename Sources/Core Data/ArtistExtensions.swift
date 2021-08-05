@@ -30,6 +30,6 @@ public extension Artist {
 
 }
 
-extention Artist: HasName {
+extension Artist: HasName {
 
 }

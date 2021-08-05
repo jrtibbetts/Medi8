@@ -27,27 +27,27 @@ class MediaLibraryTests: FetchingTestBase {
     }
 
     func testAllArtists() {
-        let artists = mediaLibrary.allArtists()
+        let artists = mediaLibrary.artists!
         XCTAssertNotNil(artists)
-        XCTAssertEqual(artists?.count, 1)
+        XCTAssertEqual(artists.count, 1)
     }
 
     // MARK: - Songs
 
     func testAllSongs() {
-        let songs = mediaLibrary.allSongs()
+        let songs = mediaLibrary.songs!
         XCTAssertNotNil(songs)
-        XCTAssertEqual(songs?.count, 14)
+        XCTAssertEqual(songs.count, 14)
     }
 
     // MARK: - Releases
 
     func testAllReleases() {
-        let releases = mediaLibrary.allMasterReleases()
+        let releases = mediaLibrary.albums!
         XCTAssertNotNil(releases)
-        XCTAssertEqual(releases?.count, 2)
+        XCTAssertEqual(releases.count, 2)
 
-        let firstRelease = releases!.first!
+        let firstRelease = releases.first!
         XCTAssertEqual(firstRelease.versions?.count, 1)
     }
 

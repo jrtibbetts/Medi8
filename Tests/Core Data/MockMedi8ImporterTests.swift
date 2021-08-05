@@ -21,8 +21,7 @@ class MockMedi8ImporterTests: FetchingTestBase {
         let importer = MockMedi8Importer(context: Self.testingContext)
         try importer.importMedia()
 
-        let artistRequest: NSFetchRequest<NSFetchRequestResult> = Artist.fetchRequest()
-        let theBeatles = try Self.testingContext.fetch(artistRequest)[0] as! Artist
+        let theBeatles = Artist.named("The Beatles", context: Self.testingContext)!
         let beatlesSongs = theBeatles.songs
         XCTAssertNotNil(beatlesSongs)
         XCTAssertEqual(beatlesSongs!.count, 205)
