@@ -5,7 +5,7 @@ import Foundation
 
 open class MediaPlayerObservation: ObservableObject {
 
-    @Published public var nowPlayingItem: Song?
+    @Published public var nowPlayingItem: SongVersion?
 
     public var mediaPlayer: MediaPlayer
 
