@@ -53,8 +53,8 @@ extension MPMediaItem {
         }
     }
 
-    public func song(_ context: NSManagedObjectContext) -> Song? {
-        let request: NSFetchRequest<Song> = Song.fetchRequest()
+    public func song(_ context: NSManagedObjectContext) -> SongVersion? {
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest()
         request.predicate = NSPredicate(format: "mediaItemPersistentID = %d", persistentID)
 
         return try? context.fetch(request).first

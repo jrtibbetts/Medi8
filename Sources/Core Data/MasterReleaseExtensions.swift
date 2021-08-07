@@ -19,6 +19,6 @@ public extension MasterRelease {
 
 }
 
-extension MasterRelease: HasTitle {
+extension MasterRelease: HasArtists, HasTitle {
     
 }
