@@ -27,8 +27,8 @@ open class MediaLibrary: ObservableObject {
         return request
     }()
 
-    public var artists: [Artist]? {
-        return try? context.fetch(Self.allArtistsRequest)
+    public var artists: [Artist] {
+        return (try? context.fetch(Self.allArtistsRequest)) ?? []
     }
 
     public func artist(_ name: String) -> Artist? {
@@ -54,8 +54,8 @@ open class MediaLibrary: ObservableObject {
         return request
     }()
 
-    public var songs: [Song]? {
-        return try? context.fetch(Self.allSongsRequest)
+    public var songs: [Song] {
+        return (try? context.fetch(Self.allSongsRequest)) ?? []
     }
 
     public func song(_ title: String) -> Song? {
@@ -103,11 +103,11 @@ open class MediaLibrary: ObservableObject {
         return request
     }()
 
-    public var masterReleases: [MasterRelease]? {
-        return try? context.fetch(Self.allMasterReleasesRequest)
+    public var masterReleases: [MasterRelease] {
+        return (try? context.fetch(Self.allMasterReleasesRequest)) ?? []
     }
 
-    public var albums: [MasterRelease]? {
+    public var albums: [MasterRelease] {
         return masterReleases
     }
 
