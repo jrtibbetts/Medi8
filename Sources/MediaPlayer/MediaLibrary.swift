@@ -74,6 +74,18 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - SongVersions
 
+    public static var allSongVersionsRequest: NSFetchRequest<SongVersion> = {
+        let sortBySortTitleAscending = (\SongVersion.song?.sortTitle).sortDescriptor(ascending: true)
+        let sortByIdAscending = (\SongVersion.mediaItemPersistentID).sortDescriptor(ascending: true)
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByIdAscending])
+
+        return request
+    }()
+
+    public var songVersions: [SongVersion] {
+        return (try? context.fetch(Self.allSongVersionsRequest)) ?? []
+    }
+
     public func songVersion(iTunesPersistentID: Int64) -> SongVersion? {
         let fetchRequest: NSFetchRequest<SongVersion> = SongVersion.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "mediaItemPersistentID = %@", iTunesPersistentID)
