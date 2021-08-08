@@ -7,8 +7,8 @@ import MediaPlayer
 
 extension MPMusicPlayerController: MediaPlayer {
 
-    public func setQueue(with songs: [MPMediaItem]) {
-        setQueue(with: MPMediaItemCollection(items: songs))
+    public func setQueue(with songVersions: [MPMediaItem]) {
+        setQueue(with: MPMediaItemCollection(items: songVersions))
     }
 
     public var nowPlayingSong: MPMediaItem? {

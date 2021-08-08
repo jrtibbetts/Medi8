@@ -86,9 +86,9 @@ open class MediaPlayerImporter: Medi8Importer {
         finishedImportingArtists = false
 
         dispatchQueue.sync { [unowned self] in
-            let songs = MPMediaQuery.songs().items ?? []
+            let songVersions = MPMediaQuery.songs().items ?? []
 
-            let artistNames = songs
+            let artistNames = songVersions
                 .compactMap { ArtistName($0.artist ?? "", sortName: $0.sortArtist) }
 
             _ = Set<ArtistName>(artistNames)
