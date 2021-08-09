@@ -1,10 +1,4 @@
-//
-//  Medi8.h
-//  Medi8
-//
-//  Created by Jason R Tibbetts on 3/23/19.
 //  Copyright © 2019 Poikile Creations. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
