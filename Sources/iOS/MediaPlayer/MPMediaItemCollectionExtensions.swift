@@ -1,4 +1,4 @@
-//  Created by Jason R Tibbetts on 8/5/21.
+//  Copyright © 2021 Poikile Creations. All rights reserved.
 
 import MediaPlayer
 
