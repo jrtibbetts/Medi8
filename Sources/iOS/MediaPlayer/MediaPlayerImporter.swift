@@ -63,8 +63,8 @@ open class MediaPlayerImporter: Medi8Importer {
                 let medi8Tracklist = TrackListing(context: self.context)
                 medi8Playlist.tracks = medi8Tracklist
 
-                for song in playlist.items {
-                    if let medi8SongVersion = SongVersion.withMediaID(Int64(song.persistentID), context: context) {
+                for songVersion in playlist.items {
+                    if let medi8SongVersion = SongVersion.withMediaID(Int64(songVersion.persistentID), context: context) {
                         medi8Tracklist.addToSongVersions(medi8SongVersion)
                     }
                 }
@@ -128,8 +128,8 @@ open class MediaPlayerImporter: Medi8Importer {
 
                     do {
                         let artist = try fetchOrCreateArtist(named: artistName, sortName: mediaItem.sortArtistName)
-                        let song = try fetchOrCreateSong(title: title, by: artist)
-                        let songVersion = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
+                        let songVersion = try fetchOrCreateSong(title: title, by: artist)
+                        let songVersion = try fetchOrCreateSongVersion(mediaItem: mediaItem, songVersion: songVersion)
                     } catch {
                         print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
                     }
@@ -165,28 +165,28 @@ open class MediaPlayerImporter: Medi8Importer {
     }
 
     open func fetchOrCreateSong(mediaItem: MPMediaItem, artist: Artist) throws -> Song? {
-        guard let song = try super.fetchOrCreateSong(title: mediaItem.title ?? "(untitled)",
+        guard let songVersion = try super.fetchOrCreateSong(title: mediaItem.title ?? "(untitled)",
                                                      by: artist) else {
             return nil
         }
 
         // Create a corresponding SongVersion. These will be merged later.
         do {
-            _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
+            _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, songVersion: songVersion)
         } catch {
             print("Failed to create a song version for \(mediaItem.title ?? "unknown")")
         }
 
-        return song
+        return songVersion
     }
 
-    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, song: Song?) throws -> SongVersion? {
+    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, songVersion: Song?) throws -> SongVersion? {
         let version = SongVersion(context: context)
         version.comment = mediaItem.comments
         version.duration = mediaItem.playbackDuration
         version.mediaItemPersistentID = Int64(mediaItem.persistentID)
 
-        if mediaItem.title != song?.title {
+        if mediaItem.title != songVersion?.title {
             version.alternativeTitle = mediaItem.title
         }
 
