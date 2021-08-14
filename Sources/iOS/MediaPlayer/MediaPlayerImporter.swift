@@ -128,8 +128,8 @@ open class MediaPlayerImporter: Medi8Importer {
 
                     do {
                         let artist = try fetchOrCreateArtist(named: artistName, sortName: mediaItem.sortArtistName)
-                        let songVersion = try fetchOrCreateSong(title: title, by: artist)
-                        let songVersion = try fetchOrCreateSongVersion(mediaItem: mediaItem, songVersion: songVersion)
+                        let song = try fetchOrCreateSong(title: title, by: artist)
+                        _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
                     } catch {
                         print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
                     }
@@ -165,28 +165,29 @@ open class MediaPlayerImporter: Medi8Importer {
     }
 
     open func fetchOrCreateSong(mediaItem: MPMediaItem, artist: Artist) throws -> Song? {
-        guard let songVersion = try super.fetchOrCreateSong(title: mediaItem.title ?? "(untitled)",
+        guard let song = try super.fetchOrCreateSong(title: mediaItem.title ?? "(untitled)",
                                                      by: artist) else {
             return nil
         }
 
         // Create a corresponding SongVersion. These will be merged later.
         do {
-            _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, songVersion: songVersion)
+            _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
         } catch {
             print("Failed to create a song version for \(mediaItem.title ?? "unknown")")
         }
 
-        return songVersion
+        return song
     }
 
-    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, songVersion: Song?) throws -> SongVersion? {
+    open func fetchOrCreateSongVersion(mediaItem: MPMediaItem, song: Song?) throws -> SongVersion? {
         let version = SongVersion(context: context)
         version.comment = mediaItem.comments
         version.duration = mediaItem.playbackDuration
         version.mediaItemPersistentID = Int64(mediaItem.persistentID)
+        version.song = song
 
-        if mediaItem.title != songVersion?.title {
+        if mediaItem.title != song?.title {
             version.alternativeTitle = mediaItem.title
         }
 

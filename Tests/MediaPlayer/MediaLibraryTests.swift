@@ -27,7 +27,7 @@ class MediaLibraryTests: FetchingTestBase {
     }
 
     func testAllArtists() {
-        let artists = mediaLibrary.artists!
+        let artists = mediaLibrary.artists
         XCTAssertNotNil(artists)
         XCTAssertEqual(artists.count, 1)
     }
@@ -35,7 +35,7 @@ class MediaLibraryTests: FetchingTestBase {
     // MARK: - Songs
 
     func testAllSongs() {
-        let songs = mediaLibrary.songs!
+        let songs = mediaLibrary.songs
         XCTAssertNotNil(songs)
         XCTAssertEqual(songs.count, 14)
     }
@@ -43,7 +43,7 @@ class MediaLibraryTests: FetchingTestBase {
     // MARK: - Releases
 
     func testAllReleases() {
-        let releases = mediaLibrary.albums!
+        let releases = mediaLibrary.albums
         XCTAssertNotNil(releases)
         XCTAssertEqual(releases.count, 2)
 
