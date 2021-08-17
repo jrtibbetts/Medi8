@@ -16,7 +16,15 @@ public extension Song {
     }
 
     var displayableArtistName: String {
-        return artists?.compactMap { ($0 as? Artist)?.name }.joined(separator: ", ") ?? "Unknown"
+        return artists?.compactMap { ($0 as? Artist)?.name }.joined(separator: ", ") ?? "Unknown Artist"
+    }
+
+    var displayableSortArtistName: String {
+        return artists?.compactMap { ($0 as? Artist)?.sortName }.joined(separator: ", ") ?? "Unknown Artist"
+    }
+
+    var id: String {
+        return displayableSortTitle + "/" + displayableSortArtistName
     }
 
     var versionsArray: [SongVersion] {

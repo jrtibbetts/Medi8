@@ -12,6 +12,10 @@ public protocol HasTitle {
 
 public extension HasTitle {
 
+    var displayableSortTitle: String {
+        return sortTitle ?? displayableTitle
+    }
+
     var displayableTitle: String {
         return title ?? "Untitled"
     }
