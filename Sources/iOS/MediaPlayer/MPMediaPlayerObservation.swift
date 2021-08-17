@@ -18,11 +18,11 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
 
     @Published public var shuffleState: MPMusicShuffleMode = .default
 
-    private var context = Medi8PersistentContainer.sharedInMemoryContext
+    var context = Medi8PersistentContainer.sharedInMemoryContext
 
-    private var notifier: NotificationCenter = .default
+    var notifier: NotificationCenter = .default
 
-    private var nowPlayingItemObserver: NSObjectProtocol? {
+    var nowPlayingItemObserver: NSObjectProtocol? {
         didSet {
             if let oldValue = oldValue {
                 notifier.removeObserver(oldValue)
@@ -30,7 +30,7 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
         }
     }
 
-    private var playbackStateObserver: NSObjectProtocol? {
+    var playbackStateObserver: NSObjectProtocol? {
         didSet {
             if let oldValue = oldValue {
                 notifier.removeObserver(oldValue)
@@ -38,11 +38,11 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
         }
     }
 
-    private var musicPlayer: MPMusicPlayerController {
+    var musicPlayer: MPMusicPlayerController {
         return mediaPlayer as! MPMusicPlayerController
     }
 
-    init(mediaPlayer: MPMusicPlayerController) {
+    public init(mediaPlayer: MPMusicPlayerController) {
         super.init(mediaPlayer: mediaPlayer)
 
         self.musicPlayer.beginGeneratingPlaybackNotifications()
