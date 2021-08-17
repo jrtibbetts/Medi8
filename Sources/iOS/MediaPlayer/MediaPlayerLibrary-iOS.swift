@@ -13,11 +13,15 @@ public class MediaPlayerLibrary: MediaLibrary {
 
     private var dispatchQueue = DispatchQueue(label: "MediaLibrary")
 
+    private var importer: MediaPlayerImporter
+
     public init() {
-        super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
+        let context = Medi8PersistentContainer.sharedInMemoryContext
+        importer = MediaPlayerImporter(context)
+        super.init(context: context)
+
         authStatus = .notDetermined
         finishedImporting = false
-        let importer = MediaPlayerImporter(context)
     }
 
 }
