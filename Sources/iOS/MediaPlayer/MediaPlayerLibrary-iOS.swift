@@ -15,6 +15,8 @@ public class MediaPlayerLibrary: MediaLibrary {
 
     private var importer: MediaPlayerImporter
 
+    private var importerCancellable: Any?
+
     public init() {
         let context = Medi8PersistentContainer.sharedInMemoryContext
         importer = MediaPlayerImporter(context)
@@ -22,6 +24,9 @@ public class MediaPlayerLibrary: MediaLibrary {
 
         authStatus = .notDetermined
         finishedImporting = false
+        importerCancellable = importer.$finishedImporting.sink { (finished) in
+            self.finishedImporting = finished
+        }
     }
 
 }

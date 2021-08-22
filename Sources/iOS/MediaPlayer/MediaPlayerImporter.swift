@@ -21,7 +21,7 @@ open class MediaPlayerImporter: Medi8Importer {
 
     private var finishedImportingArtists = false {
         didSet {
-            finishedImporting = finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
+            finishedImporting = finishedImportingArtists //  finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
         }
     }
 
@@ -68,12 +68,12 @@ open class MediaPlayerImporter: Medi8Importer {
                         medi8Tracklist.addToSongVersions(medi8SongVersion)
                     }
                 }
-            }
 
-            do {
-                try context.save()
-            } catch {
-                print("Failed to save after importing playlists: \(error.localizedDescription)")
+                do {
+                    try context.save()
+                } catch {
+                    print("Failed to save after importing playlists: \(error.localizedDescription)")
+                }
             }
 
             DispatchQueue.main.async { [weak self] in
@@ -83,6 +83,7 @@ open class MediaPlayerImporter: Medi8Importer {
     }
 
     func importArtists() {
+        print("Importing artists")
         finishedImportingArtists = false
 
         dispatchQueue.sync { [unowned self] in
@@ -97,18 +98,15 @@ open class MediaPlayerImporter: Medi8Importer {
                     print("Importing artist \(artistName.name)")
 
                     do {
-                        return try fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
+                        let artist = try fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
+                        try context.save()
+
+                        return artist
                     } catch {
                         print("Failed to create artist named '\(artistName.name)': \(error.localizedDescription)")
                         return nil
                     }
                 }
-
-            do {
-                try context.save()
-            } catch {
-                print("Failed to save after importing artists: \(error.localizedDescription)")
-            }
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingArtists = true
@@ -134,12 +132,12 @@ open class MediaPlayerImporter: Medi8Importer {
                         print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
                     }
                 }
-            }
 
-            do {
-                try context.save()
-            } catch {
-                print("Failed to save after importing songs: \(error.localizedDescription)")
+                do {
+                    try context.save()
+                } catch {
+                    print("Failed to save after importing songs: \(error.localizedDescription)")
+                }
             }
 
             DispatchQueue.main.async { [weak self] in
@@ -157,9 +155,9 @@ open class MediaPlayerImporter: Medi8Importer {
 
             if authStatus == .authorized {
                 self?.importArtists()
-                self?.importSongs()
-                self?.importAlbums()
-                self?.importPlaylists()
+//                self?.importSongs()
+//                self?.importAlbums()
+//                self?.importPlaylists()
             }
         }
     }
