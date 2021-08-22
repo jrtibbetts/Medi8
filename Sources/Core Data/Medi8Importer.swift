@@ -34,7 +34,7 @@ open class Medi8Importer: NSObject {
         request.predicate = NSPredicate(format: "name = %@", name)
 
         return try context.fetchOrCreate(withRequest: request) { (artist) in
-            print("Creating an artist named \(name)")
+            print("Fetched or created an artist named \(name)")
             artist.name = name
             artist.sortName = sortName ?? name
         }
@@ -106,7 +106,8 @@ open class Medi8Importer: NSObject {
         return try context.fetchOrCreate(withRequest: request) { (song) in
             song.title = title
             artist?.addToSongs(song)
-            Recording(context: context).addToSongs(song)
+            let recording = Recording(context: context)
+            recording.addToSongs(song)
         }
     }
 
