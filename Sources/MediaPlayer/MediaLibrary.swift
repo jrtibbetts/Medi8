@@ -20,15 +20,15 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Artists
 
-    public static var allArtistsRequest: NSFetchRequest<Artist> = {
+    public var allArtistsRequest: NSFetchRequest<Artist> {
         let request: NSFetchRequest<Artist> = Artist.fetchRequestForAll()
         request.sortDescriptors = [(\Artist.sortName).sortDescriptor(ascending: true)]
 
         return request
-    }()
+    }
 
     public var artists: [Artist] {
-        return (try? context.fetch(Self.allArtistsRequest)) ?? []
+        return (try? context.fetch(allArtistsRequest)) ?? []
     }
 
     public func artist(_ name: String) -> Artist? {
@@ -47,15 +47,15 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Songs
 
-    public static var allSongsRequest: NSFetchRequest<Song> = {
+    public var allSongsRequest: NSFetchRequest<Song> {
         let sortBySortTitleAscending = (\Song.sortTitle).sortDescriptor(ascending: true)
         let request: NSFetchRequest<Song> = Song.fetchRequestForAll(sortedBy: [sortBySortTitleAscending])
 
         return request
-    }()
+    }
 
     public var songs: [Song] {
-        return (try? context.fetch(Self.allSongsRequest)) ?? []
+        return (try? context.fetch(allSongsRequest)) ?? []
     }
 
     public func song(_ title: String) -> Song? {
@@ -74,16 +74,16 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - SongVersions
 
-    public static var allSongVersionsRequest: NSFetchRequest<SongVersion> = {
+    public var allSongVersionsRequest: NSFetchRequest<SongVersion> {
         let sortBySortTitleAscending = (\SongVersion.song?.sortTitle).sortDescriptor(ascending: true)
         let sortByIdAscending = (\SongVersion.mediaItemPersistentID).sortDescriptor(ascending: true)
         let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByIdAscending])
 
         return request
-    }()
+    }
 
     public var songVersions: [SongVersion] {
-        return (try? context.fetch(Self.allSongVersionsRequest)) ?? []
+        return (try? context.fetch(allSongVersionsRequest)) ?? []
     }
 
     public func songVersion(iTunesPersistentID: Int64) -> SongVersion? {
@@ -113,16 +113,16 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Playlists
 
-    public static var allPlaylistsRequest: NSFetchRequest<Playlist> = {
+    public var allPlaylistsRequest: NSFetchRequest<Playlist> {
         let sortBySortTitleAscending = (\Playlist.sortTitle).sortDescriptor(ascending: true)
         let sortByTitleAscending = (\Playlist.title).sortDescriptor(ascending: true)
         let request: NSFetchRequest<Playlist> = Playlist.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
 
         return request
-    }()
+    }
 
     public var playlists: [Playlist]? {
-        return try? context.fetch(Self.allPlaylistsRequest)
+        return try? context.fetch(allPlaylistsRequest)
     }
 
 }
