@@ -111,7 +111,7 @@ open class Medi8Importer: NSObject {
         }
     }
 
-    open func fetchOrCreateSongVersion(mediaId mediaItemPersistentID: Int64,
+    open func fetchOrCreateSongVersion(mediaId mediaItemPersistentID: String,
                                        song: Song?) throws -> SongVersion? {
         guard let songVersionSet = song?.versions as? Set<SongVersion> else {
             return SongVersion(context: context)

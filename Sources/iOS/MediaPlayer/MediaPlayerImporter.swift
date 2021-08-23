@@ -57,7 +57,7 @@ open class MediaPlayerImporter: Medi8Importer {
 
             for playlist in playlists {
                 let medi8Playlist: Playlist = Playlist(context: self.context)
-                medi8Playlist.mediaItemPersistentID = Int64(playlist.persistentID)
+                medi8Playlist.mediaItemPersistentID = "\(playlist.persistentID)"
                 medi8Playlist.title = playlist.value(forProperty: MPMediaPlaylistPropertyName) as? String
 
                 let medi8Tracklist = TrackListing(context: self.context)
@@ -182,7 +182,7 @@ open class MediaPlayerImporter: Medi8Importer {
         let version = SongVersion(context: context)
         version.comment = mediaItem.comments
         version.duration = mediaItem.playbackDuration
-        version.mediaItemPersistentID = Int64(mediaItem.persistentID)
+        version.mediaItemPersistentID = "\(mediaItem.persistentID)"
         version.song = song
 
         if mediaItem.title != song?.title {
