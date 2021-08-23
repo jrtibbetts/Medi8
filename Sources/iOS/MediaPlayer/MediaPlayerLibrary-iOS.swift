@@ -13,20 +13,22 @@ public class MediaPlayerLibrary: MediaLibrary {
 
     private var dispatchQueue = DispatchQueue(label: "MediaLibrary")
 
-    private var importer: MediaPlayerImporter
+    private var importer: MediaPlayerImporter!
 
     private var importerCancellable: Any?
 
     public init() {
         let context = Medi8PersistentContainer.sharedInMemoryContext
-        importer = MediaPlayerImporter(context)
         super.init(context: context)
+        importer = MediaPlayerImporter(context, mediaLibrary: self)
 
         authStatus = .notDetermined
         finishedImporting = false
-        importerCancellable = importer.$finishedImporting.sink { (finished) in
-            self.finishedImporting = finished
-        }
+        importerCancellable = importer.$finishedImporting
+            .receive(on: DispatchQueue.main, options: nil)
+            .sink { (finished) in
+                self.finishedImporting = finished
+            }
     }
 
 }

@@ -13,8 +13,9 @@ open class Medi8Importer: NSObject {
     /// The managed object context into which the data will be imported.
     open var context: NSManagedObjectContext
 
-    public init(_ context: NSManagedObjectContext) {
-        self.context = context
+    public init(_ parentContext: NSManagedObjectContext) {
+        self.context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        self.context.parent = parentContext
         super.init()
     }
 

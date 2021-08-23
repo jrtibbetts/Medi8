@@ -6,7 +6,7 @@ import Stylobate
 /// An NSPersistentContainer for the Medi8 data model.
 open class Medi8PersistentContainer: NSPersistentContainer {
 
-    public static var sharedInMemoryContainer = Medi8PersistentContainer(inMemoryOnly: true)
+    public static var sharedInMemoryContainer = Medi8PersistentContainer(inMemoryOnly: false)
 
     /// An ``NSManagedObjectContext`` backed by an in-memory store. Based on an
     /// idea by https://www.andrewcbancroft.com/2015/01/13/unit-testing-model-layer-core-data-swift/

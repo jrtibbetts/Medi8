@@ -13,6 +13,8 @@ open class MediaPlayerImporter: Medi8Importer {
 
     @Published var finishedImporting: Bool = false
 
+    private(set) var mediaLibrary: MediaLibrary
+
     private var finishedImportingAlbums = false {
         didSet {
             finishedImporting = finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
@@ -21,7 +23,7 @@ open class MediaPlayerImporter: Medi8Importer {
 
     private var finishedImportingArtists = false {
         didSet {
-            finishedImporting = finishedImportingArtists //  finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
+            finishedImporting = finishedImportingArtists && finishedImportingSongs //  finishedImportingAlbums && finishedImportingPlaylists
         }
     }
 
@@ -43,6 +45,12 @@ open class MediaPlayerImporter: Medi8Importer {
         finishedImportingAlbums = false
         dispatchQueue.sync { [unowned self] in
 //            let albums = MPMediaQuery.albums().collections ?? []
+
+            do {
+                try context.parent?.save()
+            } catch {
+                print("Failed to sync with the parent context after importing albums: \(error.localizedDescription)")
+            }
 
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingAlbums = true
@@ -74,6 +82,12 @@ open class MediaPlayerImporter: Medi8Importer {
                 } catch {
                     print("Failed to save after importing playlists: \(error.localizedDescription)")
                 }
+            }
+
+            do {
+                try context.parent?.save()
+            } catch {
+                print("Failed to sync with the parent context after importing playlists: \(error.localizedDescription)")
             }
 
             DispatchQueue.main.async { [weak self] in
@@ -108,6 +122,12 @@ open class MediaPlayerImporter: Medi8Importer {
                     }
                 }
 
+            do {
+                try context.parent?.save()
+            } catch {
+                print("Failed to sync with the parent context after importing artists: \(error.localizedDescription)")
+            }
+
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingArtists = true
             }
@@ -125,9 +145,9 @@ open class MediaPlayerImporter: Medi8Importer {
                    let artistName = mediaItem.artist {
 
                     do {
-                        let artist = try fetchOrCreateArtist(named: artistName, sortName: mediaItem.sortArtistName)
-                        let song = try fetchOrCreateSong(title: title, by: artist)
-                        _ = try fetchOrCreateSongVersion(mediaItem: mediaItem, song: song)
+                        if let artist = mediaLibrary.artist(artistName) {
+                            _ = try fetchOrCreateSong(title: title, by: artist)
+                        }
                     } catch {
                         print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
                     }
@@ -140,14 +160,22 @@ open class MediaPlayerImporter: Medi8Importer {
                 }
             }
 
+            do {
+                try context.parent?.save()
+            } catch {
+                print("Failed to sync with the parent context after importing songs: \(error.localizedDescription)")
+            }
+
             DispatchQueue.main.async { [weak self] in
                 self?.finishedImportingSongs = true
             }
         }
     }
 
-    public override init(_ context: NSManagedObjectContext = Medi8PersistentContainer.sharedInMemoryContainer.viewContext) {
+    public init(_ context: NSManagedObjectContext = Medi8PersistentContainer.sharedInMemoryContainer.viewContext,
+                mediaLibrary: MediaLibrary) {
         self.authStatus = .notDetermined
+        self.mediaLibrary = mediaLibrary
         super.init(context)
 
         MPMediaLibrary.requestAuthorization { [weak self] (authStatus) in
@@ -155,7 +183,7 @@ open class MediaPlayerImporter: Medi8Importer {
 
             if authStatus == .authorized {
                 self?.importArtists()
-//                self?.importSongs()
+                self?.importSongs()
 //                self?.importAlbums()
 //                self?.importPlaylists()
             }
@@ -189,11 +217,11 @@ open class MediaPlayerImporter: Medi8Importer {
             version.alternativeTitle = mediaItem.title
         }
 
-        if let lyricString = mediaItem.lyrics {
-            let lyrics = Lyrics(context: context)
-            lyrics.text = lyricString
-            version.lyrics = lyrics
-        }
+//        if let lyricString = mediaItem.lyrics {
+//            let lyrics = Lyrics(context: context)
+//            lyrics.text = lyricString
+//            version.lyrics = lyrics
+//        }
 
         return version
     }
