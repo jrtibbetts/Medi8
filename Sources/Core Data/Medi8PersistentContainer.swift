@@ -45,7 +45,6 @@ open class Medi8PersistentContainer: NSPersistentContainer {
                 try viewContext.fetch(fetchAllRequest).forEach { (result) in
                     viewContext.delete(result as! NSManagedObject)
                 }
-                print("succeeded")
             } catch {
                 print("failed: (error.localizedDescription)")
             }
