@@ -15,162 +15,97 @@ open class MediaPlayerImporter: Medi8Importer {
 
     private(set) var mediaLibrary: MediaLibrary
 
-    private var finishedImportingAlbums = false {
-        didSet {
-            finishedImporting = finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
-        }
-    }
-
-    private var finishedImportingArtists = false {
-        didSet {
-            finishedImporting = finishedImportingArtists && finishedImportingSongs //  finishedImportingAlbums && finishedImportingPlaylists
-        }
-    }
-
-    private var finishedImportingPlaylists = false {
-        didSet {
-            finishedImporting = finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
-        }
-    }
-
-    private var finishedImportingSongs = false {
-        didSet {
-            finishedImporting = finishedImportingAlbums && finishedImportingArtists && finishedImportingPlaylists && finishedImportingSongs
-        }
-    }
-
     private var dispatchQueue = DispatchQueue(label: "MediaLibrary")
 
-    open func importAlbums() {
-        finishedImportingAlbums = false
-        dispatchQueue.sync { [unowned self] in
-//            let albums = MPMediaQuery.albums().collections ?? []
-
-            do {
-                try context.parent?.save()
-            } catch {
-                print("Failed to sync with the parent context after importing albums: \(error.localizedDescription)")
-            }
-
-            DispatchQueue.main.async { [weak self] in
-                self?.finishedImportingAlbums = true
-            }
+    open func importAll() async throws {
+        if authStatus == .authorized {
+            try await importArtists()
+            try await importSongs()
+            try await importAlbums()
+            try await importPlaylists()
         }
     }
 
-    func importPlaylists() {
-        finishedImportingPlaylists = false
-        dispatchQueue.sync { [unowned self] in
-            let playlists = MPMediaQuery.playlists().collections ?? []
+    open func importAlbums() async throws {
+        //            let albums = MPMediaQuery.albums().collections ?? []
 
-            for playlist in playlists {
-                let medi8Playlist: Playlist = Playlist(context: self.context)
-                medi8Playlist.mediaItemPersistentID = "\(playlist.persistentID)"
-                medi8Playlist.title = playlist.value(forProperty: MPMediaPlaylistPropertyName) as? String
-
-                let medi8Tracklist = TrackListing(context: self.context)
-                medi8Playlist.tracks = medi8Tracklist
-
-                for songVersion in playlist.items {
-                    if let medi8SongVersion = SongVersion.withMediaID(Int64(songVersion.persistentID), context: context) {
-                        medi8Tracklist.addToSongVersions(medi8SongVersion)
-                    }
-                }
-
-                do {
-                    try context.save()
-                } catch {
-                    print("Failed to save after importing playlists: \(error.localizedDescription)")
-                }
-            }
-
-            do {
-                try context.parent?.save()
-            } catch {
-                print("Failed to sync with the parent context after importing playlists: \(error.localizedDescription)")
-            }
-
-            DispatchQueue.main.async { [weak self] in
-                self?.finishedImportingPlaylists = true
-            }
-        }
+        try context.parent?.save()
     }
 
-    func importArtists() {
+    func importPlaylists() async throws {
+        print("Importing playlists")
+        let playlists = MPMediaQuery.playlists().collections ?? []
+
+        for playlist in playlists {
+            let medi8Playlist: Playlist = Playlist(context: self.context)
+            medi8Playlist.mediaItemPersistentID = "\(playlist.persistentID)"
+            medi8Playlist.title = playlist.value(forProperty: MPMediaPlaylistPropertyName) as? String
+
+            let medi8Tracklist = TrackListing(context: self.context)
+            medi8Playlist.tracks = medi8Tracklist
+
+            for songVersion in playlist.items {
+                if let medi8SongVersion = SongVersion.withMediaID(Int64(songVersion.persistentID), context: context) {
+                    medi8Tracklist.addToSongVersions(medi8SongVersion)
+                }
+            }
+
+            try context.save()
+        }
+
+        try context.parent?.save()
+    }
+
+    func importArtists() async throws {
         print("Importing artists")
-        finishedImportingArtists = false
 
-        dispatchQueue.sync { [unowned self] in
-            let songVersions = MPMediaQuery.songs().items ?? []
+        let songVersions = MPMediaQuery.songs().items ?? []
 
-            let artistNames = songVersions
-                .compactMap { ArtistName($0.artist ?? "", sortName: $0.sortArtist) }
+        let artistNames = songVersions
+            .compactMap { ArtistName($0.artist ?? "", sortName: $0.sortArtist) }
 
-            _ = Set<ArtistName>(artistNames)
-                .sorted()
-                .compactMap { (artistName) -> Artist? in
-                    print("Importing artist \(artistName.name)")
-
-                    do {
-                        let artist = try fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
-                        try context.save()
-
-                        return artist
-                    } catch {
-                        print("Failed to create artist named '\(artistName.name)': \(error.localizedDescription)")
-                        return nil
-                    }
-                }
-
-            do {
-                try context.parent?.save()
-            } catch {
-                print("Failed to sync with the parent context after importing artists: \(error.localizedDescription)")
-            }
-
-            DispatchQueue.main.async { [weak self] in
-                self?.finishedImportingArtists = true
-            }
-        }
-    }
-
-    func importSongs() {
-        finishedImportingSongs = false
-
-        dispatchQueue.sync { [unowned self] in
-            let mediaItems = MPMediaQuery.songs().items ?? []
-
-            for mediaItem in mediaItems {
-                if let title = mediaItem.title,
-                   let artistName = mediaItem.artist {
-
-                    do {
-                        if let artist = mediaLibrary.artist(artistName) {
-                            _ = try fetchOrCreateSong(title: title, by: artist)
-                        }
-                    } catch {
-                        print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
-                    }
-                }
+        _ = Set<ArtistName>(artistNames)
+            .sorted()
+            .compactMap { (artistName) -> Artist? in
+                print("Importing artist \(artistName.name)")
 
                 do {
+                    let artist = try fetchOrCreateArtist(named: artistName.name, sortName: artistName.sortName)
                     try context.save()
+
+                    return artist
                 } catch {
-                    print("Failed to save after importing songs: \(error.localizedDescription)")
+                    print("Failed to create artist named '\(artistName.name)': \(error.localizedDescription)")
+                    return nil
                 }
             }
 
-            do {
-                try context.parent?.save()
-            } catch {
-                print("Failed to sync with the parent context after importing songs: \(error.localizedDescription)")
+        try context.parent?.save()
+    }
+
+    func importSongs() async throws {
+        let mediaItems = MPMediaQuery.songs().items ?? []
+
+        for mediaItem in mediaItems {
+            if let title = mediaItem.title,
+               let artistName = mediaItem.artist {
+
+                do {
+                    if let artist = mediaLibrary.artist(artistName) {
+                        _ = try fetchOrCreateSong(title: title, by: artist)
+                    }
+                } catch {
+                    print("Failed to create song named '\(title)' by \(artistName): \(error.localizedDescription)")
+                }
             }
 
-            DispatchQueue.main.async { [weak self] in
-                self?.finishedImportingSongs = true
-            }
+            try context.save()
         }
+
+        try context.parent?.save()
     }
+
+    // MARK: - Initialization
 
     public init(_ context: NSManagedObjectContext = Medi8PersistentContainer.sharedInMemoryContainer.viewContext,
                 mediaLibrary: MediaLibrary) {
@@ -180,13 +115,6 @@ open class MediaPlayerImporter: Medi8Importer {
 
         MPMediaLibrary.requestAuthorization { [weak self] (authStatus) in
             self?.authStatus = authStatus
-
-            if authStatus == .authorized {
-                self?.importArtists()
-                self?.importSongs()
-//                self?.importAlbums()
-//                self?.importPlaylists()
-            }
         }
     }
 
