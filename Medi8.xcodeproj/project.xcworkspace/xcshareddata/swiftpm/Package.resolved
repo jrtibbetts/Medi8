@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Stylobate",
-        "repositoryURL": "https://github.com/jrtibbetts/Stylobate",
-        "state": {
-          "branch": "main",
-          "revision": "1102510b399a9662045d73a367b6419676ec9f75",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "stylobate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jrtibbetts/Stylobate",
+      "state" : {
+        "revision" : "6499d572f770294c015f1a904a2056c7362f19a4",
+        "version" : "0.34.0"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }
