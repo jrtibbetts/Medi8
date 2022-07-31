@@ -16,7 +16,15 @@ public extension Song {
     }
 
     var displayableArtistName: String {
-        return artists?.compactMap { ($0 as? Artist)?.name }.joined(separator: ", ") ?? "Unknown"
+        return artists?.compactMap { ($0 as? Artist)?.name }.joined(separator: ", ") ?? "Unknown Artist"
+    }
+
+    var displayableSortArtistName: String {
+        return artists?.compactMap { ($0 as? Artist)?.sortName }.joined(separator: ", ") ?? "Unknown Artist"
+    }
+
+    var id: String {
+        return displayableSortTitle + "/" + displayableSortArtistName
     }
 
     var versionsArray: [SongVersion] {
@@ -32,20 +40,17 @@ extension Song: HasTitle {
 public extension SongVersion {
 
     static func withMediaID(_ persistentId: Int64?,
-                            context: NSManagedObjectContext) -> SongVersion? {
+                            context: NSManagedObjectContext) throws -> SongVersion? {
         guard let persistentId = persistentId else {
             return nil
         }
 
-        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest(sortDescriptors: [(\SongVersion.mediaItemPersistentID).sortDescriptor()],
-                                                                            predicate: NSPredicate(format: "mediaItemPersistentID = \(persistentId)"))
+        let byMediaItemId = (\SongVersion.mediaItemPersistentID).sortDescriptor()
+        let matchMediaItemId = NSPredicate(format: "mediaItemPersistentID = \(persistentId)")
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest(sortDescriptors: [byMediaItemId],
+                                                                            predicate: matchMediaItemId)
 
-        do {
-            return try context.fetch(request).first
-        } catch {
-            print("Failed to find a song version with a persistentID of \(persistentId): \(error.localizedDescription)")
-            return nil
-        }
+        return try context.fetch(request).first
     }
 
     var displayableArtistName: String {

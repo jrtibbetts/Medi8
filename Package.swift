@@ -18,7 +18,7 @@ let pkg = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .branch("main"))
+        .package(url: "https://github.com/jrtibbetts/Stylobate.git", .upToNextMinor(from: "0.34.0"))
     ],
 
     targets: [
@@ -35,7 +35,7 @@ let pkg = Package(
             dependencies: ["Medi8"],
             path: "Tests",
             resources: [
-                .copy("Core Data/MockData.json"),
+                .copy("Core Data/MockData.json")
             ]
         )
     ]

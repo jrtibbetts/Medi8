@@ -13,8 +13,9 @@ open class Medi8Importer: NSObject {
     /// The managed object context into which the data will be imported.
     open var context: NSManagedObjectContext
 
-    public init(_ context: NSManagedObjectContext) {
-        self.context = context
+    public init(_ parentContext: NSManagedObjectContext) {
+        self.context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        self.context.parent = parentContext
         super.init()
     }
 
@@ -34,7 +35,7 @@ open class Medi8Importer: NSObject {
         request.predicate = NSPredicate(format: "name = %@", name)
 
         return try context.fetchOrCreate(withRequest: request) { (artist) in
-            print("Creating an artist named \(name)")
+            print("Fetched or created an artist named \(name)")
             artist.name = name
             artist.sortName = sortName ?? name
         }
@@ -106,17 +107,18 @@ open class Medi8Importer: NSObject {
         return try context.fetchOrCreate(withRequest: request) { (song) in
             song.title = title
             artist?.addToSongs(song)
-            Recording(context: context).addToSongs(song)
+            let recording = Recording(context: context)
+            recording.addToSongs(song)
         }
     }
 
-    open func fetchOrCreateSongVersion(mediaId mediaItemPersistentID: Int64,
+    open func fetchOrCreateSongVersion(mediaId mediaItemPersistentID: String,
                                        song: Song?) throws -> SongVersion? {
         guard let songVersionSet = song?.versions as? Set<SongVersion> else {
             return SongVersion(context: context)
         }
 
-        let songVersions = Array<SongVersion>(songVersionSet)
+        let songVersions = Array(songVersionSet)
 
         if let existingSongVersion = songVersions.first(where: { $0.mediaItemPersistentID == mediaItemPersistentID }) {
             return existingSongVersion

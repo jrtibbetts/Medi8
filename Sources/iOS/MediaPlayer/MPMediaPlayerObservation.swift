@@ -7,6 +7,8 @@ import SwiftUI
 
 #if os(iOS)
 
+// swiftlint:disable force_cast
+
 /// An observable `MediaPlayerObservation` that publishes every time the
 /// media player's playback state changes. (Its superclass also publishes the
 /// item that's currently playing.)
@@ -18,11 +20,11 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
 
     @Published public var shuffleState: MPMusicShuffleMode = .default
 
-    private var context = Medi8PersistentContainer.sharedInMemoryContext
+    var context = Medi8PersistentContainer.sharedInMemoryContext
 
-    private var notifier: NotificationCenter = .default
+    var notifier: NotificationCenter = .default
 
-    private var nowPlayingItemObserver: NSObjectProtocol? {
+    var nowPlayingItemObserver: NSObjectProtocol? {
         didSet {
             if let oldValue = oldValue {
                 notifier.removeObserver(oldValue)
@@ -30,7 +32,7 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
         }
     }
 
-    private var playbackStateObserver: NSObjectProtocol? {
+    var playbackStateObserver: NSObjectProtocol? {
         didSet {
             if let oldValue = oldValue {
                 notifier.removeObserver(oldValue)
@@ -38,26 +40,26 @@ public class MPMediaPlayerObservation: MediaPlayerObservation {
         }
     }
 
-    private var musicPlayer: MPMusicPlayerController {
+    var musicPlayer: MPMusicPlayerController {
         return mediaPlayer as! MPMusicPlayerController
     }
 
-    init(mediaPlayer: MPMusicPlayerController) {
+    public init(mediaPlayer: MPMusicPlayerController) {
         super.init(mediaPlayer: mediaPlayer)
 
         self.musicPlayer.beginGeneratingPlaybackNotifications()
         playbackStateObserver = notifier.addObserver(forName: .MPMusicPlayerControllerPlaybackStateDidChange,
                                                      object: self.musicPlayer,
-                                                     queue: nil) { [weak self] (notification) in
+                                                     queue: nil) { [weak self] _ in
             if let mediaPlayer = self?.musicPlayer {
                 self?.playbackState = mediaPlayer.playbackState
             }
         }
 
         nowPlayingItemObserver = notifier.addObserver(forName: .MPMusicPlayerControllerNowPlayingItemDidChange,
-                                                      object: self.musicPlayer, queue: nil) { [weak self] (notification) in
+                                                      object: musicPlayer, queue: nil) { [weak self] _ in
             if let strongSelf = self {
-                strongSelf.nowPlayingItem = strongSelf.musicPlayer.nowPlayingItem?.song(strongSelf.context)
+                self?.nowPlayingItem = strongSelf.musicPlayer.nowPlayingItem?.song(strongSelf.context)
             }
         }
     }

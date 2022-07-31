@@ -13,11 +13,22 @@ public class MediaPlayerLibrary: MediaLibrary {
 
     private var dispatchQueue = DispatchQueue(label: "MediaLibrary")
 
+    private var importer: MediaPlayerImporter!
+
+    private var importerCancellable: Any?
+
     public init() {
-        super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
+        let context = Medi8PersistentContainer.sharedInMemoryContext
+        super.init(context: context)
+        importer = MediaPlayerImporter(context, mediaLibrary: self)
+
         authStatus = .notDetermined
         finishedImporting = false
-        let importer = MediaPlayerImporter(context)
+        importerCancellable = importer.$finishedImporting
+            .receive(on: DispatchQueue.main, options: nil)
+            .sink { (finished) in
+                self.finishedImporting = finished
+            }
     }
 
 }

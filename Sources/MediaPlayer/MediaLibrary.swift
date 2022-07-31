@@ -4,6 +4,8 @@ import CoreData
 import MediaPlayer
 import SwiftUI
 
+// swiftlint:disable inclusive_language
+
 open class MediaLibrary: ObservableObject {
 
     @Published public var finishedImporting: Bool = true
@@ -20,15 +22,15 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Artists
 
-    public static var allArtistsRequest: NSFetchRequest<Artist> = {
+    public var allArtistsRequest: NSFetchRequest<Artist> {
         let request: NSFetchRequest<Artist> = Artist.fetchRequestForAll()
         request.sortDescriptors = [(\Artist.sortName).sortDescriptor(ascending: true)]
 
         return request
-    }()
+    }
 
     public var artists: [Artist] {
-        return (try? context.fetch(Self.allArtistsRequest)) ?? []
+        return (try? context.fetch(allArtistsRequest)) ?? []
     }
 
     public func artist(_ name: String) -> Artist? {
@@ -47,15 +49,15 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Songs
 
-    public static var allSongsRequest: NSFetchRequest<Song> = {
+    public var allSongsRequest: NSFetchRequest<Song> {
         let sortBySortTitleAscending = (\Song.sortTitle).sortDescriptor(ascending: true)
         let request: NSFetchRequest<Song> = Song.fetchRequestForAll(sortedBy: [sortBySortTitleAscending])
 
         return request
-    }()
+    }
 
     public var songs: [Song] {
-        return (try? context.fetch(Self.allSongsRequest)) ?? []
+        return (try? context.fetch(allSongsRequest)) ?? []
     }
 
     public func song(_ title: String) -> Song? {
@@ -74,16 +76,17 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - SongVersions
 
-    public static var allSongVersionsRequest: NSFetchRequest<SongVersion> = {
+    public var allSongVersionsRequest: NSFetchRequest<SongVersion> {
         let sortBySortTitleAscending = (\SongVersion.song?.sortTitle).sortDescriptor(ascending: true)
         let sortByIdAscending = (\SongVersion.mediaItemPersistentID).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByIdAscending])
+        let sortBy = [sortBySortTitleAscending, sortByIdAscending]
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequestForAll(sortedBy: sortBy)
 
         return request
-    }()
+    }
 
     public var songVersions: [SongVersion] {
-        return (try? context.fetch(Self.allSongVersionsRequest)) ?? []
+        return (try? context.fetch(allSongVersionsRequest)) ?? []
     }
 
     public func songVersion(iTunesPersistentID: Int64) -> SongVersion? {
@@ -98,7 +101,8 @@ open class MediaLibrary: ObservableObject {
     public static var allMasterReleasesRequest: NSFetchRequest<MasterRelease> = {
         let sortBySortTitleAscending = (\MasterRelease.sortTitle).sortDescriptor(ascending: true)
         let sortByTitleAscending = (\MasterRelease.title).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
+        let sortBy = [sortBySortTitleAscending, sortByTitleAscending]
+        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: sortBy)
 
         return request
     }()
@@ -113,90 +117,17 @@ open class MediaLibrary: ObservableObject {
 
     // MARK: - Playlists
 
-    public static var allPlaylistsRequest: NSFetchRequest<Playlist> = {
+    public var allPlaylistsRequest: NSFetchRequest<Playlist> {
         let sortBySortTitleAscending = (\Playlist.sortTitle).sortDescriptor(ascending: true)
         let sortByTitleAscending = (\Playlist.title).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<Playlist> = Playlist.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
+        let sortBy = [sortBySortTitleAscending, sortByTitleAscending]
+        let request: NSFetchRequest<Playlist> = Playlist.fetchRequestForAll(sortedBy: sortBy)
 
         return request
-    }()
+    }
 
     public var playlists: [Playlist]? {
-        return try? context.fetch(Self.allPlaylistsRequest)
-    }
-
-}
-
-public class MockMediaLibrary: MediaLibrary {
-
-    public init() {
-        super.init(context: Medi8PersistentContainer.sharedInMemoryContext)
-
-        Medi8PersistentContainer.sharedInMemoryContainer.clearAll()
-        loadSongs()
-        loadPlaylists()
-    }
-
-    public func loadSongs() {
-        let siouxsie = Artist(context: context)
-        siouxsie.name = "Siouxsie and The Banshees"
-        siouxsie.sortName = nil
-
-        let release = MasterRelease(context: context)
-        release.title = "A Kiss in the Dreamhouse"
-        release.sortTitle = "Kiss in the Dreamhouse"
-        release.artists = [siouxsie]
-
-        let releaseVersion = ReleaseVersion(context: context)
-        releaseVersion.parentRelease = release
-        let comment = "1982/11/05 UK \"A Kiss in the Dreamhouse\" LP (Polydor POLD 5064)"
-        let tracklist = TrackListing(context: context)
-
-        for songData: (title: String, duration: Double, comment: String) in
-                [("Cascade", 266.0, comment),
-                 ("Green Fingers", 216.0, comment),
-                 ("Obsession", 231.0, comment),
-                 ("She's a Carnival", 220, comment),
-                 ("Circle", 323.0, comment),
-                 ("Melt!", 228.0, comment),
-                 ("Painted Bird", 256.0, comment),
-                 ("Cocoon", 269.0, comment),
-                 ("Slowdive", 265.0, "1982/10/01 UK \"Slowdive\" 7\" single (Polydor POSP 510)"),
-                 ("Fireworks (12\" version)", 277.0, "1982/05/21 UK \"Fireworks\" 12\" single (Polydor POSPX 450)"),
-                 ("Slowdive (12\" version)", 349.0, "1982/10/01 UK \"Slowdive\" 12\" single (Polydor POSPX 510)"),
-                 ("Painted Bird (Workhouse demo)", 229.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"),
-                 ("Cascade (Workhouse demo)", 354.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)")
-                ] {
-            let song = Song(context: context)
-            song.title = songData.title
-            song.artists = [siouxsie]
-            song.lyrics = nil
-
-            let songVersion = SongVersion(context: context)
-            songVersion.comment = songData.comment
-            songVersion.duration = songData.duration
-            tracklist.addToSongVersions(songVersion)
-        }
-
-        let fireworksRelease = MasterRelease(context: context)
-        fireworksRelease.title = "Fireworks"
-        fireworksRelease.artists = [siouxsie]
-
-        let fireworksReleaseVersion = ReleaseVersion(context: context)
-        fireworksReleaseVersion.parentRelease = fireworksRelease
-
-        let fireworksSong = Song(context: context)
-        fireworksSong.title = "Fireworks"
-        fireworksSong.lyrics = nil
-
-        let fireworksSongVersion = SongVersion(context: context)
-        fireworksSongVersion.comment = nil
-        fireworksSongVersion.duration = 203.0
-    }
-
-    public func loadPlaylists() {
-        let playlist = Playlist(context: context)
-        playlist.title = "Siouxsie Hits"
+        return try? context.fetch(allPlaylistsRequest)
     }
 
 }
