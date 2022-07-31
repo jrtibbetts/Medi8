@@ -3,6 +3,8 @@
 import CoreData
 import Stylobate
 
+// swiftlint:disable force_cast
+
 /// An NSPersistentContainer for the Medi8 data model.
 open class Medi8PersistentContainer: NSPersistentContainer {
 

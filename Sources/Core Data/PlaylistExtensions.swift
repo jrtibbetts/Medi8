@@ -7,5 +7,5 @@ public extension Playlist {
 }
 
 extension Playlist: HasTitle {
-    
+
 }

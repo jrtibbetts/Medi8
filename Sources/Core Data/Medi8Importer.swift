@@ -118,7 +118,7 @@ open class Medi8Importer: NSObject {
             return SongVersion(context: context)
         }
 
-        let songVersions = Array<SongVersion>(songVersionSet)
+        let songVersions = Array(songVersionSet)
 
         if let existingSongVersion = songVersions.first(where: { $0.mediaItemPersistentID == mediaItemPersistentID }) {
             return existingSongVersion

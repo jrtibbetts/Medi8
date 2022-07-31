@@ -9,7 +9,7 @@ open class MockMediaPlayer: ObservableObject, MediaPlayer {
         return playbackState != .stopped
     }
 
-    public var isPlaying: Bool  {
+    public var isPlaying: Bool {
         return playbackState == .playing
     }
 
@@ -19,7 +19,7 @@ open class MockMediaPlayer: ObservableObject, MediaPlayer {
 
     public var currentPlaybackRate: Float = 0.0
 
-    public var nowPlayingSong: MPMediaItem? = nil
+    public var nowPlayingSong: MPMediaItem?
 
     public init() {
 

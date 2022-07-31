@@ -11,9 +11,9 @@ public protocol HasName {
 }
 
 public extension HasName {
-    
+
     var displayableName: String {
         return name ?? "Unnamed Artist"
     }
-    
+
 }

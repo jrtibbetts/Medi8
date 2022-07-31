@@ -45,7 +45,9 @@ open class MediaPlayerImporter: Medi8Importer {
             medi8Playlist.tracks = medi8Tracklist
 
             for songVersion in playlist.items {
-                if let medi8SongVersion = SongVersion.withMediaID(Int64(songVersion.persistentID), context: context) {
+                let versionId = Int64(songVersion.persistentID)
+
+                if let medi8SongVersion = try SongVersion.withMediaID(versionId, context: context) {
                     medi8Tracklist.addToSongVersions(medi8SongVersion)
                 }
             }

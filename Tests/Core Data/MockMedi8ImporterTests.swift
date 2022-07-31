@@ -4,8 +4,6 @@
 import CoreData
 import XCTest
 
-// swiftlint:disable force_cast
-
 class MockMedi8ImporterTests: FetchingTestBase {
 
     func testImportMedia() throws {

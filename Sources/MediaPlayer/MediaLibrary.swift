@@ -4,6 +4,8 @@ import CoreData
 import MediaPlayer
 import SwiftUI
 
+// swiftlint:disable inclusive_language
+
 open class MediaLibrary: ObservableObject {
 
     @Published public var finishedImporting: Bool = true
@@ -77,7 +79,8 @@ open class MediaLibrary: ObservableObject {
     public var allSongVersionsRequest: NSFetchRequest<SongVersion> {
         let sortBySortTitleAscending = (\SongVersion.song?.sortTitle).sortDescriptor(ascending: true)
         let sortByIdAscending = (\SongVersion.mediaItemPersistentID).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByIdAscending])
+        let sortBy = [sortBySortTitleAscending, sortByIdAscending]
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequestForAll(sortedBy: sortBy)
 
         return request
     }
@@ -98,7 +101,8 @@ open class MediaLibrary: ObservableObject {
     public static var allMasterReleasesRequest: NSFetchRequest<MasterRelease> = {
         let sortBySortTitleAscending = (\MasterRelease.sortTitle).sortDescriptor(ascending: true)
         let sortByTitleAscending = (\MasterRelease.title).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
+        let sortBy = [sortBySortTitleAscending, sortByTitleAscending]
+        let request: NSFetchRequest<MasterRelease> = MasterRelease.fetchRequestForAll(sortedBy: sortBy)
 
         return request
     }()
@@ -116,7 +120,8 @@ open class MediaLibrary: ObservableObject {
     public var allPlaylistsRequest: NSFetchRequest<Playlist> {
         let sortBySortTitleAscending = (\Playlist.sortTitle).sortDescriptor(ascending: true)
         let sortByTitleAscending = (\Playlist.title).sortDescriptor(ascending: true)
-        let request: NSFetchRequest<Playlist> = Playlist.fetchRequestForAll(sortedBy: [sortBySortTitleAscending, sortByTitleAscending])
+        let sortBy = [sortBySortTitleAscending, sortByTitleAscending]
+        let request: NSFetchRequest<Playlist> = Playlist.fetchRequestForAll(sortedBy: sortBy)
 
         return request
     }

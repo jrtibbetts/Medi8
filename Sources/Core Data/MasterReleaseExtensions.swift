@@ -2,6 +2,8 @@
 
 import Foundation
 
+// swiftlint:disable inclusive_language
+
 public typealias Album = MasterRelease
 
 /// Implemented by elements that have an optional ``releaseDate`` property.
@@ -41,7 +43,7 @@ public extension MasterRelease {
 }
 
 extension MasterRelease: HasArtists, HasTitle {
-    
+
 }
 
 public extension NSSet {

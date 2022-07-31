@@ -2,6 +2,8 @@
 
 import Foundation
 
+// swiftlint:disable function_body_length
+
 open class MockMediaLibrary: MediaLibrary {
 
     public init() {
@@ -39,8 +41,16 @@ open class MockMediaLibrary: MediaLibrary {
                  ("Slowdive", 265.0, "1982/10/01 UK \"Slowdive\" 7\" single (Polydor POSP 510)"),
                  ("Fireworks (12\" version)", 277.0, "1982/05/21 UK \"Fireworks\" 12\" single (Polydor POSPX 450)"),
                  ("Slowdive (12\" version)", 349.0, "1982/10/01 UK \"Slowdive\" 12\" single (Polydor POSPX 510)"),
-                 ("Painted Bird (Workhouse demo)", 229.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"),
-                 ("Cascade (Workhouse demo)", 354.0, "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)")
+                 (
+                    "Painted Bird (Workhouse demo)",
+                    229.0,
+                    "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"
+                 ),
+                 (
+                    "Cascade (Workhouse demo)",
+                    354.0,
+                    "2009/99/99 UK \"A Kiss in the Dreamhouse\" remastered CD (Polydor 531 489-6)"
+                 )
                 ] {
             let song = Song(context: context)
             song.title = songData.title
