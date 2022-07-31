@@ -20,20 +20,17 @@ public extension Song {
 public extension SongVersion {
 
     static func withMediaID(_ persistentId: Int64?,
-                            context: NSManagedObjectContext) -> SongVersion? {
+                            context: NSManagedObjectContext) throws -> SongVersion? {
         guard let persistentId = persistentId else {
             return nil
         }
 
-        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest(sortDescriptors: [(\SongVersion.mediaItemPersistentID).sortDescriptor()],
-                                                                            predicate: NSPredicate(format: "mediaItemPersistentID = \(persistentId)"))
+        let byMediaItemId = (\SongVersion.mediaItemPersistentID).sortDescriptor()
+        let matchMediaItemId = NSPredicate(format: "mediaItemPersistentID = \(persistentId)")
+        let request: NSFetchRequest<SongVersion> = SongVersion.fetchRequest(sortDescriptors: [byMediaItemId],
+                                                                            predicate: matchMediaItemId)
 
-        do {
-            return try context.fetch(request).first
-        } catch {
-            print("Failed to find a song version with a persistentID of \(persistentId): \(error.localizedDescription)")
-            return nil
-        }
+        return try context.fetch(request).first
     }
 
 }

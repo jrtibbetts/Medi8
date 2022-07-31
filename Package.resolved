@@ -5,9 +5,9 @@
         "package": "Stylobate",
         "repositoryURL": "https://github.com/jrtibbetts/Stylobate.git",
         "state": {
-          "branch": "main",
-          "revision": "2edc10c3699eafb7b8d953fadeb898968211da04",
-          "version": null
+          "branch": null,
+          "revision": "6499d572f770294c015f1a904a2056c7362f19a4",
+          "version": "0.34.0"
         }
       }
     ]
