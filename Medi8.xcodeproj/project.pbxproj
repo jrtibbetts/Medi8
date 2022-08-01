@@ -3,26 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		961365A125DB8F2C009A1627 /* Medi8.h in Headers */ = {isa = PBXBuildFile; fileRef = 9613659925DB8F2C009A1627 /* Medi8.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		961365AF25DB8F50009A1627 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961365AC25DB8F50009A1627 /* FetchingTestBase.swift */; };
-		961366B825DCBEFB009A1627 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613659A25DB8F2C009A1627 /* Medi8.swift */; };
-		966D8A0E264396B3009CD74E /* MockMedi8Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A0A264396B3009CD74E /* MockMedi8Importer.swift */; };
-		966D8A0F264396B3009CD74E /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 966D8A0B264396B3009CD74E /* MockData.json */; };
-		966D8A10264396B3009CD74E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A0C264396B3009CD74E /* MockData.swift */; };
-		966D8A11264396B3009CD74E /* MockMedi8ImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A0D264396B3009CD74E /* MockMedi8ImporterTests.swift */; };
-		966D8A1626439732009CD74E /* MPMediaItemCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1326439732009CD74E /* MPMediaItemCollectionExtensions.swift */; };
-		966D8A1726439732009CD74E /* MPMediaItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1426439732009CD74E /* MPMediaItemExtensions.swift */; };
-		966D8A1D26439759009CD74E /* SongExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1826439759009CD74E /* SongExtensions.swift */; };
-		966D8A1E26439759009CD74E /* Medi8Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1926439759009CD74E /* Medi8Importer.swift */; };
-		966D8A1F26439759009CD74E /* ArtistExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1A26439759009CD74E /* ArtistExtensions.swift */; };
-		966D8A2026439759009CD74E /* MediaPlayerImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1B26439759009CD74E /* MediaPlayerImporter.swift */; };
-		966D8A2126439759009CD74E /* Medi8PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A1C26439759009CD74E /* Medi8PersistentContainer.swift */; };
-		966D8A26264397C6009CD74E /* Medi8.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A22264397C6009CD74E /* Medi8.xcdatamodeld */; };
-		966D8A2A2643983A009CD74E /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8A282643983A009CD74E /* Medi8Tests.swift */; };
+		963B40F828978978001B7C27 /* MockMediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40D42897895B001B7C27 /* MockMediaPlayer.swift */; };
+		963B40F928978978001B7C27 /* MediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40D52897895B001B7C27 /* MediaLibrary.swift */; };
+		963B40FA28978978001B7C27 /* MediaPlayerObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40D22897895B001B7C27 /* MediaPlayerObservation.swift */; };
+		963B40FB28978978001B7C27 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40D62897895B001B7C27 /* MediaPlayer.swift */; };
+		963B40FC28978978001B7C27 /* MockMediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40D32897895B001B7C27 /* MockMediaLibrary.swift */; };
+		963B40FD28978983001B7C27 /* PlaylistExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E82897895B001B7C27 /* PlaylistExtensions.swift */; };
+		963B40FE28978983001B7C27 /* Medi8PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40EA2897895B001B7C27 /* Medi8PersistentContainer.swift */; };
+		963B40FF28978983001B7C27 /* Medi8Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E22897895B001B7C27 /* Medi8Importer.swift */; };
+		963B410028978983001B7C27 /* HasTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E62897895B001B7C27 /* HasTitle.swift */; };
+		963B410128978983001B7C27 /* SongExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E92897895B001B7C27 /* SongExtensions.swift */; };
+		963B410228978983001B7C27 /* ReleaseVersionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40EB2897895B001B7C27 /* ReleaseVersionExtensions.swift */; };
+		963B410328978983001B7C27 /* HasName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E32897895B001B7C27 /* HasName.swift */; };
+		963B410428978983001B7C27 /* ArtistExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E52897895B001B7C27 /* ArtistExtensions.swift */; };
+		963B410528978983001B7C27 /* HasArtists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E42897895B001B7C27 /* HasArtists.swift */; };
+		963B410628978983001B7C27 /* MasterReleaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40E72897895B001B7C27 /* MasterReleaseExtensions.swift */; };
+		963B410728978988001B7C27 /* Medi8.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963B40DC2897895B001B7C27 /* Medi8.xcdatamodeld */; };
+		963B41082897898F001B7C27 /* MPMediaItemCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F02897895B001B7C27 /* MPMediaItemCollectionExtensions.swift */; };
+		963B41092897898F001B7C27 /* MediaPlayerLibrary-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F12897895B001B7C27 /* MediaPlayerLibrary-iOS.swift */; };
+		963B410A2897898F001B7C27 /* MPMusicPlayerControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40EF2897895B001B7C27 /* MPMusicPlayerControllerExtensions.swift */; };
+		963B410B2897898F001B7C27 /* MPMediaPlayerObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F22897895B001B7C27 /* MPMediaPlayerObservation.swift */; };
+		963B410C2897898F001B7C27 /* MPMediaItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F32897895B001B7C27 /* MPMediaItemExtensions.swift */; };
+		963B410D2897898F001B7C27 /* MediaPlayerImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F42897895B001B7C27 /* MediaPlayerImporter.swift */; };
+		963B410E28978992001B7C27 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F62897895B001B7C27 /* Song.swift */; };
+		963B410F28978995001B7C27 /* Medi8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40F72897895B001B7C27 /* Medi8.swift */; };
+		963B4110289789A1001B7C27 /* MockMedi8ImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40CE2897895B001B7C27 /* MockMedi8ImporterTests.swift */; };
+		963B4111289789A1001B7C27 /* MockMedi8Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40CD2897895B001B7C27 /* MockMedi8Importer.swift */; };
+		963B4112289789A1001B7C27 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40CB2897895B001B7C27 /* MockData.swift */; };
+		963B4113289789A1001B7C27 /* FetchingTestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40CA2897895B001B7C27 /* FetchingTestBase.swift */; };
+		963B4114289789A1001B7C27 /* Medi8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40CF2897895B001B7C27 /* Medi8Tests.swift */; };
+		963B4115289789A1001B7C27 /* MediaLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B40C82897895B001B7C27 /* MediaLibraryTests.swift */; };
+		963B4116289789A1001B7C27 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 963B40CC2897895B001B7C27 /* MockData.json */; };
 		969EBF9825E89AD90008DE91 /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 969EBF9725E89AD90008DE91 /* Stylobate */; };
 		96ACFB182246DBE800C9F2AD /* Medi8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ACFB0E2246DBE700C9F2AD /* Medi8.framework */; };
 /* End PBXBuildFile section */
@@ -51,27 +66,45 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9613659925DB8F2C009A1627 /* Medi8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
-		9613659A25DB8F2C009A1627 /* Medi8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medi8.swift; sourceTree = "<group>"; };
-		961365AC25DB8F50009A1627 /* FetchingTestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
+		963B40C82897895B001B7C27 /* MediaLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryTests.swift; sourceTree = "<group>"; };
+		963B40CA2897895B001B7C27 /* FetchingTestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingTestBase.swift; sourceTree = "<group>"; };
+		963B40CB2897895B001B7C27 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		963B40CC2897895B001B7C27 /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		963B40CD2897895B001B7C27 /* MockMedi8Importer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMedi8Importer.swift; sourceTree = "<group>"; };
+		963B40CE2897895B001B7C27 /* MockMedi8ImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMedi8ImporterTests.swift; sourceTree = "<group>"; };
+		963B40CF2897895B001B7C27 /* Medi8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8Tests.swift; sourceTree = "<group>"; };
+		963B40D22897895B001B7C27 /* MediaPlayerObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerObservation.swift; sourceTree = "<group>"; };
+		963B40D32897895B001B7C27 /* MockMediaLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMediaLibrary.swift; sourceTree = "<group>"; };
+		963B40D42897895B001B7C27 /* MockMediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMediaPlayer.swift; sourceTree = "<group>"; };
+		963B40D52897895B001B7C27 /* MediaLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibrary.swift; sourceTree = "<group>"; };
+		963B40D62897895B001B7C27 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		963B40D92897895B001B7C27 /* MediaPlayerLibrary-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaPlayerLibrary-macOS.swift"; sourceTree = "<group>"; };
+		963B40DA2897895B001B7C27 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		963B40DD2897895B001B7C27 /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
+		963B40DE2897895B001B7C27 /* string mediaIds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "string mediaIds.xcdatamodel"; sourceTree = "<group>"; };
+		963B40DF2897895B001B7C27 /* MergedFromCloisimis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MergedFromCloisimis.xcdatamodel; sourceTree = "<group>"; };
+		963B40E02897895B001B7C27 /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
+		963B40E12897895B001B7C27 /* Medi8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medi8.xcdatamodel; sourceTree = "<group>"; };
+		963B40E22897895B001B7C27 /* Medi8Importer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8Importer.swift; sourceTree = "<group>"; };
+		963B40E32897895B001B7C27 /* HasName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasName.swift; sourceTree = "<group>"; };
+		963B40E42897895B001B7C27 /* HasArtists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasArtists.swift; sourceTree = "<group>"; };
+		963B40E52897895B001B7C27 /* ArtistExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExtensions.swift; sourceTree = "<group>"; };
+		963B40E62897895B001B7C27 /* HasTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasTitle.swift; sourceTree = "<group>"; };
+		963B40E72897895B001B7C27 /* MasterReleaseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterReleaseExtensions.swift; sourceTree = "<group>"; };
+		963B40E82897895B001B7C27 /* PlaylistExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistExtensions.swift; sourceTree = "<group>"; };
+		963B40E92897895B001B7C27 /* SongExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongExtensions.swift; sourceTree = "<group>"; };
+		963B40EA2897895B001B7C27 /* Medi8PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8PersistentContainer.swift; sourceTree = "<group>"; };
+		963B40EB2897895B001B7C27 /* ReleaseVersionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseVersionExtensions.swift; sourceTree = "<group>"; };
+		963B40EC2897895B001B7C27 /* Medi8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medi8.h; sourceTree = "<group>"; };
+		963B40EF2897895B001B7C27 /* MPMusicPlayerControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPMusicPlayerControllerExtensions.swift; sourceTree = "<group>"; };
+		963B40F02897895B001B7C27 /* MPMediaItemCollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPMediaItemCollectionExtensions.swift; sourceTree = "<group>"; };
+		963B40F12897895B001B7C27 /* MediaPlayerLibrary-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaPlayerLibrary-iOS.swift"; sourceTree = "<group>"; };
+		963B40F22897895B001B7C27 /* MPMediaPlayerObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPMediaPlayerObservation.swift; sourceTree = "<group>"; };
+		963B40F32897895B001B7C27 /* MPMediaItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPMediaItemExtensions.swift; sourceTree = "<group>"; };
+		963B40F42897895B001B7C27 /* MediaPlayerImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerImporter.swift; sourceTree = "<group>"; };
+		963B40F62897895B001B7C27 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		963B40F72897895B001B7C27 /* Medi8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medi8.swift; sourceTree = "<group>"; };
 		9659768C23BED63000FD3B98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		966D8A0A264396B3009CD74E /* MockMedi8Importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMedi8Importer.swift; sourceTree = "<group>"; };
-		966D8A0B264396B3009CD74E /* MockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
-		966D8A0C264396B3009CD74E /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		966D8A0D264396B3009CD74E /* MockMedi8ImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMedi8ImporterTests.swift; sourceTree = "<group>"; };
-		966D8A1226439732009CD74E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		966D8A1326439732009CD74E /* MPMediaItemCollectionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMediaItemCollectionExtensions.swift; sourceTree = "<group>"; };
-		966D8A1426439732009CD74E /* MPMediaItemExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMediaItemExtensions.swift; sourceTree = "<group>"; };
-		966D8A1826439759009CD74E /* SongExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongExtensions.swift; sourceTree = "<group>"; };
-		966D8A1926439759009CD74E /* Medi8Importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medi8Importer.swift; sourceTree = "<group>"; };
-		966D8A1A26439759009CD74E /* ArtistExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistExtensions.swift; sourceTree = "<group>"; };
-		966D8A1B26439759009CD74E /* MediaPlayerImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerImporter.swift; sourceTree = "<group>"; };
-		966D8A1C26439759009CD74E /* Medi8PersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medi8PersistentContainer.swift; sourceTree = "<group>"; };
-		966D8A23264397C6009CD74E /* Immediate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Immediate.xcdatamodel; sourceTree = "<group>"; };
-		966D8A24264397C6009CD74E /* Immediate 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Immediate 2.xcdatamodel"; sourceTree = "<group>"; };
-		966D8A25264397C6009CD74E /* Medi8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medi8.xcdatamodel; sourceTree = "<group>"; };
-		966D8A272643983A009CD74E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		966D8A282643983A009CD74E /* Medi8Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medi8Tests.swift; sourceTree = "<group>"; };
 		96ACFB0E2246DBE700C9F2AD /* Medi8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medi8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACFB172246DBE800C9F2AD /* Medi8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Medi8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,60 +129,132 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9613658F25DB8F2C009A1627 /* Medi8 */ = {
+		963B40C62897895B001B7C27 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9613659925DB8F2C009A1627 /* Medi8.h */,
-				966D8A1226439732009CD74E /* Info.plist */,
-				9613659A25DB8F2C009A1627 /* Medi8.swift */,
-				966D8A1326439732009CD74E /* MPMediaItemCollectionExtensions.swift */,
-				966D8A1426439732009CD74E /* MPMediaItemExtensions.swift */,
-				9613659025DB8F2C009A1627 /* Core Data */,
+				963B40C72897895B001B7C27 /* MediaPlayer */,
+				963B40C92897895B001B7C27 /* Core Data */,
+				963B40CF2897895B001B7C27 /* Medi8Tests.swift */,
 			);
-			path = Medi8;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		9613659025DB8F2C009A1627 /* Core Data */ = {
+		963B40C72897895B001B7C27 /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				966D8A1A26439759009CD74E /* ArtistExtensions.swift */,
-				966D8A1926439759009CD74E /* Medi8Importer.swift */,
-				966D8A1C26439759009CD74E /* Medi8PersistentContainer.swift */,
-				966D8A1B26439759009CD74E /* MediaPlayerImporter.swift */,
-				966D8A1826439759009CD74E /* SongExtensions.swift */,
-				966D8A22264397C6009CD74E /* Medi8.xcdatamodeld */,
+				963B40C82897895B001B7C27 /* MediaLibraryTests.swift */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		963B40C92897895B001B7C27 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				963B40CA2897895B001B7C27 /* FetchingTestBase.swift */,
+				963B40CB2897895B001B7C27 /* MockData.swift */,
+				963B40CC2897895B001B7C27 /* MockData.json */,
+				963B40CD2897895B001B7C27 /* MockMedi8Importer.swift */,
+				963B40CE2897895B001B7C27 /* MockMedi8ImporterTests.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
-		961365AA25DB8F50009A1627 /* Medi8Tests */ = {
+		963B40D02897895B001B7C27 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				966D8A272643983A009CD74E /* Info.plist */,
-				966D8A282643983A009CD74E /* Medi8Tests.swift */,
-				961365AB25DB8F50009A1627 /* Core Data */,
+				963B40D12897895B001B7C27 /* MediaPlayer */,
+				963B40D72897895B001B7C27 /* macOS */,
+				963B40DB2897895B001B7C27 /* Core Data */,
+				963B40EC2897895B001B7C27 /* Medi8.h */,
+				963B40ED2897895B001B7C27 /* iOS */,
+				963B40F52897895B001B7C27 /* Model */,
+				963B40F72897895B001B7C27 /* Medi8.swift */,
 			);
-			path = Medi8Tests;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		961365AB25DB8F50009A1627 /* Core Data */ = {
+		963B40D12897895B001B7C27 /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				966D8A0B264396B3009CD74E /* MockData.json */,
-				966D8A0C264396B3009CD74E /* MockData.swift */,
-				966D8A0A264396B3009CD74E /* MockMedi8Importer.swift */,
-				966D8A0D264396B3009CD74E /* MockMedi8ImporterTests.swift */,
-				961365AC25DB8F50009A1627 /* FetchingTestBase.swift */,
+				963B40D22897895B001B7C27 /* MediaPlayerObservation.swift */,
+				963B40D32897895B001B7C27 /* MockMediaLibrary.swift */,
+				963B40D42897895B001B7C27 /* MockMediaPlayer.swift */,
+				963B40D52897895B001B7C27 /* MediaLibrary.swift */,
+				963B40D62897895B001B7C27 /* MediaPlayer.swift */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		963B40D72897895B001B7C27 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				963B40D82897895B001B7C27 /* MediaPlayer */,
+				963B40DA2897895B001B7C27 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		963B40D82897895B001B7C27 /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				963B40D92897895B001B7C27 /* MediaPlayerLibrary-macOS.swift */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		963B40DB2897895B001B7C27 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				963B40DC2897895B001B7C27 /* Medi8.xcdatamodeld */,
+				963B40E22897895B001B7C27 /* Medi8Importer.swift */,
+				963B40E32897895B001B7C27 /* HasName.swift */,
+				963B40E42897895B001B7C27 /* HasArtists.swift */,
+				963B40E52897895B001B7C27 /* ArtistExtensions.swift */,
+				963B40E62897895B001B7C27 /* HasTitle.swift */,
+				963B40E72897895B001B7C27 /* MasterReleaseExtensions.swift */,
+				963B40E82897895B001B7C27 /* PlaylistExtensions.swift */,
+				963B40E92897895B001B7C27 /* SongExtensions.swift */,
+				963B40EA2897895B001B7C27 /* Medi8PersistentContainer.swift */,
+				963B40EB2897895B001B7C27 /* ReleaseVersionExtensions.swift */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		963B40ED2897895B001B7C27 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				963B40EE2897895B001B7C27 /* MediaPlayer */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		963B40EE2897895B001B7C27 /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				963B40EF2897895B001B7C27 /* MPMusicPlayerControllerExtensions.swift */,
+				963B40F02897895B001B7C27 /* MPMediaItemCollectionExtensions.swift */,
+				963B40F12897895B001B7C27 /* MediaPlayerLibrary-iOS.swift */,
+				963B40F22897895B001B7C27 /* MPMediaPlayerObservation.swift */,
+				963B40F32897895B001B7C27 /* MPMediaItemExtensions.swift */,
+				963B40F42897895B001B7C27 /* MediaPlayerImporter.swift */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		963B40F52897895B001B7C27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				963B40F62897895B001B7C27 /* Song.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		96ACFB042246DBE700C9F2AD = {
 			isa = PBXGroup;
 			children = (
+				963B40D02897895B001B7C27 /* Sources */,
+				963B40C62897895B001B7C27 /* Tests */,
 				9659768C23BED63000FD3B98 /* README.md */,
-				9613658F25DB8F2C009A1627 /* Medi8 */,
-				961365AA25DB8F50009A1627 /* Medi8Tests */,
 				96ACFB0F2246DBE700C9F2AD /* Products */,
 				96C79FE325E4CEA7002B57DD /* Frameworks */,
 			);
@@ -178,7 +283,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961365A125DB8F2C009A1627 /* Medi8.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +297,6 @@
 				96ACFB0A2246DBE700C9F2AD /* Sources */,
 				96ACFB0B2246DBE700C9F2AD /* Frameworks */,
 				96ACFB0C2246DBE700C9F2AD /* Resources */,
-				96B1C01423C041CC003FB3DE /* ShellScript */,
 				961366A925DB8FEA009A1627 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -280,48 +383,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966D8A0F264396B3009CD74E /* MockData.json in Resources */,
+				963B4116289789A1001B7C27 /* MockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		96B1C01423C041CC003FB3DE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed. Download it from https://github.com/realm/SwiftLint\"\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96ACFB0A2246DBE700C9F2AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966D8A1726439732009CD74E /* MPMediaItemExtensions.swift in Sources */,
-				961366B825DCBEFB009A1627 /* Medi8.swift in Sources */,
-				966D8A2026439759009CD74E /* MediaPlayerImporter.swift in Sources */,
-				966D8A1E26439759009CD74E /* Medi8Importer.swift in Sources */,
-				966D8A26264397C6009CD74E /* Medi8.xcdatamodeld in Sources */,
-				966D8A1F26439759009CD74E /* ArtistExtensions.swift in Sources */,
-				966D8A1D26439759009CD74E /* SongExtensions.swift in Sources */,
-				966D8A2126439759009CD74E /* Medi8PersistentContainer.swift in Sources */,
-				966D8A1626439732009CD74E /* MPMediaItemCollectionExtensions.swift in Sources */,
+				963B410628978983001B7C27 /* MasterReleaseExtensions.swift in Sources */,
+				963B410728978988001B7C27 /* Medi8.xcdatamodeld in Sources */,
+				963B40FA28978978001B7C27 /* MediaPlayerObservation.swift in Sources */,
+				963B41092897898F001B7C27 /* MediaPlayerLibrary-iOS.swift in Sources */,
+				963B410328978983001B7C27 /* HasName.swift in Sources */,
+				963B410A2897898F001B7C27 /* MPMusicPlayerControllerExtensions.swift in Sources */,
+				963B40FB28978978001B7C27 /* MediaPlayer.swift in Sources */,
+				963B40FE28978983001B7C27 /* Medi8PersistentContainer.swift in Sources */,
+				963B40F928978978001B7C27 /* MediaLibrary.swift in Sources */,
+				963B410D2897898F001B7C27 /* MediaPlayerImporter.swift in Sources */,
+				963B410E28978992001B7C27 /* Song.swift in Sources */,
+				963B40FC28978978001B7C27 /* MockMediaLibrary.swift in Sources */,
+				963B40F828978978001B7C27 /* MockMediaPlayer.swift in Sources */,
+				963B410C2897898F001B7C27 /* MPMediaItemExtensions.swift in Sources */,
+				963B410028978983001B7C27 /* HasTitle.swift in Sources */,
+				963B410228978983001B7C27 /* ReleaseVersionExtensions.swift in Sources */,
+				963B41082897898F001B7C27 /* MPMediaItemCollectionExtensions.swift in Sources */,
+				963B40FD28978983001B7C27 /* PlaylistExtensions.swift in Sources */,
+				963B410B2897898F001B7C27 /* MPMediaPlayerObservation.swift in Sources */,
+				963B410428978983001B7C27 /* ArtistExtensions.swift in Sources */,
+				963B410128978983001B7C27 /* SongExtensions.swift in Sources */,
+				963B410F28978995001B7C27 /* Medi8.swift in Sources */,
+				963B40FF28978983001B7C27 /* Medi8Importer.swift in Sources */,
+				963B410528978983001B7C27 /* HasArtists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,11 +425,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966D8A11264396B3009CD74E /* MockMedi8ImporterTests.swift in Sources */,
-				966D8A10264396B3009CD74E /* MockData.swift in Sources */,
-				961365AF25DB8F50009A1627 /* FetchingTestBase.swift in Sources */,
-				966D8A0E264396B3009CD74E /* MockMedi8Importer.swift in Sources */,
-				966D8A2A2643983A009CD74E /* Medi8Tests.swift in Sources */,
+				963B4115289789A1001B7C27 /* MediaLibraryTests.swift in Sources */,
+				963B4113289789A1001B7C27 /* FetchingTestBase.swift in Sources */,
+				963B4110289789A1001B7C27 /* MockMedi8ImporterTests.swift in Sources */,
+				963B4112289789A1001B7C27 /* MockData.swift in Sources */,
+				963B4111289789A1001B7C27 /* MockMedi8Importer.swift in Sources */,
+				963B4114289789A1001B7C27 /* Medi8Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +582,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Medi8/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.3;
@@ -514,7 +611,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Medi8/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.3;
@@ -538,7 +635,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
-				INFOPLIST_FILE = Medi8Tests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +655,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
-				INFOPLIST_FILE = Medi8Tests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,14 +721,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		966D8A22264397C6009CD74E /* Medi8.xcdatamodeld */ = {
+		963B40DC2897895B001B7C27 /* Medi8.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				966D8A23264397C6009CD74E /* Immediate.xcdatamodel */,
-				966D8A24264397C6009CD74E /* Immediate 2.xcdatamodel */,
-				966D8A25264397C6009CD74E /* Medi8.xcdatamodel */,
+				963B40DD2897895B001B7C27 /* Immediate.xcdatamodel */,
+				963B40DE2897895B001B7C27 /* string mediaIds.xcdatamodel */,
+				963B40DF2897895B001B7C27 /* MergedFromCloisimis.xcdatamodel */,
+				963B40E02897895B001B7C27 /* Immediate 2.xcdatamodel */,
+				963B40E12897895B001B7C27 /* Medi8.xcdatamodel */,
 			);
-			currentVersion = 966D8A25264397C6009CD74E /* Medi8.xcdatamodel */;
+			currentVersion = 963B40DE2897895B001B7C27 /* string mediaIds.xcdatamodel */;
 			path = Medi8.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
