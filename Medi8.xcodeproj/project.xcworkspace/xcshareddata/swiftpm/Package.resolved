@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "stylobate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jrtibbetts/Stylobate",
+      "state" : {
+        "revision" : "6499d572f770294c015f1a904a2056c7362f19a4",
+        "version" : "0.34.0"
+      }
+    }
+  ],
+  "version" : 2
+}
